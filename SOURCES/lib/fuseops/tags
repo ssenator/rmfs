@@ -1,0 +1,25 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+FILLSTAT_DEFAULT	rmfs_readdir.c	4;"	d	file:
+FILLSTAT_DOT	rmfs_readdir.c	5;"	d	file:
+FILLSTAT_DOTDOT	rmfs_readdir.c	6;"	d	file:
+namer	namer.c	/^namer(const char *path, rnode_t *p_lookup, int *p_errno) {$/;"	f
+rmfs_access	rmfs_access.c	/^rmfs_access(const char *path, int mask){$/;"	f
+rmfs_file_ops	rmfs_fuseops_tab.c	/^struct fuse_operations rmfs_file_ops = {$/;"	v	typeref:struct:fuse_operations
+rmfs_getattr	rmfs_getattr.c	/^rmfs_getattr(const char *path, struct stat *st){$/;"	f
+rmfs_getxattr	rmfs_xattr.c	/^rmfs_getxattr(const char *path,$/;"	f
+rmfs_init	rmfs_init.c	/^rmfs_init(struct fuse_conn_info *ignored_fuse_conn_info){$/;"	f
+rmfs_mayaccess	rmfs_mayaccess.c	/^rmfs_mayaccess(rnode_t *p_rn, int *p_errno, struct fuse_file_info *fi) {$/;"	f
+rmfs_open	rmfs_open.c	/^rmfs_open(const char *path, struct fuse_file_info *fi) {$/;"	f
+rmfs_poll	rmfs_poll.c	/^rmfs_poll(const char             *path,$/;"	f
+rmfs_read	rmfs_read.c	/^rmfs_read(const char *path,$/;"	f
+rmfs_readdir	rmfs_readdir.c	/^rmfs_readdir(const char            *path,$/;"	f
+rmfs_readdir_statfiller	rmfs_readdir.c	/^rmfs_readdir_statfiller(rnode_t *p_rn, struct stat *st, int flag) {$/;"	f
+rmfs_setxattr	rmfs_xattr.c	/^rmfs_setxattr(const char *path,$/;"	f
+rmfs_statfs	rmfs_statfs.c	/^rmfs_statfs(const char *path, struct statvfs *stv) {$/;"	f
+rmfs_trunc	rmfs_trunc.c	/^rmfs_trunc(const char *path, off_t trunc_size) {$/;"	f
+rmfs_write	rmfs_write.c	/^rmfs_write(const char *path,$/;"	f

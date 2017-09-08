@@ -1,0 +1,47 @@
+
+namer.c,14
+namer(12,172
+
+rmfs_access.c,20
+rmfs_access(12,188
+
+rmfs_fuseops_tab.c,45
+struct fuse_operations rmfs_file_ops 21,935
+
+rmfs_getattr.c,19
+rmfs_getattr(5,24
+
+rmfs_init.c,18
+rmfs_init(12,183
+
+rmfs_mayaccess.c,23
+rmfs_mayaccess(10,154
+
+rmfs_open.c,16
+rmfs_open(5,24
+
+rmfs_poll.c,16
+rmfs_poll(5,24
+
+rmfs_read.c,16
+rmfs_read(5,24
+
+rmfs_readdir.c,141
+#define FILLSTAT_DEFAULT 4,20
+#define FILLSTAT_DOT 5,47
+#define FILLSTAT_DOTDOT 6,74
+rmfs_readdir_statfiller(9,107
+rmfs_readdir(58,1286
+
+rmfs_statfs.c,18
+rmfs_statfs(5,24
+
+rmfs_trunc.c,17
+rmfs_trunc(5,24
+
+rmfs_write.c,17
+rmfs_write(5,24
+
+rmfs_xattr.c,43
+rmfs_getxattr(5,24
+rmfs_setxattr(65,1436

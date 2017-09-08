@@ -1,0 +1,24 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BASE_D	Makefile	/^BASE_D		:= $(RPM_SRC_D)$/;"	m
+BUILT	Makefile	/^BUILT		=`date +%Y%m%d%H%M`$/;"	m
+DEFINES	Makefile	/^DEFINES		:= -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__COMPILE_DATE_TIME__$/;"	m
+INC_D	Makefile	/^INC_D		:= ..\/..\/..\/inc$/;"	m
+LIBS	Makefile	/^LIBS		:= -lbsd$/;"	m
+LINT	Makefile	/^LINT				:= splint$/;"	m
+LINTFLAGS	Makefile	/^LINTFLAGS			:= -checks -posix-strict-lib -booltype bool_t -boolfalse BFALSE -booltrue BTRUE $(INCFLAGS) $(DEFINES)$/;"	m
+NAME	Makefile	/^NAME=slu_rmfs\/conf\/config_param$/;"	m
+RPM_D	Makefile	/^RPM_D		:= \/home\/sts\/lanl\/sw\/fuse\/playpen\/slurmfs$/;"	m
+RPM_SRC_D	Makefile	/^RPM_SRC_D	:= $(RPM_D)\/SOURCES$/;"	m
+WARN	Makefile	/^WARN		:= -Wall$/;"	m
+WITHSYMS	Makefile	/^WITHSYMS	:= -ggdb$/;"	m
+lib_cp	Makefile	/^lib_cp	:= libcp.a$/;"	m
+objects	Makefile	/^objects		:= $(subst .c,.o,$(sources))$/;"	m
+prereq	Makefile	/^prereq		:= Makefile $(sources_headers)$/;"	m
+sources	Makefile	/^sources		:= $(sources_config_param)$/;"	m
+sources_config_param	Makefile	/^sources_config_param	:=			\\$/;"	m
+sources_headers	Makefile	/^sources_headers	:=				\\$/;"	m

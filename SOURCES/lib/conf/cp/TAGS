@@ -1,0 +1,35 @@
+
+Makefile,653
+NAME=1,0
+BUILT	3,33
+RPM_D	5,61
+RPM_SRC_D	6,110
+BASE_D	8,141
+INC_D	9,165
+sources_config_param	12,190
+sources_headers	19,302
+sources	27,414
+objects	28,450
+prereq	29,488
+DEFINES	31,528
+LIBS	32,601
+INCFLAGS	+=INCFLAGS	+34,665
+CPPFLAGS	+=CPPFLAGS	+35,706
+WITHSYMS	36,741
+WARN	37,759
+CFLAGS		+=CFLAGS		+39,775
+LDFLAGS		+=LDFLAGS		+40,806
+LINT	42,831
+LINTFLAGS	43,849
+lib_cp	49,1126
+$(lib_cp)$(lib_cp51,1145
+all:all55,1203
+lint:lint57,1219
+TAGS tags:TAGS tags60,1262
+$(objects)$(objects73,1526
+.SECONDARY:.SECONDARY75,1560
+clean:clean77,1584
+.PHONY:.PHONY80,1620
+XXX:XXX83,1650
+todo:todo85,1661
+TAGS:TAGS88,1770

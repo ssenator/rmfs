@@ -1,0 +1,19 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CleanExit	usage.c	/^CleanExit() {$/;"	f
+ErrExit	usage.c	/^ErrExit(int err, char *msg) {$/;"	f
+Usage	usage.c	/^Usage(int err, char *msg) {$/;"	f
+already_mounted	mount.c	/^already_mounted(void) {$/;"	f
+caught_in_a_loop	usage.c	/^static int caught_in_a_loop = 0;$/;"	v	file:
+config_consistent_complete	ingest.c	/^config_consistent_complete() {$/;"	f
+ingest_config	ingest.c	/^ingest_config(int pass_no)$/;"	f
+main	slu_rmfs.c	/^main(int ac, char **av) {$/;"	f
+param_collection_functab	ingest.c	/^param_source_t (*param_collection_functab[])(config_param_t *) = { \/*XXXswitchfunc*\/$/;"	v
+pusage_msg	usage.c	/^char   *pusage_msg;  \/* constructed from the fuse_opt table *\/$/;"	v
+reclaim_files	mount.c	/^reclaim_files() {$/;"	f
+request_unmount	mount.c	/^request_unmount(FILE *prev_ctlfile, long waited_for) {$/;"	f
+src2str	ingest.c	/^char *src2str[] = {$/;"	v

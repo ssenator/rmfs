@@ -1,0 +1,31 @@
+NAME=slu_rmfs/lib
+
+RPM_D		:= /home/sts/lanl/sw/fuse/playpen/slurmfs
+RPM_SRC_D	:= $(RPM_D)/SOURCES
+
+BASE_D		:= $(RPM_SRC_D)
+B_D		:= ..
+
+sources_libs	:=					\
+			$(B_D)/conf/libcp.a		\
+			$(B_D)/conf/libsetval.a		\
+			$(B_D)/conf/libtyp.a		\
+			$(B_D)/conf/libmisc.a		\
+			$(B_D)/fuseops/librmfs.a	\
+			$(B_D)/rnode/librnode.a		\
+			$(B_D)/collect/libcollect.a
+
+libs		:=	$(notdir $(sources_libs))
+
+
+$(libs): $(sources_libs)
+	$(MAKE) --directory=$(dir $@) $@
+
+
+all:	$(libs)
+
+clean:	$(libs)
+	$(RM) $^
+
+.PHONY: clean
+

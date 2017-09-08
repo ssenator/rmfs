@@ -1,0 +1,190 @@
+
+#XXX make depend to (re)generate this,
+#XXX make.common to rationalize based upon dir that this is included into
+
+slurm_headers	 :=			\
+	 /usr/include/slurm/slurm.h	\
+	 /usr/include/slurm/spank.h
+
+fuse_headers	:=			\
+	/usr/include/fuse/fuse.h
+
+selinux_headers	:=			\
+	/usr/include/selinux/context.h	\
+	/usr/include/selinux/selinux.h
+
+linux_headers	:=			\
+	/usr/include/sys/types.h	\
+	/usr/include/assert.h		\
+	/usr/include/attr/xattr.h	\
+	/usr/include/ctype.h		\
+	/usr/include/dirent.h		\
+	/usr/include/errno.h		\
+	/usr/include/fcntl.h		\
+	/usr/include/inttypes.h		\
+	/usr/include/libgen.h		\
+	/usr/include/limits.h		\
+	/usr/include/sys/mman.h		\
+	/usr/include/sys/param.h	\
+	/usr/include/signal.h		\
+	/usr/include/linux/stddef.h	\
+	/usr/include/stdio.h		\
+	/usr/include/stdint.h		\
+	/usr/include/stdlib.h		\
+	/usr/include/string.h		\
+	/usr/include/bsd/string.h	\
+	/usr/include/sysexits.h		\
+	/usr/include/sys/stat.h		\
+	/usr/include/time.h		\
+	/usr/include/sys/types.h	\
+	/usr/include/unistd.h
+
+sources_libcollect :=					\
+	$(BASE_D)/lib/collect/collect_slurm_part.c	\
+	$(BASE_D)/lib/collect/collect_slurm_node.c	\
+	$(BASE_D)/lib/collect/collect_slurm_job.c	\
+	$(BASE_D)/lib/collect/collect_slurm_step.c	\
+	$(BASE_D)/lib/collect/collect_slurm.c		\
+	$(BASE_D)/lib/collect/collect_fuse.c		\
+	$(BASE_D)/lib/collect/collect_backingstore.c	\
+	$(BASE_D)/lib/collect/typ_slurm.c		\
+	$(BASE_D)/lib/collect/collect_os.c		\
+	$(BASE_D)/lib/collect/collect_predecessor.c	\
+	$(BASE_D)/lib/collect/collect_macconf.c		\
+	$(BASE_D)/lib/collect/collect_env.c		\
+	$(BASE_D)/lib/collect/collect_cp.c		\
+	$(BASE_D)/lib/collect/calcul.c			\
+	$(BASE_D)/lib/collect/collect_default.c
+
+sources_libconf_typ	:=				\
+	$(BASE_D)/lib/conf/typ/typ_alpha.c		\
+	$(BASE_D)/lib/conf/typ/typ_alphanum.c		\
+	$(BASE_D)/lib/conf/typ/typ_always_fails.c	\
+	$(BASE_D)/lib/conf/typ/typ_check.c		\
+	$(BASE_D)/lib/conf/typ/typ_context.c		\
+	$(BASE_D)/lib/conf/typ/typ_dir.c		\
+	$(BASE_D)/lib/conf/typ/typ_file.c		\
+	$(BASE_D)/lib/conf/typ/typ_host.c		\
+	$(BASE_D)/lib/conf/typ/typ_inout.c		\
+	$(BASE_D)/lib/conf/typ/typ_numeric.c		\
+	$(BASE_D)/lib/conf/typ/typ_numericchar.c	\
+	$(BASE_D)/lib/conf/typ/typ_opaque.c		\
+	$(BASE_D)/lib/conf/typ/typ_path.c		\
+	$(BASE_D)/lib/conf/typ/typ_slurm.c		\
+	$(BASE_D)/lib/conf/typ/typ_table.c		\
+	$(BASE_D)/lib/conf/typ/typ_truth.c		\
+	$(BASE_D)/lib/conf/typ/typ_xattr.c
+
+sources_libconf_misc	:=				\
+	$(BASE_D)/lib/conf/misc/djb_hash.c		\
+	$(BASE_D)/lib/conf/misc/misc_subr.c
+
+sources_libconf_cp	:=				\
+	$(BASE_D)/lib/conf/cp/cp_subr.c			\
+	$(BASE_D)/lib/conf/cp/cp_Debug.c		\
+	$(BASE_D)/lib/conf/cp/cp_effluviate.c		\
+	$(BASE_D)/lib/conf/cp/cp_get.c			\
+	$(BASE_D)/lib/conf/cp/cp_tab.c
+
+sources_libconf_setval	:=				\
+	$(BASE_D)/lib/conf/setval/set_val_bool.c	\
+	$(BASE_D)/lib/conf/setval/set_val_charptr.c	\
+	$(BASE_D)/lib/conf/setval/set_val_l.c		\
+	$(BASE_D)/lib/conf/setval/set_val_pid.c		\
+	$(BASE_D)/lib/conf/setval/set_val_ptr.c		\
+	$(BASE_D)/lib/conf/setval/set_val_truth.c	\
+	$(BASE_D)/lib/conf/setval/set_val_ui.c		\
+	$(BASE_D)/lib/conf/setval/set_val_uid.c		\
+	$(BASE_D)/lib/conf/setval/set_val_ul.c		\
+
+sources_libconf		:=			\
+	$(sources_libconf_setval)		\
+	$(sources_libconf_cp)			\
+	$(sources_libconf_misc)			\
+	$(sources_libconf_typ)
+
+sources_librmfs		:=			\
+	./lib/fuseops/namer.c			\
+	./lib/fuseops/rmfs_init.c		\
+	./lib/fuseops/rmfs_access.c		\
+	./lib/fuseops/rmfs_getattr.c		\
+	./lib/fuseops/rmfs_statfs.c		\
+	./lib/fuseops/rmfs_open.c		\
+	./lib/fuseops/rmfs_readdir.c		\
+	./lib/fuseops/rmfs_read.c		\
+	./lib/fuseops/rmfs_trunc.c		\
+	./lib/fuseops/rmfs_write.c		\
+	./lib/fuseops/rmfs_xattr.c		\
+	./lib/fuseops/rmfs_poll.c		\
+	./lib/fuseops/rmfs_fuseops_tab.c	\
+	./lib/fuseops/rmfs_mayaccess.c		\
+
+sources_librnode	:=			\
+	./lib/rnode/rn_public.c			\
+	./lib/rnode/rn_alloc.c			\
+	./lib/rnode/rn_provision.c		\
+	./lib/rnode/rn_cast.c			\
+	./lib/rnode/rn_subr.c			\
+	./lib/rnode/rn_mkcname.c		\
+	./lib/rnode/rn_mkpart.c			\
+	./lib/rnode/rn_mkjob.c			\
+	./lib/rnode/rn_mkstep.c			\
+	./lib/rnode/rn_mknode.c			\
+	./lib/rnode/rn_mkattr.c			\
+	./lib/rnode/rn_mkctl.c			\
+	./lib/rnode/rn_README.c			\
+	./lib/rnode/rn_mkfsroot.c		\
+	./lib/rnode/rmfs_param.c		\
+	./lib/rnode/rn_tab.c			\
+	./lib/rnode/rn_ctlroot.c		\
+	./lib/rnode/rn_ctljobid.c
+
+sources_lib		:=			\
+	$(sources_librnode)			\
+	$(sources_librmfs)			\
+	$(sources_libconf)			\
+	$(sources_libcollect)
+
+sources_headers_rmfs	:=			\
+	./inc/rmfs/backingstore.h		\
+	./inc/rmfs/conf.h			\
+	./inc/rmfs/param.h			\
+	./inc/rmfs/types.h			\
+	./inc/rmfs/rnode.h			\
+	./inc/rmfs/misc.h
+
+sources_headers_linkage	:=			\
+	./inc/linkage/fuse.h			\
+	./inc/linkage/selinux.h			\
+	./inc/linkage/slurm.h			\
+
+sources_headers		:=			\
+	./inc/rmfs.h				\
+	$(sources_headers_rmfs)			\
+	$(sources_headers_linkage)		\
+	$(linux_headers)
+
+sources_slu_rmfs_supt	:=			\
+	./slu_rmfs/ingest.c 			\
+	./slu_rmfs/mount.c			\
+	./slu_rmfs/usage.c
+
+sources_slu_rmfs_main	:=			\
+	./slu_rmfs/slu_rmfs.c
+
+sources_slu_rmfs	:=			\
+	$(sources_slu_rmfs_supt)		\
+	$(sources_slu_rmfs_main)
+
+ext_headers		:=			\
+	$(fuse_headers)				\
+	$(selinux_headers)			\
+	$(slurm_headers)			\
+	$(linux_headers)
+
+sources_depend		:=			\
+	$(ext_headers)				\
+	$(sources_headers)			\
+	$(sources_lib)				\
+	$(sources_slu_rmfs)
+

@@ -1,0 +1,68 @@
+# RHEL6 uses newer file digest/compression algorithms that RHEL5 & earlier
+# systems don't understand. Revert back to md5 to support these older clients.
+%define _source_filedigest_algorithm    md5
+%define _binary_filedigest_algorithm    md5
+
+Name:		xdisplay
+Version: 	0.2
+Release:	4
+Vendor:		LANL/HPC-3/SCR
+Source:		%{name}-%{version}-%{release}.tgz
+Summary: 	Fix display on cluster compute nodes so X11 will forward windows back to users desktop.
+License: 	LANL
+Prefix:		/
+Group: 		Utilities/System
+Provides:	xdisplay = %{version}-%{release}
+Requires:	bash >= 4.1.2
+Requires:	tcsh >= 6.17
+Requires:	coreutils >=  8.4
+Requires:	xorg-x11-xauth >= 1.0.2
+Requires:	perl-File-NFSLock  >= 1.21
+Packager:	S Senator <sts@lanl.gov>
+BuildArch:	noarch
+
+%define profiledotd %{_sysconfdir}/profile.d
+%define debug_package %nil
+
+%description
+Login scripts, triggered on RHEL distributions from /etc/profile.d, 
+that will fix display on LANL cluster compute nodes so X11 will forward windows
+back to user's desktop.
+
+Most of the work is factored into the xdisplay.pl script; the xdisplay.csh and
+xdisplay.sh are linkage glue for the user's shell.
+
+%prep
+%setup -c -n %{name}-%{version}-%{release}
+%build
+%install
+
+%{__install} -D -p -m555 ./%{profiledotd}/%{name}.pl  %{buildroot}/%{profiledotd}/%{name}.pl
+%{__install} -D -p -m555 ./%{profiledotd}/%{name}.sh  %{buildroot}/%{profiledotd}/%{name}.sh
+%{__install} -D -p -m555 ./%{profiledotd}/%{name}.csh %{buildroot}/%{profiledotd}/%{name}.csh
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(-,root,root)
+%attr(555,root,root) /%{profiledotd}/%{name}.pl
+%attr(555,root,root) /%{profiledotd}/%{name}.sh
+%attr(555,root,root) /%{profiledotd}/%{name}.csh
+
+%changelog
+* Wed Jan 7 2015 Steven Senator <sts@lanl.gov>
+- v0.2.4 - add timeout to 'xauth list' command with syslog notification if the timeout triggers
+* Fri Oct 3 2014 Steven Senator <sts@lanl.gov>
+- v.0.2.3 includes locking via Perl-File-NFSLock of the .Xauthority file
+* Tue Mar 19 2013 Kathleen Kelly <kak@lanl.gov>
+- Fixed incorrect log message
+* Thu Feb 21 2013 Kathleen Kelly <kak@lanl.gov>
+- Modified to use environment variable to allow for logging to syslog.
+- Created subroutines for logging and fixing display.
+- Introduced "XDISPLAY_DEBUG" variable, if non-zero, script will log info to /var/log/messages on master.
+* Wed Aug 20 2012 Kathleen Kelly <kak@lanl.gov>
+- had left path name in the bash script pointing to a file in my home dir.
+* Fri Jul 20 2012 Kathleen Kelly <kak@lanl.gov>
+- Initial version
+

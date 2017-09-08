@@ -1,0 +1,3506 @@
+
+/usr/include/fuse/fuse.h,3190
+#define _FUSE_H_10,216
+#define FUSE_USE_VERSION 23,599
+typedef int (*fuse_fill_dir_t)fuse_fill_dir_t58,1432
+typedef struct fuse_dirhandle *fuse_dirh_t;fuse_dirh_t62,1577
+typedef int (*fuse_dirfil_t)fuse_dirfil_t63,1621
+struct fuse_operations 88,2647
+	int (*getattr)getattr95,2867
+	int (*readlink)readlink105,3240
+	int (*getdir)getdir108,3331
+	int (*mknod)mknod116,3603
+	int (*mkdir)mkdir124,3865
+	int (*unlink)unlink127,3926
+	int (*rmdir)rmdir130,3985
+	int (*symlink)symlink133,4047
+	int (*rename)rename136,4116
+	int (*link)link139,4199
+	int (*chmod)chmod142,4288
+	int (*chown)chown145,4372
+	int (*truncate)truncate148,4451
+	int (*utime)utime154,4599
+	int (*open)open173,5321
+	int (*read)read186,5795
+	int (*write)write197,6133
+	int (*statfs)statfs207,6424
+	int (*flush)flush232,7464
+	int (*release)release248,8058
+	int (*fsync)fsync257,8296
+	int (*setxattr)setxattr260,8389
+	int (*getxattr)getxattr263,8496
+	int (*listxattr)listxattr266,8593
+	int (*removexattr)removexattr269,8679
+	int (*opendir)opendir281,9086
+	int (*readdir)readdir304,9949
+	int (*releasedir)releasedir311,10104
+	int (*fsyncdir)fsyncdir320,10352
+	void *(*init)init332,10667
+	void (*destroy)destroy341,10817
+	int (*access)access354,11137
+	int (*create)create368,11501
+	int (*ftruncate)ftruncate382,11924
+	int (*fgetattr)fgetattr396,12340
+	int (*lock)lock430,13739
+	int (*utimens)utimens439,13956
+	int (*bmap)bmap449,14232
+	unsigned int flag_nullpath_ok 458,14533
+	unsigned int flag_reserved 463,14610
+	int (*ioctl)ioctl477,15063
+	int (*poll)poll497,15718
+struct fuse_context 506,15978
+	struct fuse *fuse;fuse508,16035
+	uid_t uid;511,16095
+	gid_t gid;514,16148
+	pid_t pid;517,16202
+	void *private_data;private_data520,16247
+	mode_t umask;523,16334
+#define fuse_main(553,17345
+struct fuse_module 787,25468
+	const char *name;name791,25522
+	struct fuse_fs *(*factory)factory807,25994
+	struct fuse_module *next;next810,26077
+	struct fusemod_so *so;so811,26104
+	int ctr;812,26128
+#define FUSE_REGISTER_MODULE(829,26459
+typedef void (*fuse_processor_t)fuse_processor_t846,27104
+#  undef fuse_main883,28449
+#    define fuse_main(885,28497
+#    define fuse_new 887,28596
+#    define fuse_setup 888,28635
+#    define fuse_teardown 889,28678
+#    define fuse_operations 890,28727
+#    define fuse_main(892,28811
+#    define fuse_new 894,28910
+#    define fuse_setup 895,28949
+#    define fuse_teardown 896,28992
+#    define fuse_operations 897,29041
+#    define fuse_file_info 898,29094
+#    define fuse_dirfil_t 902,29252
+#    define __fuse_read_cmd 903,29299
+#    define __fuse_process_cmd 904,29341
+#    define __fuse_loop_mt 905,29389
+#      define fuse_operations 907,29465
+#      define fuse_main 908,29519
+#      define fuse_new 909,29561
+#      define __fuse_setup 910,29601
+#      define __fuse_teardown 911,29647
+#      define __fuse_exited 912,29700
+#      define __fuse_set_getcontext_func 913,29740
+#      define fuse_statfs 915,29816
+#      define fuse_operations 916,29862
+#      define fuse_main 917,29916
+#      define fuse_new 918,29958
+#      define FUSE_DEBUG 919,29998
+
+/usr/include/selinux/context.h,130
+#define _SELINUX_CONTEXT_H_2,28
+		void *ptr;ptr13,182
+	} context_s_t;14,195
+	typedef context_s_t *context_t;context_t16,212
+
+/usr/include/selinux/selinux.h,1413
+#define _SELINUX_H_2,20
+typedef char *security_context_t;security_context_t16,370
+typedef unsigned int access_vector_t;124,5294
+typedef unsigned short security_class_t;125,5332
+struct av_decision 127,5374
+	access_vector_t allowed;128,5395
+	access_vector_t decided;129,5421
+	access_vector_t auditallow;130,5447
+	access_vector_t auditdeny;131,5476
+	unsigned int seqno;132,5504
+	unsigned int flags;133,5525
+#define SELINUX_AVD_FLAGS_PERMISSIVE	137,5589
+struct selinux_opt 140,5704
+	int type;141,5725
+	const char *value;value142,5736
+union selinux_callback 146,5786
+	(*func_log)func_log153,5983
+	int (*func_audit)func_audit156,6141
+	int (*func_validate)func_validate159,6301
+	int (*func_setenforce)func_setenforce161,6397
+	int (*func_policyload)func_policyload163,6485
+#define SELINUX_CB_LOG	166,6526
+#define SELINUX_CB_AUDIT	167,6552
+#define SELINUX_CB_VALIDATE	168,6579
+#define SELINUX_CB_SETENFORCE	169,6609
+#define SELINUX_CB_POLICYLOAD	170,6641
+#define SELINUX_ERROR	176,6866
+#define SELINUX_WARNING	177,6898
+#define SELINUX_INFO	178,6925
+#define SELINUX_AVC	179,6949
+	char *name;name291,11575
+	int value;292,11588
+} SELboolean;293,11600
+struct security_class_mapping 344,13370
+	const char *name;name345,13402
+	const char *perms[perms346,13421
+#define MATCHPATHCON_BASEONLY 394,15531
+#define MATCHPATHCON_NOTRANS 395,15611
+#define MATCHPATHCON_VALIDATE 396,15689
+
+/usr/include/slurm/slurm.h,42167
+#define _SLURM_H43,2378
+# define BEGIN_C_DECLS	51,2642
+# define END_C_DECLS	52,2678
+# define BEGIN_C_DECLS	54,2707
+# define END_C_DECLS	55,2742
+# define PARAMS(65,3141
+# define PARAMS(67,3178
+#define SYSTEM_DIMENSIONS 80,3507
+#define HIGHEST_DIMENSIONS 81,3535
+#define HAVE_SYS_SOCKET_H 87,3712
+#define DEFAULT_WAIT_ALL_NODES 91,3826
+#define TRUE 123,4702
+#define FALSE 126,4739
+typedef unsigned char SLURM_BOOL;128,4757
+#define bool 130,4809
+#    define  __slurm_addr_t_defined137,5003
+typedef struct sockaddr_in slurm_addr_t;138,5039
+#  define PRIu64 146,5212
+#  define __slurm_cred_t_defined150,5274
+typedef struct slurm_job_credential slurm_cred_t;151,5307
+#  define  __switch_jobinfo_t_defined156,5480
+typedef struct switch_jobinfo switch_jobinfo_t;157,5518
+#  define  __job_resources_t_defined	163,5713
+typedef struct job_resources job_resources_t;164,5787
+#  define  __select_jobinfo_t_defined	170,5978
+typedef struct select_jobinfo select_jobinfo_t;171,6053
+typedef struct select_nodeinfo select_nodeinfo_t;172,6121
+#  define  __jobacctinfo_t_defined177,6308
+typedef struct jobacctinfo jobacctinfo_t;178,6343
+#  define  __allocation_msg_thread_t_defined184,6552
+typedef struct allocation_msg_thread allocation_msg_thread_t;185,6597
+#  define  __sbcast_cred_t_defined189,6699
+typedef struct sbcast_cred sbcast_cred_t;190,6734
+#define SLURM_VERSION_NUMBER 204,7369
+#define SLURM_VERSION_NUM(205,7407
+#define SLURM_VERSION_MAJOR(206,7473
+#define SLURM_VERSION_MINOR(207,7527
+#define SLURM_VERSION_MICRO(208,7581
+#define	INFINITE 216,7962
+#define NO_VAL	217,7992
+#define MAX_TASKS_PER_NODE 218,8021
+#define SLURM_BATCH_SCRIPT 221,8088
+enum job_states 226,8282
+	JOB_PENDING,227,8300
+	JOB_RUNNING,228,8351
+	JOB_SUSPENDED,229,8406
+	JOB_COMPLETE,230,8470
+	JOB_CANCELLED,231,8525
+	JOB_FAILED,232,8566
+	JOB_TIMEOUT,233,8621
+	JOB_NODE_FAIL,234,8676
+	JOB_PREEMPTED,235,8726
+	JOB_END	236,8778
+#define	JOB_STATE_BASE	238,8836
+#define	JOB_STATE_FLAGS	239,8898
+#define	JOB_COMPLETING	240,8962
+#define	JOB_CONFIGURING	241,9028
+#define	JOB_RESIZING	242,9089
+#define READY_JOB_FATAL	246,9248
+#define READY_JOB_ERROR 247,9296
+#define READY_NODE_STATE 248,9347
+#define READY_JOB_STATE 249,9397
+#define MAIL_JOB_BEGIN 251,9458
+#define MAIL_JOB_END 252,9520
+#define MAIL_JOB_FAIL 253,9580
+#define MAIL_JOB_REQUEUE 254,9639
+#define NICE_OFFSET 256,9702
+enum job_state_reason 261,9933
+	WAIT_NO_REASON 263,9993
+	WAIT_PRIORITY,264,10047
+	WAIT_DEPENDENCY,265,10097
+	WAIT_RESOURCES,266,10153
+	WAIT_PART_NODE_LIMIT,267,10210
+	WAIT_PART_TIME_LIMIT,268,10276
+	WAIT_PART_DOWN,269,10342
+	WAIT_PART_INACTIVE,270,10394
+	WAIT_HELD,271,10453
+	WAIT_TIME,272,10501
+	WAIT_LICENSES,273,10556
+	WAIT_ASSOC_JOB_LIMIT,274,10607
+	WAIT_ASSOC_RESOURCE_LIMIT,275,10664
+	WAIT_ASSOC_TIME_LIMIT,276,10730
+	WAIT_RESERVATION,277,10790
+	WAIT_NODE_NOT_AVAIL,278,10841
+	WAIT_HELD_USER,279,10902
+	WAIT_TBD2,280,10946
+	FAIL_DOWN_PARTITION,281,10958
+	FAIL_DOWN_NODE,282,11012
+	FAIL_BAD_CONSTRAINTS,283,11071
+	FAIL_SYSTEM,284,11133
+	FAIL_LAUNCH,285,11175
+	FAIL_EXIT_CODE,286,11217
+	FAIL_TIMEOUT,287,11264
+	FAIL_INACTIVE_LIMIT,288,11312
+	FAIL_ACCOUNT,289,11368
+	FAIL_QOS,290,11408
+	WAIT_QOS_THRES,291,11445
+	WAIT_QOS_JOB_LIMIT,292,11517
+	WAIT_QOS_RESOURCE_LIMIT,293,11566
+	WAIT_QOS_TIME_LIMIT	294,11624
+enum job_acct_types 297,11678
+	JOB_START,298,11700
+	JOB_STEP,299,11712
+	JOB_SUSPEND,300,11723
+	JOB_TERMINATED301,11737
+#define PARTITION_SUBMIT	305,11785
+#define PARTITION_SCHED 306,11855
+#define PARTITION_DOWN	309,11978
+#define PARTITION_UP	310,12021
+#define PARTITION_DRAIN	311,12080
+#define PARTITION_INACTIVE	312,12123
+enum connection_type 314,12156
+	SELECT_MESH,315,12179
+	SELECT_TORUS,316,12221
+	SELECT_NAV,317,12265
+	SELECT_SMALL,318,12316
+	SELECT_HTC_S,319,12366
+	SELECT_HTC_D,320,12429
+	SELECT_HTC_V,321,12493
+	SELECT_HTC_L 322,12555
+enum node_use_type 325,12627
+	SELECT_COPROCESSOR_MODE,326,12648
+	SELECT_VIRTUAL_NODE_MODE,327,12718
+	SELECT_NAV_MODE	328,12783
+enum select_jobdata_type 331,12837
+	SELECT_JOBDATA_GEOMETRY,332,12864
+	SELECT_JOBDATA_ROTATE,333,12939
+	SELECT_JOBDATA_CONN_TYPE,334,12992
+	SELECT_JOBDATA_BLOCK_ID,335,13057
+	SELECT_JOBDATA_NODES,336,13114
+	SELECT_JOBDATA_IONODES,337,13162
+	SELECT_JOBDATA_NODE_CNT,338,13214
+	SELECT_JOBDATA_ALTERED,339,13272
+	SELECT_JOBDATA_BLRTS_IMAGE,340,13330
+	SELECT_JOBDATA_LINUX_IMAGE,341,13388
+	SELECT_JOBDATA_MLOADER_IMAGE,342,13446
+	SELECT_JOBDATA_RAMDISK_IMAGE,343,13508
+	SELECT_JOBDATA_REBOOT,344,13570
+	SELECT_JOBDATA_RESV_ID,345,13623
+	SELECT_JOBDATA_PAGG_ID,346,13685
+	SELECT_JOBDATA_PTR,347,13749
+	SELECT_JOBDATA_BLOCK_PTR,348,13809
+	SELECT_JOBDATA_DIM_CNT,349,13872
+	SELECT_JOBDATA_BLOCK_NODE_CNT,350,13927
+	SELECT_JOBDATA_START_LOC,351,13997
+enum select_nodedata_type 355,14088
+	SELECT_NODEDATA_BITMAP_SIZE,356,14116
+	SELECT_NODEDATA_SUBGRP_SIZE,357,14168
+	SELECT_NODEDATA_SUBCNT,358,14220
+	SELECT_NODEDATA_BITMAP,359,14272
+	SELECT_NODEDATA_STR,361,14378
+	SELECT_NODEDATA_PTR,363,14470
+enum select_print_mode 366,14545
+	SELECT_PRINT_HEAD,367,14570
+	SELECT_PRINT_DATA,368,14618
+	SELECT_PRINT_MIXED,369,14664
+	SELECT_PRINT_MIXED_SHORT,370,14711
+	SELECT_PRINT_BG_ID,371,14768
+	SELECT_PRINT_NODES,372,14816
+	SELECT_PRINT_CONNECTION,373,14862
+	SELECT_PRINT_ROTATE,374,14924
+	SELECT_PRINT_GEOMETRY,375,14977
+	SELECT_PRINT_START,376,15026
+	SELECT_PRINT_BLRTS_IMAGE,377,15083
+	SELECT_PRINT_LINUX_IMAGE,378,15142
+	SELECT_PRINT_MLOADER_IMAGE,379,15201
+	SELECT_PRINT_RAMDISK_IMAGE,380,15264
+	SELECT_PRINT_REBOOT,381,15327
+	SELECT_PRINT_RESV_ID,382,15377
+	SELECT_PRINT_START_LOC,383,15443
+enum select_node_cnt 386,15508
+	SELECT_GET_NODE_SCALING,387,15531
+	SELECT_GET_NODE_CPU_CNT,388,15603
+	SELECT_GET_MP_CPU_CNT,389,15673
+	SELECT_APPLY_NODE_MIN_OFFSET,391,15766
+	SELECT_APPLY_NODE_MAX_OFFSET,392,15832
+	SELECT_SET_NODE_CNT,393,15898
+	SELECT_SET_MP_CNT 394,15953
+enum jobacct_data_type 399,16081
+	JOBACCT_DATA_TOTAL,400,16106
+	JOBACCT_DATA_PIPE,401,16156
+	JOBACCT_DATA_RUSAGE,402,16210
+	JOBACCT_DATA_MAX_VSIZE,404,16318
+	JOBACCT_DATA_MAX_VSIZE_ID,405,16371
+	JOBACCT_DATA_TOT_VSIZE,406,16431
+	JOBACCT_DATA_MAX_RSS,407,16484
+	JOBACCT_DATA_MAX_RSS_ID,408,16535
+	JOBACCT_DATA_TOT_RSS,409,16593
+	JOBACCT_DATA_MAX_PAGES,410,16644
+	JOBACCT_DATA_MAX_PAGES_ID,411,16697
+	JOBACCT_DATA_TOT_PAGES,412,16757
+	JOBACCT_DATA_MIN_CPU,413,16810
+	JOBACCT_DATA_MIN_CPU_ID,414,16861
+	JOBACCT_DATA_TOT_CPU	415,16919
+typedef enum task_dist_states 419,17024
+	SLURM_DIST_CYCLIC 421,17109
+	SLURM_DIST_BLOCK,422,17180
+	SLURM_DIST_ARBITRARY,423,17243
+	SLURM_DIST_PLANE,424,17301
+	SLURM_DIST_CYCLIC_CYCLIC,429,17480
+	SLURM_DIST_CYCLIC_BLOCK,432,17620
+	SLURM_DIST_BLOCK_CYCLIC,433,17688
+	SLURM_DIST_BLOCK_BLOCK,434,17756
+	SLURM_NO_LLLP_DIST,435,17822
+	SLURM_DIST_UNKNOWN	436,17884
+} task_dist_states_t;437,17923
+#define OPEN_MODE_APPEND	440,18016
+#define OPEN_MODE_TRUNCATE	441,18043
+typedef enum cpu_bind_type 443,18073
+	CPU_BIND_VERBOSE 445,18191
+	CPU_BIND_VERBOSE   = 0x01,x01445,18191
+	CPU_BIND_TO_THREADS=447,18292
+	CPU_BIND_TO_THREADS= 0x02,x02447,18292
+	CPU_BIND_TO_CORES 448,18335
+	CPU_BIND_TO_CORES  = 0x04,x04448,18335
+	CPU_BIND_TO_SOCKETS=449,18376
+	CPU_BIND_TO_SOCKETS= 0x08,x08449,18376
+	CPU_BIND_TO_LDOMS 450,18419
+	CPU_BIND_TO_LDOMS  = 0x10,x10450,18419
+	CPU_BIND_NONE	453,18607
+	CPU_BIND_NONE	   = 0x20,x20453,18607
+	CPU_BIND_RANK 454,18643
+	CPU_BIND_RANK  	   = 0x40,x40454,18643
+	CPU_BIND_MAP	455,18683
+	CPU_BIND_MAP	   = 0x80,x80455,18683
+	CPU_BIND_MASK	456,18741
+	CPU_BIND_MASK	   = 0x100,x100456,18741
+	CPU_BIND_LDRANK 457,18803
+	CPU_BIND_LDRANK    = 0x200,x200457,18803
+	CPU_BIND_LDMAP	458,18859
+	CPU_BIND_LDMAP	   = 0x400,x400458,18859
+	CPU_BIND_LDMASK	459,18929
+	CPU_BIND_LDMASK	   = 0x800,x800459,18929
+	CPU_BIND_CPUSETS 463,19092
+	CPU_BIND_CPUSETS   = 0x8000x8000463,19092
+} cpu_bind_type_t;464,19121
+typedef enum mem_bind_type 466,19141
+	MEM_BIND_VERBOSE=468,19265
+	MEM_BIND_VERBOSE= 0x01,x01468,19265
+	MEM_BIND_NONE 471,19425
+	MEM_BIND_NONE   = 0x02,x02471,19425
+	MEM_BIND_RANK 472,19460
+	MEM_BIND_RANK   = 0x04,x04472,19460
+	MEM_BIND_MAP 473,19497
+	MEM_BIND_MAP    = 0x08,x08473,19497
+	MEM_BIND_MASK 474,19555
+	MEM_BIND_MASK   = 0x10,x10474,19555
+	MEM_BIND_LOCAL 475,19616
+	MEM_BIND_LOCAL  = 0x20	x20475,19616
+} mem_bind_type_t;476,19653
+enum node_states 483,19995
+	NODE_STATE_UNKNOWN,484,20014
+	NODE_STATE_DOWN,485,20071
+	NODE_STATE_IDLE,486,20120
+	NODE_STATE_ALLOCATED,487,20176
+	NODE_STATE_ERROR,488,20238
+	NODE_STATE_MIXED,489,20289
+	NODE_STATE_FUTURE,490,20337
+	NODE_STATE_END	491,20397
+#define NODE_STATE_BASE 493,20443
+#define NODE_STATE_FLAGS 494,20480
+#define NODE_RESUME 495,20517
+#define NODE_STATE_DRAIN 499,20707
+#define NODE_STATE_COMPLETING 500,20781
+#define NODE_STATE_NO_RESPOND 501,20857
+#define NODE_STATE_POWER_SAVE 502,20923
+#define NODE_STATE_FAIL 503,20990
+#define NODE_STATE_POWER_UP 505,21083
+#define NODE_STATE_MAINT 507,21178
+#define SLURM_SSL_SIGNATURE_LENGTH 512,21375
+#define SHOW_ALL	516,21516
+#define SHOW_DETAIL	517,21580
+enum ctx_keys 520,21712
+	SLURM_STEP_CTX_STEPID,521,21728
+	SLURM_STEP_CTX_TASKS,522,21786
+	SLURM_STEP_CTX_TID,523,21852
+	SLURM_STEP_CTX_RESP,524,21920
+	SLURM_STEP_CTX_CRED,525,21985
+	SLURM_STEP_CTX_SWITCH_JOB,526,22007
+	SLURM_STEP_CTX_NUM_HOSTS,527,22035
+	SLURM_STEP_CTX_HOST,528,22062
+	SLURM_STEP_CTX_JOBID,529,22084
+	SLURM_STEP_CTX_USER_MANAGED_SOCKETS530,22107
+#define CR_CPU	536,22348
+#define CR_SOCKET	539,22514
+#define CR_CORE	542,22653
+#define CR_MEMORY	545,22787
+#define CR_ONE_TASK_PER_CORE 548,22909
+#define CR_CORE_DEFAULT_DIST_BLOCK 552,23057
+#define MEM_PER_CPU 556,23178
+#define SHARED_FORCE 557,23210
+#define PRIVATE_DATA_JOBS	559,23239
+#define PRIVATE_DATA_NODES	560,23305
+#define PRIVATE_DATA_PARTITIONS	561,23368
+#define PRIVATE_DATA_USAGE	562,23441
+#define PRIVATE_DATA_USERS	563,23516
+#define PRIVATE_DATA_ACCOUNTS	564,23590
+#define PRIVATE_DATA_RESERVATIONS 565,23669
+#define PRIORITY_RESET_NONE	567,23745
+#define PRIORITY_RESET_NOW	568,23798
+#define PRIORITY_RESET_DAILY	569,23874
+#define PRIORITY_RESET_WEEKLY	570,23940
+#define PRIORITY_RESET_MONTHLY	571,24012
+#define PRIORITY_RESET_QUARTERLY 572,24088
+#define PRIORITY_RESET_YEARLY	573,24168
+#define PROP_PRIO_OFF	575,24243
+#define PROP_PRIO_ON	576,24312
+#define PROP_PRIO_NICER	577,24373
+#  define __hostlist_t_defined590,24887
+typedef struct hostlist * hostlist_t;591,24918
+#  define __list_datatypes_defined727,29284
+typedef struct list * List;728,29319
+typedef struct listIterator * ListIterator;733,29382
+typedef void (*ListDelF)ListDelF738,29470
+typedef int (*ListCmpF)ListCmpF745,29712
+typedef int (*ListFindF)ListFindF752,29914
+typedef int (*ListForF)ListForF758,30074
+#  define __bitstr_datatypes_defined856,33294
+typedef int64_t bitstr_t;859,33356
+#define BITSTR_SHIFT 860,33382
+typedef int32_t bitstr_t;862,33431
+#define BITSTR_SHIFT 863,33457
+typedef bitstr_t bitoff_t;866,33508
+#define ALLOC_SID_ADMIN_HOLD	870,33544
+#define ALLOC_SID_USER_HOLD	871,33605
+typedef struct dynamic_plugin_data 876,33864
+	void *data;data877,33901
+	uint32_t plugin_id;878,33914
+} dynamic_plugin_data_t;879,33935
+typedef struct job_descriptor 881,33961
+	char *account;account882,34041
+	uint16_t acctg_freq;883,34092
+	char *alloc_node;alloc_node884,34158
+	uint16_t alloc_resp_port;887,34301
+	uint32_t alloc_sid;888,34374
+	uint32_t argc;893,34594
+	char **argv;argv894,34651
+	time_t begin_time;895,34696
+	uint16_t ckpt_interval;896,34755
+	char *ckpt_dir;ckpt_dir897,34819
+	char *comment;comment898,34881
+	uint16_t contiguous;899,34947
+	char *cpu_bind;cpu_bind901,35040
+	uint16_t cpu_bind_type;902,35093
+	char *dependency;dependency903,35144
+	time_t end_time;904,35211
+	char **environment;environment907,35355
+	uint32_t env_size;909,35459
+	char *exc_nodes;exc_nodes910,35514
+	char *features;features912,35620
+	char *gres;gres914,35707
+	uint32_t group_id;916,35799
+	uint16_t immediate;917,35858
+	uint32_t job_id;919,35971
+	uint16_t kill_on_node_fail;920,36024
+	char *licenses;licenses922,36123
+	uint16_t mail_type;923,36176
+	char *mail_user;mail_user924,36235
+	char *mem_bind;mem_bind925,36288
+	uint16_t mem_bind_type;926,36341
+	char *name;name927,36392
+	char *network;network928,36440
+	uint16_t nice;929,36480
+	uint32_t num_tasks;931,36562
+	uint8_t open_mode;933,36642
+	uint16_t other_port;935,36729
+	uint8_t overcommit;936,36798
+	char *partition;partition937,36866
+	uint16_t plane_size;939,36950
+	uint32_t priority;941,37030
+	char *qos;qos944,37162
+	char *resp_host;resp_host945,37200
+	char *req_nodes;req_nodes946,37247
+	uint16_t requeue;948,37330
+	char *reservation;reservation949,37392
+	char *script;script950,37445
+	uint16_t shared;951,37503
+	char **spank_job_env;spank_job_env955,37715
+	uint32_t spank_job_env_size;957,37827
+	uint16_t task_dist;958,37890
+	uint32_t time_limit;959,37942
+	uint32_t time_min;961,38033
+	uint32_t user_id;963,38117
+	uint16_t wait_all_nodes;965,38229
+	uint16_t warn_signal;968,38388
+	uint16_t warn_time;969,38458
+	char *work_dir;work_dir970,38526
+	uint16_t cpus_per_task;973,38605
+	uint32_t min_cpus;975,38687
+	uint32_t max_cpus;977,38769
+	uint32_t min_nodes;979,38851
+	uint32_t max_nodes;981,38936
+	uint16_t sockets_per_node;983,39019
+	uint16_t cores_per_socket;984,39085
+	uint16_t threads_per_core;985,39151
+	uint16_t ntasks_per_node;986,39217
+	uint16_t ntasks_per_socket;987,39288
+	uint16_t ntasks_per_core;989,39373
+	uint16_t pn_min_cpus;990,39444
+	uint32_t pn_min_memory;991,39511
+	uint32_t pn_min_tmp_disk;994,39647
+	uint16_t geometry[geometry1003,39973
+	uint16_t conn_type[conn_type1005,40079
+	uint16_t reboot;1006,40151
+	uint16_t rotate;1007,40208
+	char *blrtsimage;blrtsimage1008,40264
+	char *linuximage;linuximage1009,40316
+	char *mloaderimage;mloaderimage1010,40368
+	char *ramdiskimage;ramdiskimage1011,40422
+	uint32_t req_switch;1014,40516
+	dynamic_plugin_data_t *select_jobinfo;select_jobinfo1015,40574
+	char *std_err;std_err1017,40672
+	char *std_in;std_in1018,40714
+	char *std_out;std_out1019,40754
+	uint32_t wait4switch;1020,40796
+	char *wckey;wckey1021,40869
+} job_desc_msg_t;1022,40914
+typedef struct job_info 1024,40933
+	char *account;account1025,40959
+	char    *alloc_node;alloc_node1026,41010
+	uint32_t alloc_sid;1027,41071
+	uint32_t assoc_id;1028,41130
+	uint16_t batch_flag;1029,41179
+	char *batch_host;batch_host1030,41242
+	char *batch_script;batch_script1031,41301
+	char *command;command1032,41353
+	char *comment;comment1033,41399
+	uint16_t contiguous;1034,41465
+	uint16_t cpus_per_task;1035,41528
+	char *dependency;dependency1037,41610
+	uint32_t derived_ec;1038,41677
+	time_t eligible_time;1039,41740
+	time_t end_time;1040,41802
+	char *exc_nodes;exc_nodes1041,41866
+	int *exc_node_inx;exc_node_inx1042,41929
+	uint32_t exit_code;1045,42063
+	char *features;features1046,42132
+	char *gres;gres1047,42198
+	uint32_t group_id;1048,42260
+	uint32_t job_id;1049,42308
+	uint16_t job_state;1050,42339
+	char *licenses;licenses1051,42404
+	uint32_t max_cpus;1052,42457
+	uint32_t max_nodes;1053,42520
+	uint16_t sockets_per_node;1054,42585
+	uint16_t cores_per_socket;1055,42651
+	uint16_t threads_per_core;1056,42717
+	char *name;name1057,42783
+	char *network;network1058,42819
+	char *nodes;nodes1059,42864
+	uint16_t nice;1060,42916
+	int *node_inx;node_inx1061,42967
+	uint16_t ntasks_per_core;1064,43100
+	uint16_t ntasks_per_node;1065,43171
+	uint16_t ntasks_per_socket;1066,43242
+	uint32_t num_nodes;1068,43318
+	uint32_t num_cpus;1069,43385
+	char *partition;partition1070,43450
+	uint32_t pn_min_memory;1071,43501
+	uint16_t pn_min_cpus;1072,43572
+	uint32_t pn_min_tmp_disk;1073,43638
+	time_t pre_sus_time;1074,43708
+	uint32_t priority;1075,43771
+	char *qos;qos1077,43872
+	char *req_nodes;req_nodes1078,43910
+	int *req_node_inx;req_node_inx1079,43973
+	uint32_t req_switch;1082,44107
+	uint16_t requeue;1083,44165
+	time_t resize_time;1084,44233
+	uint16_t restart_cnt;1085,44287
+	char *resv_name;resv_name1086,44338
+	dynamic_plugin_data_t *select_jobinfo;select_jobinfo1087,44379
+	job_resources_t *job_resrcs;job_resrcs1091,44506
+	uint16_t shared;1092,44574
+	uint16_t show_flags;1093,44639
+	time_t start_time;1094,44702
+	char *state_desc;state_desc1095,44770
+	uint16_t state_reason;1096,44829
+	time_t submit_time;1098,44936
+	time_t suspend_time;1099,44986
+	uint32_t time_limit;1100,45049
+	uint32_t time_min;1101,45117
+	uint32_t user_id;1102,45183
+	time_t 	preempt_time;1103,45229
+	uint32_t wait4switch;1104,45281
+	char *wckey;wckey1105,45354
+	char *work_dir;work_dir1106,45399
+} job_info_t;1107,45453
+typedef struct job_info_msg 1109,45468
+	time_t last_update;1110,45498
+	uint32_t record_count;1111,45545
+	job_info_t *job_array;job_array1112,45593
+} job_info_msg_t;1113,45639
+typedef struct step_update_request_msg 1115,45658
+	uint32_t job_id;1116,45699
+	uint32_t step_id;1117,45717
+	uint32_t time_limit;1118,45736
+} step_update_request_msg_t;1119,45775
+typedef struct slurm_step_layout 1121,45805
+	char *front_end;front_end1122,45840
+	uint32_t node_cnt;1125,45965
+	char *node_list;node_list1126,46002
+	uint16_t plane_size;1127,46055
+	uint16_t *tasks;tasks1131,46258
+	uint32_t task_cnt;1132,46276
+	uint16_t task_dist;1133,46336
+	uint32_t **tids;tids1137,46541
+} slurm_step_layout_t;1138,46592
+typedef struct slurm_step_io_fds 1140,46616
+		int fd;1142,46661
+		uint32_t taskid;1143,46671
+		uint32_t nodeid;1144,46690
+	} in,1145,46709
+	} in, out,1145,46709
+	} in, out, err;1145,46709
+} slurm_step_io_fds_t;1146,46726
+#define SLURM_STEP_IO_FDS_INITIALIZER 1148,46750
+typedef struct launch_tasks_response_msg 1152,46899
+	uint32_t return_code;1153,46942
+	char    *node_name;node_name1154,46965
+	uint32_t srun_node_id;1155,46986
+	uint32_t count_of_pids;1156,47010
+	uint32_t *local_pids;local_pids1157,47035
+	uint32_t *task_ids;task_ids1158,47058
+} launch_tasks_response_msg_t;1159,47115
+typedef struct task_ext_msg 1161,47147
+	uint32_t num_tasks;1162,47177
+	uint32_t *task_id_list;task_id_list1163,47198
+	uint32_t return_code;1164,47223
+	uint32_t job_id;1165,47246
+	uint32_t step_id;1166,47264
+} task_exit_msg_t;1167,47283
+typedef struct srun_ping_msg 1169,47303
+	uint32_t job_id;1170,47334
+	uint32_t step_id;1171,47371
+} srun_ping_msg_t;1172,47414
+typedef struct srun_job_complete_msg 1174,47434
+	uint32_t job_id;1175,47473
+	uint32_t step_id;1176,47517
+} srun_job_complete_msg_t;1177,47566
+typedef struct srun_timeout_msg 1179,47594
+	uint32_t job_id;1180,47628
+	uint32_t step_id;1181,47665
+	time_t   timeout;1182,47708
+} srun_timeout_msg_t;1183,47765
+typedef struct srun_user_msg 1185,47788
+	uint32_t job_id;1186,47819
+	char *msg;msg1187,47856
+} srun_user_msg_t;1188,47898
+typedef struct srun_node_fail_msg 1190,47918
+	uint32_t job_id;1191,47954
+	char *nodelist;nodelist1192,47991
+	uint32_t step_id;1193,48038
+} srun_node_fail_msg_t;1194,48081
+typedef struct srun_step_missing_msg 1196,48106
+	uint32_t job_id;1197,48145
+	char *nodelist;nodelist1198,48182
+	uint32_t step_id;1199,48240
+} srun_step_missing_msg_t;1200,48283
+enum suspend_opts 1202,48311
+	SUSPEND_JOB,1203,48331
+	RESUME_JOB	1204,48370
+typedef struct suspend_msg 1207,48410
+	uint16_t op;1208,48439
+	uint32_t job_id;1209,48511
+} suspend_msg_t;1210,48555
+	uint16_t ckpt_interval;1213,48590
+	uint32_t cpu_count;1214,48652
+	uint16_t exclusive;1215,48709
+	char *features;features1216,48774
+	uint16_t immediate;1217,48835
+	uint32_t job_id;1219,48948
+	uint32_t mem_per_cpu;1220,48979
+	char *ckpt_dir;ckpt_dir1222,49064
+	char *gres;gres1223,49130
+	char *name;name1224,49175
+	char *network;network1225,49216
+	uint8_t no_kill;1226,49256
+	uint32_t min_nodes;1227,49309
+	uint32_t max_nodes;1229,49394
+	char *node_list;node_list1231,49477
+	bool overcommit;1232,49524
+	uint16_t plane_size;1236,49721
+	uint16_t relative;1238,49801
+	uint16_t resv_port_cnt;1239,49865
+	uint32_t task_count;1240,49917
+	uint16_t task_dist;1241,49970
+	uint32_t time_limit;1243,50059
+	uid_t uid;1244,50103
+	uint16_t verbose_level;1245,50130
+} slurm_step_ctx_params_t;1247,50215
+	uint32_t argc;1250,50260
+	char **argv;argv1251,50276
+	uint32_t envc;1252,50290
+	char **env;env1253,50306
+	char *cwd;cwd1254,50319
+	bool user_managed_io;1255,50331
+	uint32_t msg_timeout;1256,50354
+	bool buffered_stdio;1259,50469
+	bool labelio;1260,50491
+	char *remote_output_filename;remote_output_filename1261,50506
+	char *remote_error_filename;remote_error_filename1262,50537
+	char *remote_input_filename;remote_input_filename1263,50567
+	slurm_step_io_fds_t local_fds;1264,50597
+	uint32_t gid;1267,50683
+	bool multi_prog;1268,50698
+	uint32_t slurmd_debug;1269,50716
+	bool parallel_debug;1270,50773
+	char *task_prolog;task_prolog1271,50795
+	char *task_epilog;task_epilog1272,50815
+	uint16_t cpu_bind_type;1273,50835
+	char *cpu_bind;cpu_bind1274,50886
+	uint16_t mem_bind_type;1275,50903
+	char *mem_bind;mem_bind1276,50954
+	uint16_t max_sockets;1278,50972
+	uint16_t max_cores;1279,50995
+	uint16_t max_threads;1280,51016
+	uint16_t cpus_per_task;1281,51039
+	uint16_t task_dist;1282,51064
+	bool preserve_env;1283,51085
+	char *mpi_plugin_name;mpi_plugin_name1285,51106
+	uint8_t open_mode;1286,51130
+	uint16_t acctg_freq;1287,51150
+	bool pty;1288,51172
+	char *ckpt_dir;ckpt_dir1289,51183
+	char *restart_dir;restart_dir1290,51200
+	char **spank_job_env;spank_job_env1291,51220
+	uint32_t spank_job_env_size;1293,51332
+} slurm_step_launch_params_t;1294,51395
+	void (*task_start)task_start1297,51443
+	void (*task_finish)task_finish1298,51495
+} slurm_step_launch_callbacks_t;1299,51536
+	void (*ping)ping1302,51587
+	void (*job_complete)job_complete1303,51621
+	void (*timeout)timeout1304,51671
+	void (*user_msg)user_msg1305,51711
+	void (*node_fail)node_fail1306,51749
+	void (*job_suspend)job_suspend1307,51793
+} slurm_allocation_callbacks_t;1308,51832
+	void (*acct_full)acct_full1311,51882
+	void (*dbd_fail)dbd_fail1312,51904
+	void (*dbd_resumed)dbd_resumed1313,51925
+	void (*db_fail)db_fail1314,51949
+	void (*db_resumed)db_resumed1315,51969
+} slurm_trigger_callbacks_t;1316,51992
+	char *ckpt_dir;ckpt_dir1319,52039
+	uint16_t ckpt_interval;1320,52100
+	char *gres;gres1321,52162
+	uint32_t job_id;1322,52209
+	char *name;name1323,52240
+	char *network;network1324,52277
+	char *nodes;nodes1325,52327
+	int *node_inx;node_inx1326,52384
+	uint32_t num_cpus;1329,52517
+	uint32_t num_tasks;1330,52580
+	char *partition;partition1331,52623
+	char *resv_ports;resv_ports1332,52674
+	time_t run_time;1333,52723
+	dynamic_plugin_data_t *select_jobinfo;select_jobinfo1334,52788
+	time_t start_time;1338,52915
+	uint32_t step_id;1339,52957
+	uint32_t time_limit;1340,52990
+	uint32_t user_id;1341,53034
+} job_step_info_t;1342,53080
+typedef struct job_step_info_response_msg 1344,53100
+	time_t last_update;1345,53144
+	uint32_t job_step_count;1346,53192
+	job_step_info_t *job_steps;job_steps1347,53242
+} job_step_info_response_msg_t;1348,53298
+   	char *node_name;node_name1351,53348
+        uint32_t *pid;pid1352,53369
+	uint32_t pid_cnt;1353,53392
+} job_step_pids_t;1354,53411
+	uint32_t job_id;1357,53448
+	List pid_list;1358,53466
+	uint32_t step_id;1359,53516
+} job_step_pids_response_msg_t;1360,53535
+	jobacctinfo_t *jobacct;jobacct1363,53585
+	uint32_t num_tasks;1364,53610
+   	uint32_t return_code;1365,53631
+	job_step_pids_t *step_pids;step_pids1366,53657
+} job_step_stat_t;1367,53686
+	uint32_t job_id;1370,53723
+	List stats_list;1371,53741
+	uint32_t step_id;1372,53793
+} job_step_stat_response_msg_t;1373,53812
+typedef struct node_info 1375,53845
+	char *arch;arch1376,53872
+	time_t boot_time;1377,53914
+	uint16_t cores;1378,53957
+	uint16_t cpus;1379,54012
+	char *features;features1381,54087
+	char *gres;gres1382,54137
+	char *name;name1383,54192
+	char *node_addr;node_addr1384,54231
+	char *node_hostname;node_hostname1385,54285
+	uint16_t node_state;1386,54340
+	char *os;os1387,54389
+	uint32_t real_memory;1388,54442
+	char *reason;reason1389,54512
+	time_t reason_time;1390,54573
+	uint32_t reason_uid;1392,54667
+	time_t slurmd_start_time;1394,54759
+	uint16_t sockets;1395,54814
+	uint16_t threads;1396,54872
+	uint32_t tmp_disk;1397,54930
+	uint32_t weight;1398,54994
+	dynamic_plugin_data_t *select_nodeinfo;select_nodeinfo1399,55060
+} node_info_t;1403,55212
+typedef struct node_info_msg 1405,55228
+	time_t last_update;1406,55259
+	uint32_t node_scaling;1407,55307
+	uint32_t record_count;1413,55517
+	node_info_t *node_array;node_array1414,55566
+} node_info_msg_t;1415,55615
+typedef struct front_end_info 1417,55635
+	time_t boot_time;1418,55667
+	char *name;name1420,55742
+	uint16_t node_state;1421,55773
+	char *reason;reason1422,55823
+	time_t reason_time;1424,55893
+	uint32_t reason_uid;1426,55989
+	time_t slurmd_start_time;1428,56083
+} front_end_info_t;1429,56139
+typedef struct front_end_info_msg 1431,56160
+	time_t last_update;1432,56196
+	uint32_t record_count;1433,56244
+	front_end_info_t *front_end_array;front_end_array1434,56293
+} front_end_info_msg_t;1435,56357
+typedef struct topo_info 1437,56382
+	uint16_t level;1438,56409
+	uint32_t link_speed;1439,56461
+	char *name;name1440,56518
+	char *nodes;nodes1441,56551
+	char *switches;switches1442,56605
+} topo_info_t;1443,56665
+typedef struct topo_info_response_msg 1445,56681
+	uint32_t record_count;1446,56721
+	topo_info_t *topo_array;topo_array1447,56770
+} topo_info_response_msg_t;1448,56830
+typedef struct job_alloc_info_msg 1450,56859
+	uint32_t job_id;1451,56895
+} job_alloc_info_msg_t;1452,56926
+#define PART_FLAG_DEFAULT	1456,57062
+#define PART_FLAG_HIDDEN	1457,57126
+#define PART_FLAG_NO_ROOT	1458,57191
+#define PART_FLAG_ROOT_ONLY	1459,57261
+#define PART_FLAG_DEFAULT_CLR	1464,57591
+#define PART_FLAG_HIDDEN_CLR	1465,57663
+#define PART_FLAG_NO_ROOT_CLR	1466,57733
+#define PART_FLAG_ROOT_ONLY_CLR	1467,57805
+typedef struct partition_info 1469,57882
+	char *allow_alloc_nodes;allow_alloc_nodes1470,57914
+	char *allow_groups;allow_groups1471,57984
+	char *alternate;alternate1473,58069
+	uint32_t def_mem_per_cpu;1474,58122
+	uint32_t default_time;1475,58191
+	uint16_t flags;1476,58249
+	uint32_t grace_time;1477,58295
+	uint32_t max_mem_per_cpu;1478,58357
+	uint32_t max_nodes;1479,58426
+	uint16_t max_share;1480,58473
+	uint32_t max_time;1481,58532
+	uint32_t min_nodes;1482,58578
+	char *name;name1483,58613
+	int *node_inx;node_inx1484,58655
+	char *nodes;nodes1487,58777
+	uint16_t preempt_mode;1488,58831
+	uint16_t priority;1489,58897
+	uint16_t state_up;1490,58952
+	uint32_t total_cpus;1491,59006
+	uint32_t total_nodes;1492,59072
+} partition_info_t;1493,59140
+typedef struct delete_partition_msg 1495,59161
+	char *name;name1496,59199
+} delete_part_msg_t;1497,59250
+typedef struct resource_allocation_response_msg 1499,59272
+	uint32_t job_id;1500,59322
+	char *node_list;node_list1501,59362
+	uint32_t num_cpu_groups;1502,59409
+	uint16_t *cpus_per_node;cpus_per_node1503,59469
+	uint32_t *cpu_count_reps;cpu_count_reps1504,59514
+	uint32_t node_cnt;1505,59581
+	uint32_t error_code;1506,59622
+	dynamic_plugin_data_t *select_jobinfo;select_jobinfo1507,59681
+	uint32_t pn_min_memory;1511,59827
+} resource_allocation_response_msg_t;1514,59963
+typedef struct job_alloc_info_response_msg 1516,60002
+	uint32_t job_id;1517,60047
+	char *node_list;node_list1518,60087
+	uint32_t num_cpu_groups;1519,60134
+	uint16_t *cpus_per_node;cpus_per_node1520,60194
+	uint32_t *cpu_count_reps;cpu_count_reps1521,60239
+	uint32_t node_cnt;1522,60306
+	slurm_addr_t *node_addr;node_addr1523,60347
+	uint32_t error_code;1524,60397
+	dynamic_plugin_data_t *select_jobinfo;select_jobinfo1525,60456
+} job_alloc_info_response_msg_t;1529,60602
+typedef struct partition_info_msg 1531,60636
+	time_t last_update;1532,60672
+	uint32_t record_count;1533,60719
+	partition_info_t *partition_array;partition_array1534,60767
+} partition_info_msg_t;1535,60831
+	char *cnodes;cnodes1541,60911
+	int *cnode_inx;cnode_inx1542,60966
+	uint32_t job_id;1547,61160
+	void *job_ptr;job_ptr1548,61198
+	uint32_t user_id;1549,61260
+	char *user_name;user_name1550,61317
+} block_job_info_t;1551,61376
+	char *bg_block_id;bg_block_id1554,61414
+	char *blrtsimage;blrtsimage1555,61434
+	uint16_t conn_type[conn_type1556,61491
+	uint32_t cnode_cnt;1557,61532
+	int *ionode_inx;ionode_inx1558,61553
+	char *ionode_str;ionode_str1562,61721
+	List job_list;1563,61740
+	uint32_t job_running;1564,61806
+	char *linuximage;linuximage1565,61829
+	char *mloaderimage;mloaderimage1566,61886
+	int *mp_inx;mp_inx1567,61945
+	char *mp_str;mp_str1570,62087
+	int *mp_used_inx;mp_used_inx1571,62102
+	char *mp_used_str;mp_used_str1575,62256
+	uint16_t node_use;1576,62276
+	char *owner_name;owner_name1577,62296
+	char *ramdiskimage;ramdiskimage1578,62315
+	char *reason;reason1579,62374
+	uint16_t state;1580,62389
+} block_info_t;1581,62406
+	block_info_t *block_array;block_array1584,62440
+	time_t    last_update;1585,62468
+	uint32_t  record_count;1586,62492
+} block_info_msg_t;1587,62517
+typedef block_info_t update_block_msg_t;1589,62538
+#define RESERVE_FLAG_MAINT	1657,64959
+#define RESERVE_FLAG_NO_MAINT	1658,65014
+#define RESERVE_FLAG_DAILY	1659,65074
+#define RESERVE_FLAG_NO_DAILY	1660,65129
+#define RESERVE_FLAG_WEEKLY	1661,65189
+#define RESERVE_FLAG_NO_WEEKLY	1662,65246
+#define RESERVE_FLAG_IGN_JOBS	1663,65308
+#define RESERVE_FLAG_NO_IGN_JOB	1664,65371
+#define RESERVE_FLAG_LIC_ONLY	1665,65442
+#define RESERVE_FLAG_NO_LIC_ONLY 1666,65518
+#define RESERVE_FLAG_OVERLAP	1667,65597
+#define RESERVE_FLAG_SPEC_NODES	1668,65664
+typedef struct reserve_info 1670,65734
+	char *accounts;accounts1671,65764
+	time_t end_time;1672,65823
+	char *features;features1673,65871
+	uint16_t flags;1674,65918
+	char *licenses;licenses1675,65967
+	char *name;name1676,66024
+	uint32_t node_cnt;1677,66064
+	int *node_inx;node_inx1678,66114
+	char *node_list;node_list1681,66247
+	char *partition;partition1682,66301
+	time_t start_time;1683,66354
+	char *users;users1684,66406
+} reserve_info_t;1685,66459
+typedef struct reserve_info_msg 1687,66478
+	time_t last_update;1688,66512
+	uint32_t record_count;1689,66559
+	reserve_info_t *reservation_array;reservation_array1690,66607
+} reserve_info_msg_t;1691,66673
+typedef struct resv_desc_msg 1693,66696
+	char *accounts;accounts1694,66727
+	uint32_t duration;1695,66786
+	time_t end_time;1696,66847
+	char *features;features1697,66895
+	uint16_t flags;1698,66942
+	char *licenses;licenses1699,66991
+	char *name;name1700,67048
+	uint32_t node_cnt;1701,67109
+	char *node_list;node_list1702,67159
+	char *partition;partition1703,67213
+	time_t start_time;1704,67266
+	char *users;users1705,67318
+} resv_desc_msg_t;1706,67371
+typedef struct reserve_response_msg 1708,67391
+	char *name;name1709,67429
+} reserve_response_msg_t;1710,67469
+typedef struct reservation_name_msg 1712,67496
+	char *name;name1713,67534
+} reservation_name_msg_t;1715,67610
+#define DEBUG_FLAG_SELECT_TYPE	1718,67638
+#define DEBUG_FLAG_STEPS	1719,67704
+#define DEBUG_FLAG_TRIGGERS	1720,67762
+#define DEBUG_FLAG_CPU_BIND	1721,67826
+#define DEBUG_FLAG_WIKI	1722,67883
+#define DEBUG_FLAG_NO_CONF_HASH	1723,67945
+#define DEBUG_FLAG_GRES	1725,68055
+#define DEBUG_FLAG_BG_PICK 1726,68119
+#define DEBUG_FLAG_BG_WIRES	1728,68211
+#define DEBUG_FLAG_BG_ALGO	1729,68281
+#define DEBUG_FLAG_BG_ALGO_DEEP	1730,68349
+#define DEBUG_FLAG_PRIO 1732,68436
+#define DEBUG_FLAG_BACKFILL	1733,68504
+#define DEBUG_FLAG_GANG	1734,68574
+#define DEBUG_FLAG_RESERVATION	1735,68637
+#define DEBUG_FLAG_FRONT_END	1736,68707
+#define GROUP_FORCE	1738,68770
+#define GROUP_CACHE	1741,68895
+#define GROUP_TIME_MASK	1743,68986
+#define PREEMPT_MODE_OFF	1746,69077
+#define PREEMPT_MODE_SUSPEND	1747,69138
+#define PREEMPT_MODE_REQUEUE	1748,69204
+#define PREEMPT_MODE_CHECKPOINT	1749,69278
+#define PREEMPT_MODE_CANCEL	1751,69379
+#define PREEMPT_MODE_GANG	1752,69442
+typedef struct slurm_ctl_conf 1754,69505
+	time_t last_update;1755,69537
+	uint16_t accounting_storage_enforce;1756,69605
+	char *accounting_storage_backup_host;accounting_storage_backup_host1758,69725
+	char *accounting_storage_host;accounting_storage_host1760,69810
+	char *accounting_storage_loc;accounting_storage_loc1761,69872
+	char *accounting_storage_pass;accounting_storage_pass1763,69956
+	uint32_t accounting_storage_port;1765,70030
+	char *accounting_storage_type;accounting_storage_type1766,70102
+	char *accounting_storage_user;accounting_storage_user1767,70164
+	uint16_t acctng_store_job_comment;1768,70226
+	char *authtype;authtype1769,70299
+	char *backup_addr;backup_addr1770,70343
+	char *backup_controller;backup_controller1771,70409
+	uint16_t batch_start_timeout;1772,70475
+	time_t boot_time;1773,70544
+	char *checkpoint_type;checkpoint_type1774,70596
+	char *cluster_name;cluster_name1775,70649
+	uint16_t complete_wait;1776,70715
+	char *control_addr;control_addr1778,70818
+	char *control_machine;control_machine1779,70883
+	char *crypto_type;crypto_type1780,70946
+	uint32_t debug_flags;1781,71003
+	uint32_t def_mem_per_cpu;1782,71066
+	uint16_t disable_root_jobs;1783,71135
+	uint16_t enforce_part_limits;1784,71207
+	char *epilog;epilog1786,71315
+	uint32_t epilog_msg_time;1787,71360
+	char *epilog_slurmctld;epilog_slurmctld1789,71462
+	uint16_t fast_schedule;1790,71533
+	uint32_t first_job_id;1792,71651
+	uint16_t get_env_timeout;1793,71720
+	char * gres_plugins;1794,71792
+	uint16_t group_info;1795,71853
+	uint32_t hash_val;1796,71906
+	uint16_t health_check_interval;1797,71971
+	char * health_check_program;1798,72037
+	uint16_t inactive_limit;1799,72106
+	uint16_t job_acct_gather_freq;1801,72216
+	char *job_acct_gather_type;job_acct_gather_type1803,72310
+	char *job_ckpt_dir;job_ckpt_dir1804,72372
+	char *job_comp_host;job_comp_host1805,72438
+	char *job_comp_loc;job_comp_loc1806,72494
+	char *job_comp_pass;job_comp_pass1807,72553
+	uint32_t job_comp_port;1808,72613
+	char *job_comp_type;job_comp_type1809,72672
+	char *job_comp_user;job_comp_user1810,72728
+	char *job_credential_private_key;job_credential_private_key1811,72784
+	char *job_credential_public_certificate;job_credential_public_certificate1812,72845
+	uint16_t job_file_append;1813,72918
+	uint16_t job_requeue;1814,72985
+	char *job_submit_plugins;job_submit_plugins1815,73055
+	uint16_t kill_on_bad_exit;1816,73123
+	uint16_t kill_wait;1819,73272
+	char *licenses;licenses1821,73360
+	char *mail_prog;mail_prog1822,73419
+	uint32_t max_job_cnt;1823,73468
+	uint32_t max_job_id;1824,73527
+	uint32_t max_mem_per_cpu;1825,73596
+	uint32_t max_step_cnt;1826,73665
+	uint16_t max_tasks_per_node;1827,73727
+	uint16_t min_job_age;1828,73786
+	char *mpi_default;mpi_default1830,73888
+	char *mpi_params;mpi_params1831,73944
+	uint16_t msg_timeout;1832,73984
+	char *munge_socket;munge_socket1833,74029
+	uint32_t next_job_id;1834,74076
+	char *node_prefix;node_prefix1835,74143
+	uint16_t over_time_limit;1837,74256
+	char *plugindir;plugindir1839,74377
+	char *plugstack;plugstack1840,74421
+	uint16_t preempt_mode;1842,74496
+	char *preempt_type;preempt_type1843,74562
+	uint32_t priority_decay_hl;1844,74621
+	uint32_t priority_calc_period;1846,74703
+	uint16_t priority_favor_small;1848,74791
+	uint32_t priority_max_age;1849,74857
+	uint16_t priority_reset_period;1851,74960
+	char *priority_type;priority_type1853,75049
+	uint32_t priority_weight_age;1854,75101
+	uint32_t priority_weight_fs;1855,75160
+	uint32_t priority_weight_js;1856,75224
+	uint32_t priority_weight_part;1857,75287
+	uint32_t priority_weight_qos;1858,75353
+	uint16_t private_data;1859,75412
+	char *proctrack_type;proctrack_type1861,75498
+	char *prolog;prolog1862,75556
+	char *prolog_slurmctld;prolog_slurmctld1863,75615
+	uint16_t propagate_prio_process;1864,75686
+	char *propagate_rlimits;propagate_rlimits1866,75781
+	char *propagate_rlimits_except;propagate_rlimits_except1867,75853
+	char *resume_program;resume_program1868,75926
+	uint16_t resume_rate;1869,75988
+	uint16_t resume_timeout;1870,76054
+	uint16_t resv_over_run;1872,76150
+	uint16_t ret2service;1874,76239
+	char *salloc_default_command;salloc_default_command1876,76321
+	char *sched_logfile;sched_logfile1877,76381
+	uint16_t sched_log_level;1878,76451
+	char *sched_params;sched_params1879,76525
+	uint16_t sched_time_slice;1881,76623
+	char *schedtype;schedtype1882,76689
+	uint16_t schedport;1883,76738
+	uint16_t schedrootfltr;1884,76795
+	char *select_type;select_type1886,76905
+	void *select_conf_key_pairs;select_conf_key_pairs1887,76960
+	uint16_t select_type_param;1889,77069
+	char *slurm_conf;slurm_conf1891,77160
+	uint32_t slurm_user_id;1892,77215
+	char *slurm_user_name;slurm_user_name1893,77269
+	uint32_t slurmd_user_id;1894,77327
+	char *slurmd_user_name;slurmd_user_name1895,77382
+	uint16_t slurmctld_debug;1896,77438
+	char *slurmctld_logfile;slurmctld_logfile1897,77495
+	char *slurmctld_pidfile;slurmctld_pidfile1898,77565
+	uint32_t slurmctld_port;1899,77635
+	uint16_t slurmctld_port_count;1900,77709
+	uint16_t slurmctld_timeout;1901,77778
+	uint16_t slurmd_debug;1903,77897
+	char *slurmd_logfile;slurmd_logfile1904,77948
+	char *slurmd_pidfile;slurmd_pidfile1905,78013
+	uint32_t slurmd_port;1906,78082
+	char *slurmd_spooldir;slurmd_spooldir1907,78149
+	uint16_t slurmd_timeout;1908,78217
+	char *srun_epilog;srun_epilog1910,78320
+	char *srun_prolog;srun_prolog1911,78371
+	char *state_save_location;state_save_location1912,78422
+	char *suspend_exc_nodes;suspend_exc_nodes1914,78507
+	char *suspend_exc_parts;suspend_exc_parts1915,78569
+	char *suspend_program;suspend_program1916,78636
+	uint16_t suspend_rate;1917,78701
+	uint32_t suspend_time;1918,78770
+	uint16_t suspend_timeout;1919,78847
+	char *switch_type;switch_type1921,78946
+	char *task_epilog;task_epilog1922,79000
+	char *task_plugin;task_plugin1923,79057
+	uint16_t task_plugin_param;1924,79102
+	char *task_prolog;task_prolog1925,79152
+	char *tmp_fs;tmp_fs1926,79209
+	char *topology_plugin;topology_plugin1927,79265
+	uint16_t track_wckey;1928,79319
+	uint16_t tree_width;1929,79384
+	char *unkillable_program;unkillable_program1930,79450
+	uint16_t unkillable_timeout;1932,79566
+	uint16_t use_pam;1935,79735
+	char *version;version1936,79787
+	uint16_t vsize_factor;1937,79831
+	uint16_t wait_time;1938,79894
+	uint16_t z_16;1939,79945
+	uint32_t z_32;1940,79992
+	char *z_char;z_char1941,80039
+} slurm_ctl_conf_t;1942,80085
+typedef struct slurmd_status_msg 1944,80106
+	time_t booted;1945,80141
+	time_t last_slurmctld_msg;1946,80189
+	uint16_t slurmd_debug;1947,80254
+	uint16_t actual_cpus;1948,80299
+	uint16_t actual_sockets;1949,80360
+	uint16_t actual_cores;1950,80413
+	uint16_t actual_threads;1951,80462
+	uint32_t actual_real_mem;1952,80523
+	uint32_t actual_tmp_disk;1953,80581
+	uint32_t pid;1954,80643
+	char *hostname;hostname1955,80677
+	char *slurmd_logfile;slurmd_logfile1956,80717
+	char *step_list;step_list1957,80772
+	char *version;version1958,80822
+} slurmd_status_t;1959,80862
+typedef struct submit_response_msg 1961,80882
+	uint32_t job_id;1962,80919
+	uint32_t step_id;1963,80950
+	uint32_t error_code;1964,80983
+} submit_response_msg_t;1965,81042
+typedef struct slurm_update_node_msg 1967,81068
+	char *features;features1968,81107
+	char *gres;gres1969,81152
+	char *node_names;node_names1970,81203
+	uint16_t node_state;1971,81267
+	char *reason;reason1972,81316
+	uint32_t reason_uid;1973,81377
+	uint32_t weight;1975,81472
+} update_node_msg_t;1976,81516
+typedef struct slurm_update_front_end_msg 1978,81538
+	char *name;name1979,81582
+	uint16_t node_state;1980,81642
+	char *reason;reason1981,81691
+	uint32_t reason_uid;1982,81752
+} update_front_end_msg_t;1984,81847
+typedef struct partition_info update_part_msg_t;1986,81874
+typedef struct job_sbcast_cred_msg 1988,81924
+	uint32_t      job_id;1989,81961
+	slurm_addr_t  *node_addr;node_addr1990,82007
+	uint32_t      node_cnt;1991,82058
+	char         *node_list;node_list1992,82105
+	sbcast_cred_t *sbcast_cred;sbcast_cred1993,82160
+} job_sbcast_cred_msg_t;1994,82217
+typedef struct slurm_step_ctx_struct slurm_step_ctx_t;1997,82297
+#define TRIGGER_RES_TYPE_JOB 1999,82353
+#define TRIGGER_RES_TYPE_NODE 2000,82400
+#define TRIGGER_RES_TYPE_SLURMCTLD 2001,82447
+#define TRIGGER_RES_TYPE_SLURMDBD 2002,82494
+#define TRIGGER_RES_TYPE_DATABASE 2003,82541
+#define TRIGGER_RES_TYPE_FRONT_END 2004,82588
+#define TRIGGER_TYPE_UP 2005,82635
+#define TRIGGER_TYPE_DOWN 2006,82686
+#define TRIGGER_TYPE_FAIL 2007,82737
+#define TRIGGER_TYPE_TIME 2008,82788
+#define TRIGGER_TYPE_FINI 2009,82839
+#define TRIGGER_TYPE_RECONFIG 2010,82890
+#define TRIGGER_TYPE_BLOCK_ERR 2011,82941
+#define TRIGGER_TYPE_IDLE 2012,82992
+#define TRIGGER_TYPE_DRAINED 2013,83043
+#define TRIGGER_TYPE_PRI_CTLD_FAIL 2014,83094
+#define TRIGGER_TYPE_PRI_CTLD_RES_OP 2015,83145
+#define TRIGGER_TYPE_PRI_CTLD_RES_CTRL 2016,83196
+#define TRIGGER_TYPE_PRI_CTLD_ACCT_FULL 2017,83247
+#define TRIGGER_TYPE_BU_CTLD_FAIL 2018,83298
+#define TRIGGER_TYPE_BU_CTLD_RES_OP 2019,83349
+#define TRIGGER_TYPE_BU_CTLD_AS_CTRL 2020,83400
+#define TRIGGER_TYPE_PRI_DBD_FAIL 2021,83451
+#define TRIGGER_TYPE_PRI_DBD_RES_OP 2022,83502
+#define TRIGGER_TYPE_PRI_DB_FAIL 2023,83553
+#define TRIGGER_TYPE_PRI_DB_RES_OP 2024,83604
+typedef struct trigger_info 2027,83657
+	uint32_t trig_id;2028,83687
+	uint16_t res_type;2029,83723
+	char *   res_id;2030,83768
+	uint32_t trig_type;2031,83804
+	uint16_t offset;2032,83846
+	uint32_t user_id;2033,83906
+	char *   program;2034,83955
+} trigger_info_t;2035,83999
+typedef struct trigger_info_msg 2037,84018
+	uint32_t record_count;2038,84052
+	trigger_info_t *trigger_array;trigger_array2039,84101
+} trigger_info_msg_t;2040,84159
+
+/usr/include/slurm/spank.h,2646
+#define SPANK_H39,2221
+#undef BEGIN_C_DECLS41,2238
+#undef END_C_DECLS42,2259
+#  define BEGIN_C_DECLS 44,2297
+#  define END_C_DECLS 45,2342
+#  define BEGIN_C_DECLS 47,2402
+#  define END_C_DECLS 48,2446
+typedef struct spank_handle * spank_t;53,2579
+typedef int (spank_f)57,2669
+enum spank_item 142,5453
+    S_JOB_UID,143,5471
+    S_JOB_GID,144,5551
+    S_JOB_ID,145,5631
+    S_JOB_STEPID,146,5711
+    S_JOB_NNODES,147,5791
+    S_JOB_NODEID,148,5871
+    S_JOB_LOCAL_TASK_COUNT,149,5951
+    S_JOB_TOTAL_TASK_COUNT,150,6031
+    S_JOB_NCPUS,151,6111
+    S_JOB_ARGV,152,6191
+    S_JOB_ENV,153,6271
+    S_TASK_ID,154,6351
+    S_TASK_GLOBAL_ID,155,6431
+    S_TASK_EXIT_STATUS,156,6511
+    S_TASK_PID,157,6591
+    S_JOB_PID_TO_GLOBAL_ID,158,6671
+    S_JOB_PID_TO_LOCAL_ID,159,6751
+    S_JOB_LOCAL_TO_GLOBAL_ID,160,6831
+    S_JOB_GLOBAL_TO_LOCAL_ID,161,6911
+    S_JOB_SUPPLEMENTARY_GIDS,162,6991
+    S_SLURM_VERSION,163,7071
+    S_SLURM_VERSION_MAJOR,164,7151
+    S_SLURM_VERSION_MINOR,165,7231
+    S_SLURM_VERSION_MICRO,166,7311
+    S_STEP_CPUS_PER_TASK,167,7391
+    S_JOB_ALLOC_CORES,169,7547
+    S_JOB_ALLOC_MEM,170,7627
+    S_STEP_ALLOC_CORES,171,7707
+    S_STEP_ALLOC_MEM 172,7787
+typedef enum spank_item spank_item_t;175,7871
+enum spank_err 179,7937
+    ESPANK_SUCCESS 180,7954
+    ESPANK_ERROR 181,8034
+    ESPANK_BAD_ARG 182,8114
+    ESPANK_NOT_TASK 183,8194
+    ESPANK_ENV_EXISTS 184,8274
+    ESPANK_ENV_NOEXIST 185,8354
+    ESPANK_NOSPACE 186,8434
+    ESPANK_NOT_REMOTE 187,8514
+    ESPANK_NOEXIST 188,8594
+    ESPANK_NOT_EXECD 189,8674
+    ESPANK_NOT_AVAIL 190,8754
+    ESPANK_NOT_LOCAL 191,8834
+typedef enum spank_err spank_err_t;194,8918
+enum spank_context 199,8987
+    S_CTX_ERROR,200,9008
+    S_CTX_LOCAL,201,9088
+    S_CTX_REMOTE,202,9168
+    S_CTX_ALLOCATOR,203,9248
+    S_CTX_SLURMD,204,9328
+    S_CTX_JOB_SCRIPT 205,9408
+#define HAVE_S_CTX_SLURMD 208,9492
+#define HAVE_S_CTX_JOB_SCRIPT 209,9572
+typedef enum spank_context spank_context_t;211,9653
+typedef int (*spank_opt_cb_f)spank_opt_cb_f224,10058
+struct spank_option 226,10132
+    char *         name;227,10154
+    char *         arginfo;228,10233
+    char *         usage;229,10314
+    int            has_arg;230,10393
+    int            val;231,10472
+    spank_opt_cb_f cb;232,10551
+#define SPANK_OPTIONS_TABLE_END 246,11029
+#define SPANK_OPTION_MAXLEN 251,11151
+extern void slurm_info 414,17243
+extern void slurm_error 416,17335
+extern void slurm_verbose 418,17428
+extern void slurm_debug 420,17523
+extern void slurm_debug2 422,17616
+extern void slurm_debug3 424,17710
+#define SPANK_PLUGIN(433,17906
+
+/usr/include/sys/types.h,3179
+#define	_SYS_TYPES_H	24,970
+typedef __u_char u_char;34,1100
+typedef __u_short u_short;35,1125
+typedef __u_int u_int;36,1152
+typedef __u_long u_long;37,1175
+typedef __quad_t quad_t;38,1200
+typedef __u_quad_t u_quad_t;39,1225
+typedef __fsid_t fsid_t;40,1254
+#  define __u_char_defined41,1279
+typedef __loff_t loff_t;45,1322
+typedef __ino_t ino_t;49,1401
+typedef __ino64_t ino_t;51,1431
+# define __ino_t_defined53,1464
+typedef __ino64_t ino64_t;56,1556
+# define __ino64_t_defined57,1583
+typedef __dev_t dev_t;61,1642
+# define __dev_t_defined62,1665
+typedef __gid_t gid_t;66,1722
+# define __gid_t_defined67,1745
+typedef __mode_t mode_t;71,1803
+# define __mode_t_defined72,1828
+typedef __nlink_t nlink_t;76,1888
+# define __nlink_t_defined77,1915
+typedef __uid_t uid_t;81,1974
+# define __uid_t_defined82,1997
+typedef __off_t off_t;87,2083
+typedef __off64_t off_t;89,2113
+# define __off_t_defined91,2146
+typedef __off64_t off64_t;94,2238
+# define __off64_t_defined95,2265
+typedef __pid_t pid_t;99,2324
+# define __pid_t_defined100,2347
+typedef __id_t id_t;105,2487
+# define __id_t_defined106,2508
+typedef __ssize_t ssize_t;110,2566
+# define __ssize_t_defined111,2593
+typedef __daddr_t daddr_t;116,2672
+typedef __caddr_t caddr_t;117,2699
+#  define __daddr_t_defined118,2726
+typedef __key_t key_t;123,2846
+# define __key_t_defined124,2869
+# define __need_clock_t128,2952
+#define	__need_time_t130,2983
+#define __need_timer_t131,3005
+#define __need_clockid_t132,3028
+typedef __useconds_t useconds_t;137,3121
+#  define __useconds_t_defined138,3154
+typedef __suseconds_t suseconds_t;141,3224
+#  define __suseconds_t_defined142,3259
+#define	__need_size_t146,3307
+typedef unsigned long int ulong;151,3412
+typedef unsigned short int ushort;152,3445
+typedef unsigned int uint;153,3480
+#  define __int8_t_defined162,3703
+typedef	char int8_t;163,3730
+typedef	short int int16_t;164,3751
+typedef	int int32_t;165,3778
+typedef long int int64_t;167,3822
+__extension__ typedef long long int int64_t;169,3879
+typedef	unsigned char u_int8_t;174,4004
+typedef	unsigned short int u_int16_t;175,4036
+typedef	unsigned int u_int32_t;176,4074
+typedef unsigned long int u_int64_t;178,4128
+__extension__ typedef unsigned long long int u_int64_t;180,4195
+typedef int register_t;183,4260
+# define __intN_t(188,4364
+# define __u_intN_t(190,4452
+#  define __int8_t_defined194,4580
+typedef int register_t 206,4807
+#define __BIT_TYPES_DEFINED__	212,4964
+typedef __blksize_t blksize_t;229,5383
+# define __blksize_t_defined230,5414
+typedef __blkcnt_t blkcnt_t;236,5559
+#  define __blkcnt_t_defined237,5633
+typedef __fsblkcnt_t fsblkcnt_t;240,5700
+#  define __fsblkcnt_t_defined241,5774
+typedef __fsfilcnt_t fsfilcnt_t;244,5843
+#  define __fsfilcnt_t_defined245,5917
+typedef __blkcnt64_t blkcnt_t;249,5990
+#  define __blkcnt_t_defined250,6068
+typedef __fsblkcnt64_t fsblkcnt_t;253,6135
+#  define __fsblkcnt_t_defined254,6211
+typedef __fsfilcnt64_t fsfilcnt_t;257,6280
+#  define __fsfilcnt_t_defined258,6356
+typedef __blkcnt64_t blkcnt64_t;263,6428
+typedef __fsblkcnt64_t fsblkcnt64_t;264,6508
+typedef __fsfilcnt64_t fsfilcnt64_t;265,6586
+
+/usr/include/assert.h,553
+# undef	_ASSERT_H26,958
+# undef	assert27,976
+# undef __ASSERT_VOID_CAST28,991
+#  undef assert_perror31,1037
+#define	_ASSERT_H	36,1092
+# define __ASSERT_VOID_CAST 40,1183
+# define __ASSERT_VOID_CAST 42,1235
+# define assert(52,1438
+#  define assert_perror(61,1714
+extern void __assert_fail 69,1882
+extern void __assert_perror_fail 74,2112
+extern void __assert 82,2372
+# define assert(88,2511
+#  define assert_perror(94,2690
+#   define __ASSERT_FUNCTION	106,3252
+#   define __ASSERT_FUNCTION	109,3370
+#   define __ASSERT_FUNCTION	111,3416
+
+/usr/include/attr/xattr.h,140
+#define __XATTR_H__21,779
+# define ENOATTR 27,858
+#define XATTR_CREATE 30,922
+#define XATTR_REPLACE 31,999
+extern int setxattr 36,1093
+
+/usr/include/ctype.h,2683
+#define	_CTYPE_H	25,985
+#  define _ISbit(43,1487
+#  define _ISbit(45,1567
+  _ISupper 50,1661
+  _ISupper = _ISbit 50,1661
+  _ISlower 51,1704
+  _ISlower = _ISbit 51,1704
+  _ISalpha 52,1747
+  _ISalpha = _ISbit 52,1747
+  _ISdigit 53,1791
+  _ISdigit = _ISbit 53,1791
+  _ISxdigit 54,1832
+  _ISxdigit = _ISbit 54,1832
+  _ISspace 55,1886
+  _ISspace = _ISbit 55,1886
+  _ISprint 56,1930
+  _ISprint = _ISbit 56,1930
+  _ISgraph 57,1972
+  _ISgraph = _ISbit 57,1972
+  _ISblank 58,2015
+  _ISblank = _ISbit 58,2015
+  _IScntrl 59,2076
+  _IScntrl = _ISbit 59,2076
+  _ISpunct 60,2127
+  _ISpunct = _ISbit 60,2127
+  _ISalnum 61,2173
+  _ISalnum = _ISbit 61,2173
+extern __const unsigned short int **__ctype_b_loc __ctype_b_loc81,3196
+extern __const __int32_t **__ctype_tolower_loc __ctype_tolower_loc83,3293
+extern __const __int32_t **__ctype_toupper_loc __ctype_toupper_loc85,3387
+#define __isctype(88,3482
+#define	__isascii(91,3575
+#define	__toascii(92,3647
+#define	__exctype(94,3710
+extern int tolower 116,4264
+#define __tobody(155,5288
+# define isalnum(173,5836
+# define isalpha(174,5881
+# define iscntrl(175,5926
+# define isdigit(176,5971
+# define islower(177,6016
+# define isgraph(178,6061
+# define isprint(179,6106
+# define ispunct(180,6151
+# define isspace(181,6196
+# define isupper(182,6241
+# define isxdigit(183,6286
+#  define isblank(186,6355
+__NTH 197,6584
+#  define tolower(204,6764
+#  define toupper(205,6837
+#  define isascii(209,7009
+#  define toascii(210,7044
+#  define _tolower(212,7080
+#  define _toupper(213,7147
+#  define __isctype_l(237,8106
+# define __exctype_l(240,8211
+extern int __tolower_l 263,8873
+#  define __tolower_l(271,9212
+#  define __toupper_l(273,9315
+#  define tolower_l(275,9418
+#  define toupper_l(276,9477
+#  define __isalnum_l(281,9587
+#  define __isalpha_l(282,9646
+#  define __iscntrl_l(283,9705
+#  define __isdigit_l(284,9764
+#  define __islower_l(285,9823
+#  define __isgraph_l(286,9882
+#  define __isprint_l(287,9941
+#  define __ispunct_l(288,10000
+#  define __isspace_l(289,10059
+#  define __isupper_l(290,10118
+#  define __isxdigit_l(291,10177
+#  define __isblank_l(293,10239
+#   define __isascii_l(296,10346
+#   define __toascii_l(297,10395
+#  define isalnum_l(300,10454
+#  define isalpha_l(301,10502
+#  define iscntrl_l(302,10550
+#  define isdigit_l(303,10598
+#  define islower_l(304,10646
+#  define isgraph_l(305,10694
+#  define isprint_l(306,10742
+#  define ispunct_l(307,10790
+#  define isspace_l(308,10838
+#  define isupper_l(309,10886
+#  define isxdigit_l(310,10934
+#  define isblank_l(312,10985
+#   define isascii_l(315,11081
+#   define toascii_l(316,11130
+
+/usr/include/dirent.h,1268
+#define	_DIRENT_H	24,959
+typedef __ino_t ino_t;35,1117
+typedef __ino64_t ino_t;37,1148
+#  define __ino_t_defined39,1182
+typedef __ino64_t ino64_t;42,1277
+#  define __ino64_t_defined43,1304
+# define d_ino	65,1989
+# define _D_EXACT_NAMLEN(83,2775
+# define _D_ALLOC_NAMLEN(84,2819
+# define _D_EXACT_NAMLEN(86,2879
+#  define _D_ALLOC_NAMLEN(88,2960
+#  define _D_ALLOC_NAMLEN(90,3047
+    DT_UNKNOWN 100,3234
+# define DT_UNKNOWN	101,3254
+    DT_FIFO 102,3285
+# define DT_FIFO	103,3302
+    DT_CHR 104,3327
+# define DT_CHR	105,3343
+    DT_DIR 106,3367
+# define DT_DIR	107,3383
+    DT_BLK 108,3407
+# define DT_BLK	109,3423
+    DT_REG 110,3447
+# define DT_REG	111,3463
+    DT_LNK 112,3487
+# define DT_LNK	113,3504
+    DT_SOCK 114,3528
+# define DT_SOCK	115,3546
+    DT_WHT 116,3571
+# define DT_WHT	117,3587
+# define IFTODT(121,3682
+# define DTTOIF(122,3731
+typedef struct __dirstream DIR;128,3885
+extern DIR *opendir opendir135,4127
+#  define readdir 169,5261
+#   define readdir_r 196,6049
+#  define dirfd(227,6981
+#    define MAXNAMLEN	237,7264
+#    define MAXNAMLEN	239,7304
+# define __need_size_t244,7358
+#   define scandir 268,8290
+#   define alphasort 295,9265
+#   define getdirentries 325,10269
+#   define versionsort 351,11022
+
+/usr/include/errno.h,152
+# define _ERRNO_H	28,1085
+#undef	__need_Emath37,1294
+typedef int error_t;69,2363
+#  define __error_t_defined	70,2384
+# undef __need_error_t72,2422
+
+/usr/include/fcntl.h,1316
+#define	_FCNTL_H	25,984
+# define __need_timespec39,1433
+# define S_IFMT	43,1502
+# define S_IFDIR	44,1528
+# define S_IFCHR	45,1555
+# define S_IFBLK	46,1582
+# define S_IFREG	47,1609
+#  define S_IFIFO	49,1654
+#  define S_IFLNK	52,1708
+#  define S_IFSOCK	55,1820
+# define S_ISUID	60,1884
+# define S_ISGID	61,1950
+#  define S_ISVTX	65,2166
+# define S_IRUSR	68,2203
+# define S_IWUSR	69,2258
+# define S_IXUSR	70,2314
+# define S_IRWXU	72,2414
+# define S_IRGRP	74,2465
+# define S_IWGRP	75,2520
+# define S_IXGRP	76,2576
+# define S_IRWXG	78,2676
+# define S_IROTH	80,2709
+# define S_IWOTH	81,2765
+# define S_IXOTH	82,2822
+# define S_IRWXO	84,2924
+#  define R_OK	91,3117
+#  define W_OK	92,3168
+#  define X_OK	93,3220
+#  define F_OK	94,3274
+# define SEEK_SET	100,3480
+# define SEEK_CUR	101,3536
+# define SEEK_END	102,3591
+# define AT_FDCWD	106,3679
+# define AT_SYMLINK_NOFOLLOW	109,3816
+# define AT_REMOVEDIR	110,3888
+# define AT_SYMLINK_FOLLOW	112,3976
+# define AT_EACCESS	113,4039
+extern int open 131,4728
+#  define open 137,4935
+#   define openat 162,5754
+#  define creat 183,6390
+# define F_ULOCK 200,7060
+# define F_LOCK 201,7121
+# define F_TLOCK 202,7180
+# define F_TEST 203,7248
+#   define lockf 211,7515
+#   define posix_fadvise 231,8102
+#   define posix_fallocate 252,8723
+
+/usr/include/inttypes.h,5353
+#define _INTTYPES_H	24,960
+#  define __gwchar_t 33,1185
+typedef __WCHAR_TYPE__ __gwchar_t;35,1244
+#  define __need_wchar_t37,1286
+typedef wchar_t __gwchar_t;39,1333
+# define ____gwchar_t_defined	41,1369
+#  define __PRI64_PREFIX	50,1595
+#  define __PRIPTR_PREFIX	51,1624
+#  define __PRI64_PREFIX	53,1661
+#  define __PRIPTR_PREFIX54,1691
+# define PRId8	60,1798
+# define PRId16	61,1818
+# define PRId32	62,1839
+# define PRId64	63,1860
+# define PRIdLEAST8	65,1897
+# define PRIdLEAST16	66,1921
+# define PRIdLEAST32	67,1946
+# define PRIdLEAST64	68,1971
+# define PRIdFAST8	70,2012
+# define PRIdFAST16	71,2035
+# define PRIdFAST32	72,2075
+# define PRIdFAST64	73,2115
+# define PRIi8	76,2156
+# define PRIi16	77,2176
+# define PRIi32	78,2197
+# define PRIi64	79,2218
+# define PRIiLEAST8	81,2255
+# define PRIiLEAST16	82,2279
+# define PRIiLEAST32	83,2304
+# define PRIiLEAST64	84,2329
+# define PRIiFAST8	86,2370
+# define PRIiFAST16	87,2393
+# define PRIiFAST32	88,2433
+# define PRIiFAST64	89,2473
+# define PRIo8	92,2536
+# define PRIo16	93,2556
+# define PRIo32	94,2577
+# define PRIo64	95,2598
+# define PRIoLEAST8	97,2635
+# define PRIoLEAST16	98,2659
+# define PRIoLEAST32	99,2684
+# define PRIoLEAST64	100,2709
+# define PRIoFAST8	102,2750
+# define PRIoFAST16	103,2773
+# define PRIoFAST32	104,2813
+# define PRIoFAST64	105,2853
+# define PRIu8	108,2919
+# define PRIu16	109,2939
+# define PRIu32	110,2960
+# define PRIu64	111,2981
+# define PRIuLEAST8	113,3018
+# define PRIuLEAST16	114,3042
+# define PRIuLEAST32	115,3067
+# define PRIuLEAST64	116,3092
+# define PRIuFAST8	118,3133
+# define PRIuFAST16	119,3156
+# define PRIuFAST32	120,3196
+# define PRIuFAST64	121,3236
+# define PRIx8	124,3315
+# define PRIx16	125,3335
+# define PRIx32	126,3356
+# define PRIx64	127,3377
+# define PRIxLEAST8	129,3414
+# define PRIxLEAST16	130,3438
+# define PRIxLEAST32	131,3463
+# define PRIxLEAST64	132,3488
+# define PRIxFAST8	134,3529
+# define PRIxFAST16	135,3552
+# define PRIxFAST32	136,3592
+# define PRIxFAST64	137,3632
+# define PRIX8	140,3711
+# define PRIX16	141,3731
+# define PRIX32	142,3752
+# define PRIX64	143,3773
+# define PRIXLEAST8	145,3810
+# define PRIXLEAST16	146,3834
+# define PRIXLEAST32	147,3859
+# define PRIXLEAST64	148,3884
+# define PRIXFAST8	150,3925
+# define PRIXFAST16	151,3948
+# define PRIXFAST32	152,3988
+# define PRIXFAST64	153,4028
+# define PRIdMAX	157,4124
+# define PRIiMAX	158,4160
+# define PRIoMAX	159,4196
+# define PRIuMAX	160,4232
+# define PRIxMAX	161,4268
+# define PRIXMAX	162,4304
+# define PRIdPTR	166,4397
+# define PRIiPTR	167,4434
+# define PRIoPTR	168,4471
+# define PRIuPTR	169,4508
+# define PRIxPTR	170,4545
+# define PRIXPTR	171,4582
+# define SCNd8	177,4700
+# define SCNd16	178,4722
+# define SCNd32	179,4744
+# define SCNd64	180,4765
+# define SCNdLEAST8	182,4802
+# define SCNdLEAST16	183,4828
+# define SCNdLEAST32	184,4854
+# define SCNdLEAST64	185,4879
+# define SCNdFAST8	187,4920
+# define SCNdFAST16	188,4945
+# define SCNdFAST32	189,4985
+# define SCNdFAST64	190,5025
+# define SCNi8	193,5097
+# define SCNi16	194,5119
+# define SCNi32	195,5141
+# define SCNi64	196,5162
+# define SCNiLEAST8	198,5199
+# define SCNiLEAST16	199,5225
+# define SCNiLEAST32	200,5251
+# define SCNiLEAST64	201,5276
+# define SCNiFAST8	203,5317
+# define SCNiFAST16	204,5342
+# define SCNiFAST32	205,5382
+# define SCNiFAST64	206,5422
+# define SCNu8	209,5496
+# define SCNu16	210,5518
+# define SCNu32	211,5540
+# define SCNu64	212,5561
+# define SCNuLEAST8	214,5598
+# define SCNuLEAST16	215,5624
+# define SCNuLEAST32	216,5650
+# define SCNuLEAST64	217,5675
+# define SCNuFAST8	219,5716
+# define SCNuFAST16	220,5741
+# define SCNuFAST32	221,5781
+# define SCNuFAST64	222,5821
+# define SCNo8	225,5884
+# define SCNo16	226,5906
+# define SCNo32	227,5928
+# define SCNo64	228,5949
+# define SCNoLEAST8	230,5986
+# define SCNoLEAST16	231,6012
+# define SCNoLEAST32	232,6038
+# define SCNoLEAST64	233,6063
+# define SCNoFAST8	235,6104
+# define SCNoFAST16	236,6129
+# define SCNoFAST32	237,6169
+# define SCNoFAST64	238,6209
+# define SCNx8	241,6278
+# define SCNx16	242,6300
+# define SCNx32	243,6322
+# define SCNx64	244,6343
+# define SCNxLEAST8	246,6380
+# define SCNxLEAST16	247,6406
+# define SCNxLEAST32	248,6432
+# define SCNxLEAST64	249,6457
+# define SCNxFAST8	251,6498
+# define SCNxFAST16	252,6523
+# define SCNxFAST32	253,6563
+# define SCNxFAST64	254,6603
+# define SCNdMAX	258,6699
+# define SCNiMAX	259,6735
+# define SCNoMAX	260,6771
+# define SCNuMAX	261,6807
+# define SCNxMAX	262,6843
+# define SCNdPTR	265,6934
+# define SCNiPTR	266,6971
+# define SCNoPTR	267,7008
+# define SCNuPTR	268,7045
+# define SCNxPTR	269,7082
+    long int quot;281,7274
+    long int rem;282,7311
+  } imaxdiv_t;283,7348
+    long long int quot;290,7453
+    long long int rem;291,7495
+  } imaxdiv_t;292,7537
+extern intmax_t imaxabs 298,7598
+extern imaxdiv_t imaxdiv 301,7753
+extern intmax_t strtoimax 305,7907
+extern unsigned long int __strtoul_internal 338,8999
+extern long int __wcstol_internal 351,9419
+extern unsigned long int __wcstoul_internal 363,9832
+extern long long int __strtoll_internal 380,10331
+extern unsigned long long int __strtoull_internal 393,10738
+extern long long int __wcstoll_internal 409,11194
+extern unsigned long long int __wcstoull_internal 424,11633
+
+/usr/include/libgen.h,90
+#define _LIBGEN_H	20,887
+extern char *dirname dirname27,1012
+#define basename	36,1397
+
+/usr/include/limits.h,818
+#define _LIBC_LIMITS_H_	25,998
+#define MB_LEN_MAX	33,1201
+#  define _LIMITS_H	44,1615
+#  define CHAR_BIT	55,1885
+#  define SCHAR_MIN	58,1967
+#  define SCHAR_MAX	59,1994
+#  define UCHAR_MAX	62,2086
+#   define CHAR_MIN	66,2191
+#   define CHAR_MAX	67,2213
+#   define CHAR_MIN	69,2251
+#   define CHAR_MAX	70,2281
+#  define SHRT_MIN	74,2386
+#  define SHRT_MAX	75,2414
+#  define USHRT_MAX	78,2512
+#  define INT_MIN	81,2598
+#  define INT_MAX	82,2631
+#  define UINT_MAX	85,2727
+#   define LONG_MAX	89,2846
+#   define LONG_MAX	91,2895
+#  define LONG_MIN	93,2936
+#   define ULONG_MAX	97,3067
+#   define ULONG_MAX	99,3119
+#   define LLONG_MAX	105,3255
+#   define LLONG_MIN	106,3298
+#   define ULLONG_MAX	109,3415
+#  define LLONG_MIN	133,4198
+#  define LLONG_MAX	136,4260
+#  define ULLONG_MAX	139,4326
+
+/usr/include/sys/mman.h,306
+#define	_SYS_MMAN_H	21,942
+#define __need_size_t25,1011
+typedef __off_t off_t;30,1107
+typedef __off64_t off_t;32,1137
+# define __off_t_defined34,1170
+typedef __mode_t mode_t;38,1228
+# define __mode_t_defined39,1253
+#define MAP_FAILED	45,1362
+extern void *mmap mmap58,2012
+#  define mmap 67,2320
+
+/usr/include/signal.h,1053
+# define _SIGNAL_H26,1015
+#  define __sig_atomic_t_defined39,1364
+typedef __sig_atomic_t sig_atomic_t;41,1419
+# undef __need_sig_atomic_t44,1484
+#  define __sigset_t_defined49,1622
+typedef __sigset_t sigset_t;50,1651
+# undef __need_sigset_t52,1688
+typedef __pid_t pid_t;62,1862
+#  define __pid_t_defined63,1885
+typedef __uid_t uid_t;68,1970
+#  define __uid_t_defined69,1993
+# define __need_timespec75,2116
+typedef void (*__sighandler_t)__sighandler_t84,2287
+extern __sighandler_t __sysv_signal 89,2485
+#  define signal 110,3181
+#   define sigpause(180,5646
+# define sigmask(193,6066
+# define NSIG	207,6520
+typedef __sighandler_t sighandler_t;211,6565
+typedef __sighandler_t sig_t;216,6674
+extern int sigemptyset 222,6767
+struct sigvec314,10225
+    __sighandler_t sv_handler;316,10243
+    int sv_mask;317,10297
+    int sv_flags;319,10354
+# define sv_onstack	320,10399
+# define SV_ONSTACK	324,10491
+# define SV_INTERRUPT	325,10563
+# define SV_RESETHAND	326,10629
+extern int sigvec 334,11064
+# define __need_size_t348,11467
+
+/usr/include/linux/stddef.h,86
+#define _LINUX_STDDEF_H2,24
+#undef NULL6,51
+#define NULL 8,88
+#define NULL 10,109
+
+/usr/include/stdio.h,2123
+# define _STDIO_H	27,1047
+# define __need_size_t32,1106
+# define __need_NULL33,1129
+# define __need_FILE37,1197
+# define __need___FILE38,1218
+typedef struct _IO_FILE FILE;49,1497
+# define __FILE_defined	57,1762
+#undef	__need_FILE59,1820
+__USING_NAMESPACE_STD(__need_FILE54,1726
+typedef struct _IO_FILE __FILE;65,1972
+# define ____FILE_defined	67,2005
+#undef	__need___FILE69,2067
+#define _STDIO_USES_IOSTREAM73,2106
+typedef _G_va_list va_list;80,2250
+#   define _VA_LIST_DEFINED81,2278
+typedef __off_t off_t;91,2436
+typedef __off64_t off_t;93,2466
+# define __off_t_defined95,2499
+typedef __off64_t off64_t;98,2593
+# define __off64_t_defined99,2620
+typedef __ssize_t ssize_t;103,2683
+# define __ssize_t_defined104,2710
+typedef _G_fpos_t fpos_t;111,2870
+typedef _G_fpos64_t fpos_t;113,2902
+typedef _G_fpos64_t fpos64_t;117,2982
+#define _IOFBF 121,3082
+#define _IOLBF 122,3124
+#define _IONBF 123,3164
+# define BUFSIZ 128,3248
+# define EOF 135,3387
+#define SEEK_SET	141,3513
+#define SEEK_CUR	142,3568
+#define SEEK_END	143,3622
+# define P_tmpdir	148,3774
+#define stdin 170,4599
+#define stdout 171,4619
+#define stderr 172,4641
+extern int remove 177,4722
+#  define tmpfile 199,5424
+#  define fopen 290,8436
+#  define freopen 291,8460
+extern int vsnprintf 389,12111
+extern int vasprintf 398,12463
+extern int __asprintf 401,12634
+extern int asprintf 404,12796
+extern int vdprintf 416,13277
+extern int dprintf 419,13419
+extern int fscanf 429,13705
+#  define fscanf 461,15163
+#  define scanf 462,15196
+#  define sscanf 463,15227
+extern int vscanf 483,15808
+extern int vsscanf 487,15999
+extern int __REDIRECT 498,16485
+extern int __REDIRECT 503,16692
+extern int __REDIRECT 506,16858
+extern int __isoc99_vfscanf 512,17083
+#   define vfscanf 520,17442
+#   define vscanf 521,17478
+#   define vsscanf 522,17512
+#define getc(547,18115
+#define putc(589,19441
+#   define fseeko 781,26497
+#   define ftello 782,26524
+#  define fgetpos 806,27236
+#  define fsetpos 807,27264
+extern int obstack_vprintf 897,30128
+extern void flockfile 908,30474
+# define __need_getopt922,31060
+
+/usr/include/stdint.h,4546
+#define _STDINT_H	24,944
+# define __int8_t_defined36,1189
+typedef signed char		int8_t;37,1215
+typedef short int		int16_t;38,1244
+typedef int			int32_t;39,1272
+typedef long int		int64_t;41,1317
+typedef long long int		int64_t;44,1365
+typedef unsigned char		uint8_t;49,1430
+typedef unsigned short int	uint16_t;50,1462
+typedef unsigned int		uint32_t;52,1526
+# define __uint32_t_defined53,1558
+typedef unsigned long int	uint64_t;56,1614
+typedef unsigned long long int	uint64_t;59,1670
+typedef signed char		int_least8_t;66,1756
+typedef short int		int_least16_t;67,1791
+typedef int			int_least32_t;68,1825
+typedef long int		int_least64_t;70,1875
+typedef long long int		int_least64_t;73,1928
+typedef unsigned char		uint_least8_t;77,1991
+typedef unsigned short int	uint_least16_t;78,2029
+typedef unsigned int		uint_least32_t;79,2072
+typedef unsigned long int	uint_least64_t;81,2131
+typedef unsigned long long int	uint_least64_t;84,2193
+typedef signed char		int_fast8_t;91,2284
+typedef long int		int_fast16_t;93,2339
+typedef long int		int_fast32_t;94,2371
+typedef long int		int_fast64_t;95,2403
+typedef int			int_fast16_t;97,2441
+typedef int			int_fast32_t;98,2469
+typedef long long int		int_fast64_t;100,2511
+typedef unsigned char		uint_fast8_t;104,2573
+typedef unsigned long int	uint_fast16_t;106,2631
+typedef unsigned long int	uint_fast32_t;107,2672
+typedef unsigned long int	uint_fast64_t;108,2713
+typedef unsigned int		uint_fast16_t;110,2760
+typedef unsigned int		uint_fast32_t;111,2797
+typedef unsigned long long int	uint_fast64_t;113,2848
+typedef long int		intptr_t;120,2988
+#  define __intptr_t_defined121,3016
+typedef unsigned long int	uintptr_t;123,3053
+typedef int			intptr_t;126,3124
+#  define __intptr_t_defined127,3148
+typedef unsigned int		uintptr_t;129,3185
+typedef long int		intmax_t;135,3279
+typedef unsigned long int	uintmax_t;136,3307
+typedef long long int		intmax_t;139,3364
+typedef unsigned long long int	uintmax_t;141,3411
+#  define __INT64_C(150,3671
+#  define __UINT64_C(151,3701
+#  define __INT64_C(153,3740
+#  define __UINT64_C(154,3771
+# define INT8_MIN	160,3888
+# define INT16_MIN	161,3914
+# define INT32_MIN	162,3945
+# define INT64_MIN	163,3981
+# define INT8_MAX	165,4078
+# define INT16_MAX	166,4103
+# define INT32_MAX	167,4131
+# define INT64_MAX	168,4164
+# define UINT8_MAX	171,4261
+# define UINT16_MAX	172,4287
+# define UINT32_MAX	173,4316
+# define UINT64_MAX	174,4351
+# define INT_LEAST8_MIN	178,4472
+# define INT_LEAST16_MIN	179,4504
+# define INT_LEAST32_MIN	180,4540
+# define INT_LEAST64_MIN	181,4581
+# define INT_LEAST8_MAX	183,4705
+# define INT_LEAST16_MAX	184,4736
+# define INT_LEAST32_MAX	185,4769
+# define INT_LEAST64_MAX	186,4807
+# define UINT_LEAST8_MAX	189,4931
+# define UINT_LEAST16_MAX	190,4962
+# define UINT_LEAST32_MAX	191,4996
+# define UINT_LEAST64_MAX	192,5036
+# define INT_FAST8_MIN	196,5167
+#  define INT_FAST16_MIN	198,5220
+#  define INT_FAST32_MIN	199,5271
+#  define INT_FAST16_MIN	201,5329
+#  define INT_FAST32_MIN	202,5370
+# define INT_FAST64_MIN	204,5419
+# define INT_FAST8_MAX	206,5548
+#  define INT_FAST16_MAX	208,5600
+#  define INT_FAST32_MAX	209,5648
+#  define INT_FAST16_MAX	211,5703
+#  define INT_FAST32_MAX	212,5741
+# define INT_FAST64_MAX	214,5787
+# define UINT_FAST8_MAX	217,5916
+#  define UINT_FAST16_MAX	219,5969
+#  define UINT_FAST32_MAX	220,6020
+#  define UINT_FAST16_MAX	222,6078
+#  define UINT_FAST32_MAX	223,6118
+# define UINT_FAST64_MAX	225,6166
+#  define INTPTR_MIN	230,6317
+#  define INTPTR_MAX	231,6365
+#  define UINTPTR_MAX	232,6410
+#  define INTPTR_MIN	234,6465
+#  define INTPTR_MAX	235,6503
+#  define UINTPTR_MAX	236,6538
+# define INTMAX_MIN	241,6634
+# define INTMAX_MAX	243,6740
+# define UINTMAX_MAX	246,6846
+#  define PTRDIFF_MIN	253,7001
+#  define PTRDIFF_MAX	254,7050
+#  define PTRDIFF_MIN	256,7103
+#  define PTRDIFF_MAX	257,7142
+# define SIG_ATOMIC_MIN	261,7220
+# define SIG_ATOMIC_MAX	262,7261
+#  define SIZE_MAX	266,7353
+#  define SIZE_MAX	268,7405
+#  define WCHAR_MIN	274,7554
+#  define WCHAR_MAX	275,7587
+# define WINT_MIN	279,7656
+# define WINT_MAX	280,7680
+# define INT8_C(290,7947
+# define INT16_C(291,7968
+# define INT32_C(292,7990
+#  define INT64_C(294,8034
+#  define INT64_C(296,8069
+# define UINT8_C(300,8124
+# define UINT16_C(301,8146
+# define UINT32_C(302,8169
+#  define UINT64_C(304,8219
+#  define UINT64_C(306,8256
+#  define INTMAX_C(311,8339
+#  define UINTMAX_C(312,8368
+#  define INTMAX_C(314,8406
+#  define UINTMAX_C(315,8436
+
+/usr/include/stdlib.h,2604
+#define		__need_size_t28,1026
+# define	__need_wchar_t30,1082
+# define	__need_NULL31,1106
+#define	_STDLIB_H	38,1203
+#   define __WAIT_INT(51,1615
+#   define __WAIT_INT(55,1753
+#   define __WAIT_STATUS	64,2121
+#   define __WAIT_STATUS_DEFN	65,2153
+    union wait *__uptr;__uptr70,2258
+    int *__iptr;__iptr71,2282
+  } __WAIT_STATUS 72,2299
+#   define __WAIT_STATUS_DEFN	73,2358
+#  define __WAIT_INT(78,2434
+#  define __WAIT_STATUS	79,2472
+#  define __WAIT_STATUS_DEFN	80,2503
+# define WEXITSTATUS(85,2630
+# define WTERMSIG(86,2695
+# define WSTOPSIG(87,2754
+# define WIFEXITED(88,2813
+# define WIFSIGNALED(89,2874
+# define WIFSTOPPED(90,2939
+#  define WIFCONTINUED(92,3025
+    int quot;100,3229
+    int rem;101,3262
+  } div_t;102,3295
+    long int quot;108,3378
+    long int rem;109,3415
+  } ldiv_t;110,3452
+# define __ldiv_t_defined	111,3464
+    long long int quot;120,3658
+    long long int rem;121,3700
+  } lldiv_t;122,3742
+# define __lldiv_t_defined	123,3755
+#define	RAND_MAX	129,3875
+#define	EXIT_FAILURE	134,4024
+#define	EXIT_SUCCESS	135,4075
+#define	MB_CUR_MAX	139,4201
+extern size_t __ctype_get_mb_cur_max 140,4248
+__NTH 284,9415
+__NTH 289,9532
+__NTH 298,9753
+extern char *l64a l64a311,10129
+struct random_data349,11812
+    int32_t *fptr;fptr351,11835
+    int32_t *rptr;rptr352,11877
+    int32_t *state;state353,11918
+    int rand_type;354,11969
+    int rand_deg;355,12029
+    int rand_sep;356,12090
+    int32_t *end_ptr;end_ptr357,12149
+extern int random_r 360,12213
+struct drand48_data418,14335
+    unsigned short int __x[__x420,14359
+    unsigned short int __old_x[__old_x421,14412
+    unsigned short int __c;422,14465
+    unsigned short int __init;423,14541
+    unsigned long long int __a;424,14602
+extern int drand48_r 428,14759
+# define __malloc_and_calloc_defined468,16319
+extern int atexit 518,18180
+extern void quick_exit 552,19520
+extern void _Exit 560,19788
+extern char *getenv getenv567,19985
+#   define mkstemp 626,22369
+#   define mkstemps 648,23038
+#   define mkostemp 680,24179
+#   define mkostemps 702,24877
+# define __COMPAR_FN_T741,26064
+typedef int (*__compar_fn_t)__compar_fn_t742,26087
+typedef __compar_fn_t comparison_fn_t;745,26169
+typedef int (*__compar_d_fn_t)__compar_d_fn_t749,26240
+extern void *bsearch bsearch755,26483
+extern long int labs 772,27126
+__extension__ extern long long int llabs 776,27246
+extern div_t div 785,27535
+extern ldiv_t ldiv 787,27627
+__extension__ extern lldiv_t lldiv 793,27794
+extern char *ecvt ecvt808,28363
+#undef __need_malloc_and_calloc962,34185
+
+/usr/include/string.h,747
+#define	_STRING_H	25,963
+#define	__need_size_t32,1066
+#define	__need_NULL33,1088
+# define __CORRECT_ISO_CPP_STRING_H_PROTO38,1240
+extern void *memcpy memcpy44,1349
+memchr 88,2948
+extern void *memchr memchr95,3067
+# define strdupa(189,6900
+# define strndupa(199,7276
+strchr 228,8167
+extern char *strchr strchr235,8269
+strrchr 255,8877
+extern char *strrchr strrchr262,8981
+strpbrk 307,10724
+extern char *strpbrk strpbrk314,10848
+strstr 335,11574
+extern char *strstr strstr342,11710
+#   define strerror_r 433,15247
+index 482,16880
+extern char *index index489,16982
+rindex 510,17656
+extern char *rindex rindex517,17758
+extern int ffsl 528,18186
+__extension__ extern int ffsll 530,18272
+extern int strcasecmp 536,18425
+
+/usr/include/bsd/string.h,32
+#define LIBBSD_STRING_H34,1577
+
+/usr/include/sysexits.h,533
+#define	_SYSEXITS_H 33,1658
+#define EX_OK	92,4287
+#define EX__BASE	94,4334
+#define EX_USAGE	96,4391
+#define EX_DATAERR	97,4442
+#define EX_NOINPUT	98,4488
+#define EX_NOUSER	99,4534
+#define EX_NOHOST	100,4579
+#define EX_UNAVAILABLE	101,4624
+#define EX_SOFTWARE	102,4676
+#define EX_OSERR	103,4729
+#define EX_OSFILE	104,4787
+#define EX_CANTCREAT	105,4839
+#define EX_IOERR	106,4901
+#define EX_TEMPFAIL	107,4946
+#define EX_PROTOCOL	108,5014
+#define EX_NOPERM	109,5068
+#define EX_CONFIG	110,5113
+#define EX__MAX	112,5161
+
+/usr/include/sys/stat.h,2426
+#define	_SYS_STAT_H	25,986
+#  define __need_time_t34,1240
+#  define __need_timespec37,1320
+typedef __dev_t dev_t;46,1576
+#  define __dev_t_defined47,1599
+typedef __gid_t gid_t;51,1659
+#  define __gid_t_defined52,1682
+typedef __ino_t ino_t;57,1772
+typedef __ino64_t ino_t;59,1803
+#  define __ino_t_defined61,1837
+typedef __mode_t mode_t;65,1898
+#  define __mode_t_defined66,1923
+typedef __nlink_t nlink_t;70,1986
+#  define __nlink_t_defined71,2013
+typedef __off_t off_t;76,2105
+typedef __off64_t off_t;78,2136
+#  define __off_t_defined80,2170
+typedef __uid_t uid_t;84,2230
+#  define __uid_t_defined85,2253
+typedef __blkcnt_t blkcnt_t;92,2386
+typedef __blkcnt64_t blkcnt_t;94,2423
+#  define __blkcnt_t_defined96,2463
+typedef __blksize_t blksize_t;100,2530
+#  define __blksize_t_defined101,2561
+# define S_IFMT	110,2726
+# define S_IFDIR	111,2752
+# define S_IFCHR	112,2779
+# define S_IFBLK	113,2806
+# define S_IFREG	114,2833
+#  define S_IFIFO	116,2878
+#  define S_IFLNK	119,2932
+#  define S_IFSOCK	123,3068
+#define	__S_ISTYPE(129,3149
+#define	S_ISDIR(131,3213
+#define	S_ISCHR(132,3266
+#define	S_ISBLK(133,3319
+#define	S_ISREG(134,3372
+# define S_ISFIFO(136,3442
+# define S_ISLNK(139,3521
+# define S_ISLNK(143,3627
+# define S_ISSOCK(148,3762
+# define S_ISSOCK(150,3845
+# define S_TYPEISMQ(158,4165
+# define S_TYPEISSEM(159,4208
+# define S_TYPEISSHM(160,4253
+#define	S_ISUID 166,4332
+#define	S_ISGID	167,4391
+# define S_ISVTX	171,4599
+#define	S_IRUSR	174,4634
+#define	S_IWUSR	175,4682
+#define	S_IXUSR	176,4732
+#define	S_IRWXU	178,4825
+# define S_IREAD	181,4919
+# define S_IWRITE	182,4944
+# define S_IEXEC	183,4970
+#define	S_IRGRP	186,5003
+#define	S_IWGRP	187,5056
+#define	S_IXGRP	188,5110
+#define	S_IRWXG	190,5208
+#define	S_IROTH	192,5240
+#define	S_IWOTH	193,5294
+#define	S_IXOTH	194,5349
+#define	S_IRWXO	196,5449
+# define ACCESSPERMS 201,5540
+# define ALLPERMS 202,5598
+# define DEFFILEMODE 203,5677
+# define S_BLKSIZE	205,5758
+extern int stat 211,5910
+#  define stat 225,6491
+#  define fstat 226,6513
+#   define fstatat 250,7345
+#   define lstat 274,8101
+# define _STAT_VER	393,12534
+# define _MKNOD_VER	396,12581
+#  define __fxstat 427,13818
+#  define __xstat 428,13848
+#  define __lxstat 429,13876
+__NTH 462,15064
+__NTH 469,15208
+__NTH 476,15351
+__NTH 485,15590
+__NTH 493,15769
+__NTH 504,16079
+__NTH 511,16275
+__NTH 518,16426
+__NTH 525,16576
+
+/usr/include/time.h,1496
+# define _TIME_H	27,1033
+# define __need_size_t36,1158
+# define __need_NULL37,1181
+#   define CLK_TCK	47,1488
+# define __clock_t_defined	54,1652
+typedef __clock_t clock_t;60,1758
+#undef	__need_clock_t67,1977
+# define __time_t_defined	70,2076
+__USING_NAMESPACE_STD(__time_t_defined63,1874
+typedef __time_t time_t;76,2180
+#undef	__need_time_t83,2393
+# define __clockid_t_defined	87,2533
+__USING_NAMESPACE_STD(__clockid_t_defined79,2293
+typedef __clockid_t clockid_t;92,2642
+#undef	__clockid_time_t95,2742
+# define __timer_t_defined	99,2882
+typedef __timer_t timer_t;104,2982
+#undef	__need_timer_t107,3074
+# define __timespec_defined	114,3262
+struct timespec120,3481
+    __time_t tv_sec;122,3501
+    long int tv_nsec;123,3539
+#undef	__need_timespec127,3654
+struct tm133,3753
+  int tm_sec;135,3765
+  int tm_min;136,3819
+  int tm_hour;137,3857
+  int tm_mday;138,3894
+  int tm_mon;139,3930
+  int tm_year;140,3966
+  int tm_wday;141,4003
+  int tm_yday;142,4045
+  int tm_isdst;143,4089
+  long int tm_gmtoff;146,4145
+  __const char *tm_zone;tm_zone147,4196
+  long int __tm_gmtoff;149,4257
+  __const char *__tm_zone;__tm_zone150,4310
+__USING_NAMESPACE_STD(155,4466
+struct itimerspec161,4590
+    struct timespec it_interval;163,4612
+    struct timespec it_value;164,4645
+typedef __pid_t pid_t;174,4816
+#  define __pid_t_defined175,4839
+extern clock_t clock 183,5032
+extern time_t mktime 193,5410
+# define __isleap(304,9152
+extern int clock_getres 333,10047
+
+/usr/include/unistd.h,2528
+#define	_UNISTD_H	24,943
+# define _POSIX_VERSION	35,1239
+# define _POSIX_VERSION	38,1369
+# define _POSIX_VERSION	41,1499
+# define _POSIX_VERSION	44,1634
+# define _POSIX_VERSION	47,1743
+# define __POSIX2_THIS_VERSION	54,1917
+# define __POSIX2_THIS_VERSION	58,2122
+# define __POSIX2_THIS_VERSION	61,2262
+# define __POSIX2_THIS_VERSION	64,2376
+#define _POSIX2_VERSION	68,2492
+#define	_POSIX2_C_BIND	72,2621
+#define	_POSIX2_C_DEV	76,2762
+#define	_POSIX2_SW_DEV	80,2900
+#define _POSIX2_LOCALEDEF 84,3048
+# define _XOPEN_VERSION	88,3204
+# define _XOPEN_VERSION	90,3260
+# define _XOPEN_VERSION	92,3315
+# define _XOPEN_VERSION	94,3349
+#define _XOPEN_XCU_VERSION	98,3438
+#define _XOPEN_XPG2	101,3535
+#define _XOPEN_XPG3	102,3557
+#define _XOPEN_XPG4	103,3579
+#define _XOPEN_UNIX	106,3651
+#define	_XOPEN_CRYPT	109,3704
+#define	_XOPEN_ENH_I18N	113,3818
+#define _XOPEN_LEGACY	116,3894
+#define	STDIN_FILENO	211,8633
+#define	STDOUT_FILENO	212,8679
+#define	STDERR_FILENO	213,8727
+typedef __ssize_t ssize_t;221,8893
+# define __ssize_t_defined222,8920
+#define	__need_size_t225,8955
+#define __need_NULL226,8977
+typedef __gid_t gid_t;233,9178
+#  define __gid_t_defined234,9201
+typedef __uid_t uid_t;238,9261
+#  define __uid_t_defined239,9284
+typedef __off_t off_t;244,9374
+typedef __off64_t off_t;246,9405
+#  define __off_t_defined248,9439
+typedef __off64_t off64_t;251,9534
+#  define __off64_t_defined252,9561
+typedef __useconds_t useconds_t;256,9628
+#  define __useconds_t_defined257,9661
+typedef __pid_t pid_t;261,9726
+#  define __pid_t_defined262,9749
+typedef __intptr_t intptr_t;268,9912
+#  define __intptr_t_defined269,9941
+typedef __socklen_t socklen_t;275,10060
+#  define __socklen_t_defined276,10091
+#define	R_OK	282,10217
+#define	W_OK	283,10266
+#define	X_OK	284,10316
+#define	F_OK	285,10368
+extern int access 288,10476
+# define SEEK_SET	312,11366
+# define SEEK_CUR	313,11422
+# define SEEK_END	314,11477
+# define L_SET	319,11644
+# define L_INCR	320,11669
+# define L_XTND	321,11695
+#  define lseek 338,12212
+#   define pread 392,14027
+#   define pwrite 393,14052
+extern long int pathconf 609,22640
+#  define getpgrp 638,23560
+#   define setpgrp 677,24933
+# define __need_getopt889,32839
+extern int getdtablesize 997,37125
+#   define truncate 1015,37627
+#   define ftruncate 1032,38097
+# define F_ULOCK 1085,40033
+# define F_LOCK 1086,40094
+# define F_TLOCK 1087,40153
+# define F_TEST 1088,40221
+#   define lockf 1097,40509
+# define TEMP_FAILURE_RETRY(1111,40820
+
+inc/rmfs.h,417
+#define RMFS_H_4,18
+typedef enum ingest_cycles 46,952
+  INGEST_PREVSTATE 47,981
+  INGEST_COLDSTART 48,1006
+  INGEST_1 49,1030
+  INGEST_1         = INGEST_COLDSTART 49,1030
+  INGEST_2 50,1073
+  INGEST_2         = INGEST_1 50,1073
+  INGEST_3 51,1108
+  INGEST_3         = INGEST_1 51,1108
+  INGEST_MAX 52,1143
+  INGEST_MAX       = INGEST_3,52,1143
+} ingest_cycle_t;53,1174
+#define NXT_ingest_cycle(55,1193
+
+inc/rmfs/conf.h,2738
+#define RMFS_CONF_H_40,1349
+#define CP_UNK_SIZE 45,1417
+struct rmfs_param 50,1536
+  union ue 51,1556
+    void     *ptr;ptr53,1649
+    void     *base_addr;base_addr54,1668
+    char     *str;str57,1712
+    char     *pathnm;pathnm58,1731
+    char     *hostname;hostname59,1753
+    char    **array_str;array_str60,1777
+    unsigned long ul;63,1819
+    unsigned int  ui;64,1841
+    uint16_t      ui_16;65,1863
+    uint32_t      ui_32;66,1888
+    long          l;67,1913
+    int           i;68,1934
+    uid_t         uid;69,1955
+    gid_t         gid;70,1978
+    pid_t         pid;71,2001
+    time_t        time;72,2024
+    tri_t         truth;73,2048
+    bool_t        btruth;74,2073
+  } ue;75,2099
+  size_t size;76,2107
+  struct path_descriptor 78,2174
+    char *fullpath;fullpath79,2201
+    pid_t owner;80,2221
+    int   fd;81,2238
+    FILE *fstr;fstr82,2252
+    int   ours:ours83,2268
+  } pd;84,2286
+typedef struct rmfs_param rmfs_param_t;86,2297
+struct config_param 89,2408
+  rmfs_param_t     val;90,2430
+  rmfs_param_t     default_val;91,2514
+  ptyp_t           typ;92,2546
+  struct src 94,2571
+    param_source_t   allowed;95,2586
+    param_source_t   actual;96,2616
+    param_source_t   debug;97,2645
+  } src;98,2673
+  char            *nm;nm99,2682
+  int              h;100,2705
+  param_source_t (*collector)collector101,2727
+  struct depends_on 102,2781
+    char                *nm;nm103,2803
+    struct config_param *p_cp;p_cp104,2832
+  } depends_on;105,2863
+  struct slurm_fuse_opt_desc *p_fopd;p_fopd108,2901
+  struct fuse_opt            *p_fo;p_fo109,2993
+  struct src_specific 112,3079
+    struct slurm_info 113,3103
+      ptyp_t                        parent_type;114,3148
+      void                         *base_addr;base_addr115,3197
+      off_t                         off;116,3244
+      partition_info_msg_t         *pim;pim117,3285
+      node_info_msg_t              *nim;nim118,3326
+      job_info_msg_t               *jim;jim119,3367
+      job_step_info_response_msg_t *stim;stim120,3408
+      int                           dynamic:dynamic121,3450
+      int 122,3497
+    } slurm;123,3537
+    struct rmfs_info 124,3550
+      ptyp_t                        parent_type;125,3573
+      int                           local:local126,3622
+      int                           fs:fs127,3667
+      int 128,3709
+    } rmfs;129,3749
+  } per_src;130,3761
+  struct rnode        *p_rnode;p_rnode133,3796
+  struct config_param *p_nxt;p_nxt134,3828
+typedef struct config_param config_param_t;136,3921
+#define CONFPARAM_REQUIRED 138,3966
+#define CONFPARAM_MISSINGOK 139,4017
+#define IS_VALID_HASH(141,4070
+#define IS_INVALID_HASH(142,4128
+
+inc/rmfs/param.h,2085
+#define RMFS_PARAM_H_3,23
+#define DEFMODE_FILE 32,1240
+#define DEFMODE_DIR 33,1266
+#define N_DEFAULT_MODES 34,1292
+#define RM_UID_CTL 36,1319
+#define RM_UID_DISPATCH 37,1365
+#define RM_UIDS 38,1424
+#define RNODEPOOL_DEFAULT_MINSIZE 45,1579
+struct rnode_params 57,2051
+  unsigned long  rn_minpoolsize;58,2073
+  unsigned long *rn_allocmap;rn_allocmap60,2107
+  rnode_t       *rn_pool;rn_pool61,2137
+  unsigned long  rn_maxalloc;63,2166
+  unsigned long  rn_basealloc;64,2196
+  unsigned long  rn_curalloc;65,2227
+  rnode_t       *p_nxt_avail_rn;p_nxt_avail_rn67,2258
+  unsigned long  nxt_avail;68,2291
+  uid_t               rm_uid[rm_uid70,2320
+  mode_t              def_mode[def_mode71,2385
+  security_context_t *scon;scon72,2434
+  rnode_t       *p_fsroot;p_fsroot75,2481
+  rnode_t       *p_cname;p_cname76,2508
+  rnode_t       *p_jobd;p_jobd77,2534
+  rnode_t       *p_dirty;p_dirty79,2562
+  time_t         last_update;80,2605
+  unsigned long  fsid;82,2636
+  unsigned long  version;83,2659
+typedef struct rnode_params rn_param_t;86,2689
+#define RNPARAM_MINPOOLSIZE_OFF 124,3862
+#define RNPARAM_MINPOOLSIZE 125,3933
+#define RNPARAM_ALLOCMAP_OFF 127,4008
+#define RNPARAM_ALLOCMAP 128,4073
+#define RNPARAM_POOL_OFF 130,4146
+#define RNPARAM_POOL 131,4210
+#define RNPARAM_MAXALLOC_OFF 133,4278
+#define RNPARAM_MAXALLOC 134,4346
+#define RNPARAM_BASEALLOC_OFF 136,4419
+#define RNPARAM_BASEALLOC 137,4489
+#define RNPARAM_CURALLOC_OFF 139,4564
+#define RNPARAM_CURALLOC 140,4632
+#define RNPARAM_NXTAVAILRN_OFF 142,4705
+#define RNPARAM_NXTAVAILRN 143,4776
+#define RNPARAM_NXTAVAIL_OFF 145,4850
+#define RNPARAM_NXTAVAIL 146,4916
+#define RNPARAM_RMUID_OFF 148,4988
+#define RNPARAM_RMUID 149,5051
+#define RNPARAM_DEFMODE_OFF 151,5122
+#define RNPARAM_DEFMODE 152,5187
+#define RNPARAM_JOBD_OFF 154,5261
+#define RNPARAM_JOBD 155,5324
+#define RNPARAM_DIRTY_OFF 157,5392
+#define RNPARAM_DIRTY 158,5456
+#define RNPARAM_LASTUPDATE_OFF 160,5525
+#define RNPARAM_LASTUPDATE 161,5593
+#define RNPARAM_FSID_OFF 163,5669
+#define RNPARAM_FSID 164,5730
+
+inc/rmfs/types.h,8818
+#define RMFS_TYPE_H_9,160
+enum boolean 17,261
+  BFALSE 18,276
+  BTRUE 19,290
+typedef enum boolean bool_t;21,306
+typedef _Bool bool_t;24,342
+enum trilene 28,373
+  UNSET 29,388
+  UNSET = (~0)29,388
+  FALSE 30,404
+  FALSE = false,30,404
+  TRUE 31,421
+  TRUE  = true31,421
+typedef enum trilene tri_t;33,439
+enum opt_flag 40,565
+  OPT_INVAL 41,581
+  OPT_INVAL          = ~0,41,581
+  OPT_NONE 42,608
+  OPT_VALID_IF_DEBUG 43,634
+  OPT_DEBUG 44,660
+  OPT_DEBUG          = OPT_VALID_IF_DEBUG,44,660
+  OPT_MANDATORY 45,703
+  OPT_MAND 46,729
+  OPT_MAND           = OPT_MANDATORY,46,729
+  OPT_EXCLUSIVE_ALL 47,767
+  OPT_EXCL_ALL 48,793
+  OPT_EXCL_ALL       = OPT_EXCLUSIVE_ALL,48,793
+  OPT_EXCLUSIVE 49,835
+  OPT_EXCLUSIVE      = OPT_EXCLUSIVE_ALL,49,835
+  OPT_SELECT_ONE 50,877
+  OPT_ONE 51,903
+  OPT_ONE            = OPT_SELECT_ONE,51,903
+  OPT_NONOPT 52,942
+typedef enum opt_flag opt_flg_t;54,1034
+enum param_source 69,1452
+  PSRC_NONE 70,1472
+  PSRC_NOBITS 71,1498
+  PSRC_NOBITS        = PSRC_NONE,71,1498
+  PSRC_MAC_CONF 73,1535
+  PSRC_MAC 74,1561
+  PSRC_MAC           = PSRC_MAC_CONF,74,1561
+  PSRC_SLURM 76,1600
+  PSRC_ENVAR 78,1629
+  PSRC_ENV 79,1655
+  PSRC_ENV           = PSRC_ENVAR,79,1655
+  PSRC_MNT_OPT 81,1691
+  PSRC_MNT 82,1717
+  PSRC_MNT           = PSRC_MNT_OPT,82,1717
+  PSRC_MNT_NONOPT 83,1754
+  PSRC_FUSE 84,1819
+  PSRC_USERINPUT 86,1848
+  PSRC_DEFAULT 88,1888
+  PSRC_DERIVED 89,1914
+  PSRC_MAX 91,2005
+  PSRC_MAX           = PSRC_DERIVED,91,2005
+  PSRC_N 92,2042
+  PSRC_N             = PSRC_MAX+PSRC_MAX92,2042
+  PSRC_LAST 93,2092
+  PSRC_LAST          = PSRC_MAX,93,2092
+  PSRC_LOPRI 94,2125
+  PSRC_LOPRI         = PSRC_LAST,94,2125
+  PSRC_LEAST_TRUSTED 95,2159
+  PSRC_LEAST_TRUSTED = PSRC_LOPRI,95,2159
+  PSRC_FIRST 96,2194
+  PSRC_FIRST         = PSRC_NONE+PSRC_NONE96,2194
+  PSRC_HIPRI 97,2245
+  PSRC_HIPRI         = PSRC_FIRST,97,2245
+  PSRC_MOST_TRUSTED 98,2280
+  PSRC_MOST_TRUSTED  = PSRC_HIPRI98,2280
+typedef enum param_source param_source_t;100,2317
+#define PSRCNAME(103,2402
+#define BIT(105,2444
+#define PSRC_ALLBITS 107,2475
+#define ISSET(116,2762
+#define ANY(118,2801
+#define NOBITS(119,2853
+#define PSRC_LSB(121,2896
+#define PSRC_MSB(124,2986
+#define PSRC_NXT(126,3028
+#define PSRC_TEST(127,3062
+enum param_type 137,3340
+  PTYP_NONE 138,3358
+  PTYP_OPAQUE 140,3386
+  PTYP_OPAQUE       = PTYP_NONE+PTYP_NONE140,3386
+  PTYP_FIRST 141,3421
+  PTYP_FIRST        = PTYP_OPAQUE,141,3421
+  PTYP_ALPHANUM 143,3457
+  PTYP_ALPHANUM     = PTYP_OPAQUE 143,3457
+  PTYP_ALPHA_FIRST 144,3496
+  PTYP_ALPHA_FIRST  = PTYP_ALPHANUM,144,3496
+  PTYP_ALPHA 145,3533
+  PTYP_ALPHA        = PTYP_ALPHA_FIRST 145,3533
+  PTYP_NUMERICHAR 146,3577
+  PTYP_NUMERICHAR   = PTYP_ALPHA_FIRST 146,3577
+  PTYP_ALPHA_P2P 147,3675
+  PTYP_ALPHA_P2P    = PTYP_ALPHA_FIRST 147,3675
+  PTYP_XATTR 148,3746
+  PTYP_XATTR        = PTYP_ALPHA_FIRST 148,3746
+  PTYP_PATH 149,3844
+  PTYP_PATH         = PTYP_ALPHA_FIRST 149,3844
+  PTYP_FSVIS_FIRST 150,3942
+  PTYP_FSVIS_FIRST  = PTYP_PATH,150,3942
+  PTYP_FILE 152,4019
+  PTYP_FILE         = PTYP_ALPHA_FIRST 152,4019
+  PTYP_FILEXIST 153,4117
+  PTYP_FILEXIST     = PTYP_ALPHA_FIRST 153,4117
+  PTYP_SYM 154,4215
+  PTYP_SYM          = PTYP_ALPHA_FIRST 154,4215
+  PTYP_DIREXIST 155,4315
+  PTYP_DIREXIST     = PTYP_ALPHA_FIRST 155,4315
+  PTYP_DIR 156,4413
+  PTYP_DIR          = PTYP_ALPHA_FIRST 156,4413
+  PTYP_FSVIS_LAST 157,4512
+  PTYP_FSVIS_LAST   = PTYP_DIR,157,4512
+  PTYP_HOST 158,4544
+  PTYP_HOST         = PTYP_ALPHA_FIRST 158,4544
+  PTYP_HOST_FIRST 159,4641
+  PTYP_HOST_FIRST   = PTYP_HOST,159,4641
+  PTYP_HOSTNAME 160,4674
+  PTYP_HOSTNAME     = PTYP_HOST,160,4674
+  PTYP_HOST_LAST 161,4707
+  PTYP_HOST_LAST    = PTYP_HOST,161,4707
+  PTYP_ALPHA_LAST 162,4740
+  PTYP_ALPHA_LAST   = PTYP_HOST,162,4740
+  PTYP_NUMERIC 164,4774
+  PTYP_NUMERIC        = PTYP_ALPHA_LAST 164,4774
+  PTYP_INT_FIRST 165,4822
+  PTYP_INT_FIRST      = PTYP_NUMERIC,165,4822
+  PTYP_NUMERICTIME 166,4895
+  PTYP_NUMERICTIME    = PTYP_INT_FIRST 166,4895
+  PTYP_NUMTIME 167,4973
+  PTYP_NUMTIME        = PTYP_NUMERICTIME,167,4973
+  PTYP_NUMTIM_SECS 168,5015
+  PTYP_NUMTIM_SECS    = PTYP_INT_FIRST 168,5015
+  PTYP_NUMTIME_SECS 169,5097
+  PTYP_NUMTIME_SECS   = PTYP_NUMTIM_SECS,169,5097
+  PTYP_NUMSIGNED 170,5139
+  PTYP_NUMSIGNED      = PTYP_INT_FIRST 170,5139
+  PTYP_UNSIGNED_INT 171,5210
+  PTYP_UNSIGNED_INT   = PTYP_INT_FIRST 171,5210
+  PTYP_UNSIGNED_INT16 172,5254
+  PTYP_UNSIGNED_INT16 = PTYP_INT_FIRST 172,5254
+  PTYP_UNSIGNED_INT32 173,5298
+  PTYP_UNSIGNED_INT32 = PTYP_INT_FIRST 173,5298
+  PTYP_UID 174,5342
+  PTYP_UID            = PTYP_INT_FIRST 174,5342
+  PTYP_PID 175,5386
+  PTYP_PID            = PTYP_INT_FIRST 175,5386
+  PTYP_TRILENE 176,5430
+  PTYP_TRILENE        = PTYP_INT_FIRST 176,5430
+  PTYP_BOOLEAN 177,5510
+  PTYP_BOOLEAN        = PTYP_INT_FIRST 177,5510
+  PTYP_SIGNATURE 178,5591
+  PTYP_SIGNATURE      = PTYP_INT_FIRST 178,5591
+  PTYP_INT_LAST 179,5636
+  PTYP_INT_LAST       = PTYP_SIGNATURE,179,5636
+  PTYP_CONTEXT 181,5679
+  PTYP_CONTEXT      = PTYP_INT_LAST 181,5679
+  PTYP_CNTXT_FIRST 182,5738
+  PTYP_CNTXT_FIRST  = PTYP_CONTEXT,182,5738
+  PTYP_CNTXT 183,5774
+  PTYP_CNTXT        = PTYP_CONTEXT,183,5774
+  PTYP_CNTXT_LAST 184,5810
+  PTYP_CNTXT_LAST   = PTYP_CONTEXT,184,5810
+  PTYP_CLUSTER 187,5866
+  PTYP_CLUSTER      = PTYP_CNTXT_LAST 187,5866
+  PTYP_SLURM_FIRST 188,5909
+  PTYP_SLURM_FIRST  = PTYP_CLUSTER,188,5909
+  PTYP_CNTRLMACH 189,5945
+  PTYP_CNTRLMACH    = PTYP_SLURM_FIRST 189,5945
+  PTYP_PARTITION 190,6003
+  PTYP_PARTITION    = PTYP_SLURM_FIRST 190,6003
+  PTYP_NODE 191,6065
+  PTYP_NODE         = PTYP_SLURM_FIRST 191,6065
+  PTYP_JOB 192,6127
+  PTYP_JOB          = PTYP_SLURM_FIRST 192,6127
+  PTYP_STEP 193,6189
+  PTYP_STEP         = PTYP_SLURM_FIRST 193,6189
+  PTYP_ALLOCJOB 194,6251
+  PTYP_ALLOCJOB     = PTYP_SLURM_FIRST 194,6251
+  PTYP_NODESTATE 195,6331
+  PTYP_NODESTATE    = PTYP_SLURM_FIRST 195,6331
+  PTYP_SLURMVERSION 196,6401
+  PTYP_SLURMVERSION = PTYP_SLURM_FIRST 196,6401
+  PTYP_SLURMUID 197,6445
+  PTYP_SLURMUID     = PTYP_SLURM_FIRST 197,6445
+  PTYP_SLURMTMOUT 198,6489
+  PTYP_SLURMTMOUT   = PTYP_SLURM_FIRST 198,6489
+  PTYP_SPANKENV 199,6534
+  PTYP_SPANKENV     = PTYP_SLURM_FIRST 199,6534
+  PTYP_SPANKENVSIZE 200,6579
+  PTYP_SPANKENVSIZE = PTYP_SLURM_FIRST 200,6579
+  PTYP_JSUB_PLUGIN 201,6624
+  PTYP_JSUB_PLUGIN  = PTYP_SLURM_FIRST 201,6624
+  PTYP_GRES_PLUGIN 202,6669
+  PTYP_GRES_PLUGIN  = PTYP_SLURM_FIRST 202,6669
+  PTYP_SLURMUNAME 203,6714
+  PTYP_SLURMUNAME   = PTYP_SLURM_FIRST 203,6714
+  PTYP_SLURMDUNAME 204,6759
+  PTYP_SLURMDUNAME  = PTYP_SLURM_FIRST 204,6759
+  PTYP_SLURM_LAST 205,6804
+  PTYP_SLURM_LAST   = PTYP_SLURM_FIRST 205,6804
+  PTYP_LAST 207,6850
+  PTYP_LAST         = PTYP_SLURM_LAST,207,6850
+  PTYP_GUARD 208,6889
+  PTYP_GUARD        = PTYP_LAST 208,6889
+  PTYP_LEN 209,6926
+  PTYP_LEN          = PTYP_GUARD 209,6926
+typedef enum param_type ptyp_t;211,7012
+#define IS_SLURM_TYPE(213,7045
+#define IS_NUMERIC_TYPE(214,7137
+#define IS_NUMSIGNED_TYPE(215,7225
+#define IS_SIGNATURE_TYPE(216,7284
+#define IS_ALPHA_TYPE(217,7343
+#define IS_CONTEXT_TYPE(218,7435
+#define IS_XATTR_TYPE(219,7527
+#define IS_OPAQUE_TYPE(220,7607
+#define IS_VALID_TYPE(221,7663
+#define IS_BOOLEAN_TYPE(222,7741
+#define IS_TRILENE_TYPE(223,7798
+#define IS_TRUTH_TYPE(224,7855
+#define IS_LOGICAL_TYPE(225,7936
+#define IS_FSVIS_TYPE(226,7990
+#define IS_HOST_TYPE(227,8080
+#define OPAQUE_EMIT 233,8317
+enum slurmfs_exitcode 238,8373
+  ExitOK 239,8397
+  ExitOK             = EX_OK,239,8397
+  Exit_OK 240,8427
+  Exit_OK            = EX_OK,240,8427
+  ErrExit_ENOMEM 241,8457
+  ErrExit_ENOMEM     = EX__BASE-EX__BASE241,8457
+  ErrExit_ARGPARSE 242,8537
+  ErrExit_ARGPARSE   = EX_USAGE,242,8537
+  ErrExit_INCOMPLETE 243,8570
+  ErrExit_INCOMPLETE = EX_DATAERR,243,8570
+  ErrExit_CONFIG 244,8605
+  ErrExit_CONFIG     = EX_CONFIG,244,8605
+  ErrExit_UNAVAIL 245,8639
+  ErrExit_UNAVAIL    = EX_UNAVAILABLE,245,8639
+  ErrExit_NOPERM 246,8678
+  ErrExit_NOPERM     = EX_NOPERM,246,8678
+  ErrExit_OSERR 247,8712
+  ErrExit_OSERR      = EX_OSERR,247,8712
+  ErrExit_TEMPFAIL 248,8745
+  ErrExit_TEMPFAIL   = EX_TEMPFAIL,248,8745
+  ErrExit_INTERNAL 249,8781
+  ErrExit_INTERNAL   = EX_SOFTWARE,249,8781
+  ErrExit_STUCK 251,8820
+  ErrExit_STUCK      = EX_OK+EX_OK251,8820
+  ErrExit_SLURM 252,8890
+  ErrExit_SLURM      = EX_OK+EX_OK252,8890
+  ErrExit_ASSERT 253,8945
+  ErrExit_ASSERT     = EX_OK+EX_OK253,8945
+  ErrExit_NOMEM 254,9023
+  ErrExit_NOMEM      = EX_OK+EX_OK254,9023
+  ErrExit_WARN 255,9075
+  ErrExit_WARN       = EX_OK+EX_OK255,9075
+typedef enum slurmfs_exitcode rmfs_exitcode_t;257,9136
+#define max(272,9504
+#define min(279,9637
+
+inc/rmfs/rnode.h,4920
+#define RNODE_H_55,2628
+enum rnode_type 77,3035
+  RN_NONE 78,3053
+  RN_FIRST 79,3076
+  RN_FIRST        = RN_NONE,79,3076
+  RN_PROVISION 80,3105
+  RN_PROVISION    = RN_FIRST,80,3105
+  RN_GUARD 81,3135
+  RN_GUARD        = RN_FIRST 81,3135
+  RND_ROOT 83,3187
+  RND_ROOT        = RN_FIRST 83,3187
+  RND_CLUSTER 84,3236
+  RND_CLUSTER     = RN_FIRST 84,3236
+  RND_PARTS 86,3286
+  RND_PARTS       = RN_FIRST 86,3286
+  RND_PARTITIONS 87,3335
+  RND_PARTITIONS  = RND_PARTS,87,3335
+  RND_PARTNAME 88,3366
+  RND_PARTNAME    = RN_FIRST 88,3366
+  RND_NODES 90,3416
+  RND_NODES       = RN_FIRST 90,3416
+  RND_NODENAME 91,3465
+  RND_NODENAME    = RN_FIRST 91,3465
+  RND_JOBS 93,3515
+  RND_JOBS        = RN_FIRST 93,3515
+  RND_JOBID 94,3564
+  RND_JOBID       = RN_FIRST 94,3564
+  RND_JOBNAME 95,3613
+  RND_JOBNAME     = RND_JOBID,95,3613
+  RND_JOBSTEPS 97,3645
+  RND_JOBSTEPS    = RN_FIRST 97,3645
+  RND_JOBSTEPID 98,3695
+  RND_JOBSTEPID   = RN_FIRST 98,3695
+  RND_JOBSTEP 99,3745
+  RND_JOBSTEP     = RND_JOBSTEPID,99,3745
+  RND_JOBSTEPNAME 100,3780
+  RND_JOBSTEPNAME = RND_JOBSTEPID,100,3780
+  RND_JOBSTEP_CTX,103,3834
+  RND_JOBSTEP_LAUNCH,104,3853
+  RND_RESV,105,3875
+  RND_RESERVATION,106,3887
+  RNF_ALLOCJOB 109,3914
+  RNF_ALLOCJOB    = RN_FIRST 109,3914
+  RND_NODESTATE 110,3964
+  RND_NODESTATE   = RN_FIRST 110,3964
+  RND_ATTRIBUTES 112,4015
+  RND_ATTRIBUTES  = RN_FIRST 112,4015
+  RNF_ATTRIBUTE 113,4065
+  RNF_ATTRIBUTE   = RN_FIRST 113,4065
+  RNF_ATTR 114,4115
+  RNF_ATTR        = RNF_ATTRIBUTE,114,4115
+  RND_CONTROL 116,4151
+  RND_CONTROL     = RN_FIRST 116,4151
+  RND_CTRL 117,4201
+  RND_CTRL        = RND_CONTROL,117,4201
+  RNF_CONTEXT 119,4235
+  RNF_CONTEXT     = RN_FIRST 119,4235
+  RNF_CNTXT 120,4285
+  RNF_CNTXT       = RNF_CONTEXT,120,4285
+  RNF_CNTX 121,4318
+  RNF_CNTX        = RNF_CONTEXT,121,4318
+  RNF_KNOB 123,4354
+  RNF_KNOB        = RN_FIRST 123,4354
+  RNF_EXEC 124,4404
+  RNF_EXEC        = RNF_KNOB,124,4404
+  RNF_SIGNATURE 126,4437
+  RNF_SIGNATURE   = RN_FIRST 126,4437
+  RNF_SIG 127,4487
+  RNF_SIG         = RNF_SIGNATURE,127,4487
+  RND_RNPARAMS 129,4525
+  RND_RNPARAMS    = RN_FIRST 129,4525
+  RND_PARAMS 130,4575
+  RND_PARAMS      = RND_RNPARAMS,130,4575
+  RN_RAZE 132,4610
+  RN_RAZE         = RN_FIRST 132,4610
+  RN_LAST 133,4660
+  RN_LAST         = RN_RAZE,133,4660
+  RN_LEN 135,4692
+  RN_LEN          = RN_LAST 135,4692
+  RN_BASEALLOC 137,4743
+  RN_BASEALLOC    = RND_ROOT,137,4743
+  RN_INVALID 138,4773
+  RN_INVALID      = (~0)138,4773
+typedef enum rnode_type rn_type_t;141,4826
+#define IS_RTYPE_BUILDABLE(143,4862
+#define IS_RTYPE_VALID(148,5039
+#define IS_RTYPE_ATTR_SUBTYPE(150,5101
+#define IS_RTYPE_ATTRIBUTE(153,5258
+#define IS_RTYPE_CONTROL(154,5348
+#define IS_RTYPE_CTL(159,5533
+#define IS_RTYPE_XATTRIBUTE(161,5593
+#define IS_RTYPE_XATTR(162,5651
+#define MAX_RN_CMDS 174,5923
+struct rnode 175,5947
+  rn_type_t            rtype;176,5962
+  unsigned long        rino;177,5992
+  char                *nm;nm178,6079
+  struct rnode      *(*buildfn)buildfn181,6174
+  struct config_param *p_cp;p_cp183,6242
+  int                  gen;184,6271
+  time_t               ctime;185,6299
+  uid_t                uid;186,6329
+  gid_t                gid;187,6357
+  void                *p_dyntyp;p_dyntyp188,6385
+  int                  h;189,6418
+  struct rnode        *nxt_dirty;nxt_dirty192,6485
+  struct rnode        *signature;signature193,6582
+  struct rnode        *prev_version;prev_version194,6679
+  struct attr_desc 203,7056
+    struct config_param *table;table204,7077
+    tri_t              (*is_mine)is_mine205,7109
+  } attr_desc;206,7167
+  struct is 209,7255
+    unsigned int   dir:dir210,7269
+    unsigned int   file:file211,7295
+    unsigned int   link:link212,7322
+  } is;213,7349
+  struct may_be 216,7427
+    unsigned int 217,7445
+    unsigned int      controllable:controllable218,7498
+    unsigned int      dirty:dirty219,7536
+    unsigned int      readable:readable220,7567
+    unsigned int      writable:writable221,7601
+    unsigned int      execable:execable222,7635
+    unsigned int 223,7669
+    struct rnode     *notify;notify225,7700
+  } maybe;226,7730
+  struct rn_ctl 229,7811
+    enum rnode_type  rtype;230,7829
+    char            *nm;nm231,7909
+    tri_t          (*fn)fn232,7934
+  } ctl[ctl233,7999
+  int                  n_children;236,8100
+  struct rnode        *children;children237,8136
+  struct rnode        *parent;parent238,8224
+  struct rnode        *attr;attr239,8313
+  struct rnode        *subdir;subdir240,8401
+  int                  n_xattr;242,8492
+  struct config_param *xattr;xattr243,8580
+typedef struct rnode  rnode_t;246,8672
+typedef struct rn_ctl rn_ctl_t;247,8703
+struct convtyp 250,8777
+  enum param_type ptyp;251,8794
+  rn_type_t       rtyp;252,8818
+typedef struct convtyp pt2rn_t;254,8845
+
+inc/rmfs/misc.h,30
+#define RMFS_MISCSUBR_H_3,26
+
+inc/linkage/fuse.h,502
+#define RMFS_FUSE_LINKAGE_H_10,118
+#define FUSE_USE_VERSION 13,173
+struct slurm_fuse_opt_desc 26,439
+  char                *_s;_s27,468
+  char                *_long;_long28,495
+  char                *nm;nm30,568
+  struct config_param *p_cp;p_cp31,639
+  char                *help;help33,708
+  opt_flg_t            oflg;34,779
+typedef struct slurm_fuse_opt_desc slurm_fuse_opt_desc_t;36,849
+#define N_SLURM_FOPTS 44,1173
+#define N_SLURMFS_CONFIG 45,1252
+struct fuse_args f_args;52,1442
+
+inc/linkage/selinux.h,388
+#define SELINUX_LINKAGE_H_6,59
+#define CTX_XATTR_NM 18,285
+#define ctx_DEFAULT 19,330
+#define CTX_DEFAULT_S0 20,385
+#define CTX_JOBID 21,443
+#define CTX_JOBID_S0 22,501
+#define CTX_JOBID_EXEC 23,562
+#define CTX_JOBID_EXEC_S0 24,625
+#define CTX_JOBID_DEFAULT 26,692
+#define CTX_DEFAULT 27,794
+#define XATTR_SIG 29,901
+#define XATTR_SIGTYP 30,948
+#define SIGTYP_DJBHASH 31,993
+
+lib/rnode/rn_public.c,55
+(*get_rn_buildfn(get_rn_buildfn20,430
+mk_fs(46,1103
+
+lib/rnode/rn_alloc.c,122
+bsalloc(10,159
+bsalloc_init(15,199
+backingstore_valid(19,258
+rn_poolinit(47,1304
+rn_alloc(124,4002
+rn_raze(192,5798
+
+lib/rnode/rn_provision.c,21
+rn_provision(13,301
+
+lib/rnode/rn_cast.c,46
+rn_cast(9,128
+rn_cast_attr_typconv(179,4796
+
+lib/rnode/rn_subr.c,42
+attr_cnt_cp(9,100
+link_xattr2rn 49,1005
+
+lib/rnode/rn_mkcname.c,42
+is_cname_attr(18,375
+rn_mkcname(48,1005
+
+lib/rnode/rn_mkpart.c,39
+rn_mkpartd(10,214
+rn_mkpart(123,3847
+
+lib/rnode/rn_mkjob.c,62
+rn_mkjobd(10,201
+rn_resetugid(144,4249
+rn_mkjobid(174,4810
+
+lib/rnode/rn_mkstep.c,44
+rn_mkjobstepd(9,204
+rn_mkjobstep(158,4689
+
+lib/rnode/rn_mknode.c,121
+rn_mknoded(9,207
+rn_mknode(123,3808
+#define MAX_STATE_STR_LEN 211,6430
+rn_mknstate(214,6471
+rn_mkallocjob(345,10683
+
+lib/rnode/rn_mkattr.c,185
+rn_mkattrd(10,242
+mkattr_knob(138,4085
+(*get_rn_signfn(get_rn_signfn158,4572
+mkattr_sig(196,5503
+mkattr_xattr_ctx(255,7205
+rn_mkattr(362,10270
+getconfig_from_myattrnm(471,13636
+
+lib/rnode/rn_mkctl.c,18
+rn_mkctld(18,637
+
+lib/rnode/rn_mkfsroot.c,43
+is_fsroot_attr(9,112
+rn_mkfsroot(60,1546
+
+lib/rnode/rmfs_param.c,584
+static int the_rn_paramtab_lock 11,214
+rn_param_t rn_paramtab 12,251
+rn_paramtab_lock(15,289
+rn_paramtab_release(22,431
+get_rn_params(41,872
+set_rnparam_rn(53,1065
+set_rnparam_time(73,1419
+set_rnparam_ul(88,1712
+get_rnparam_fsroot(104,2101
+get_rnparam_rn(121,2412
+get_rnparam_ulp(136,2702
+get_rnparam_ul(151,2999
+get_rnparam_uidp(167,3304
+get_rnparam_modep(182,3588
+get_rnparam_fsid(198,3866
+get_rnparam_version(214,4133
+get_rnparam_modep_offset(230,4410
+rn_param_adddirty(249,4792
+set_rnparam_fsroot(276,5423
+set_rnparam_cname(300,6004
+set_rnparam_jobd(324,6573
+
+lib/rnode/rn_tab.c,369
+rnode_t rnode_buildtab[rnode_buildtab49,1972
+  { .rtype=rtype102,5604
+  { .rtype=rtype104,5777
+  { .rtype=rtype107,5952
+  { .rtype=rtype109,6125
+  { .rtype=rtype111,6299
+  { .rtype=rtype113,6473
+  { .rtype=rtype116,6648
+  { .rtype=rtype119,6824
+pt2rn_t p2r_typ_convtab[p2r_typ_convtab134,7327
+pt2rn_t p2r_typ_rm_convtab[p2r_typ_rm_convtab165,8872
+
+lib/rnode/rn_ctlroot.c,203
+cleanup_file(10,68
+cleanup(35,483
+rn_ctlroot_umount(42,611
+effluviate_one_rn(63,1080
+effluviate_rnode(112,2586
+effluviate_fstree(134,3061
+rn_ctlroot_effluviate(156,3620
+rn_ctlroot_check(170,3883
+
+lib/rnode/rn_ctljobid.c,140
+jobid_sigdesc_tab[jobid_sigdesc_tab9,126
+rn_ctljobid_sign(20,657
+rn_ctljobid_sync_fromBackingStore(172,5426
+rn_ctljobid_write(182,5689
+
+lib/fuseops/namer.c,14
+namer(12,172
+
+lib/fuseops/rmfs_init.c,18
+rmfs_init(12,183
+
+lib/fuseops/rmfs_access.c,20
+rmfs_access(12,188
+
+lib/fuseops/rmfs_getattr.c,19
+rmfs_getattr(5,24
+
+lib/fuseops/rmfs_statfs.c,18
+rmfs_statfs(5,24
+
+lib/fuseops/rmfs_open.c,16
+rmfs_open(5,24
+
+lib/fuseops/rmfs_readdir.c,141
+#define FILLSTAT_DEFAULT 4,20
+#define FILLSTAT_DOT 5,47
+#define FILLSTAT_DOTDOT 6,74
+rmfs_readdir_statfiller(9,107
+rmfs_readdir(58,1286
+
+lib/fuseops/rmfs_read.c,16
+rmfs_read(5,24
+
+lib/fuseops/rmfs_trunc.c,17
+rmfs_trunc(5,24
+
+lib/fuseops/rmfs_write.c,17
+rmfs_write(5,24
+
+lib/fuseops/rmfs_xattr.c,68
+rmfs_getxattr(5,24
+rmfs_setxattr(65,1513
+rmfs_listxattr(139,3202
+
+lib/fuseops/rmfs_poll.c,16
+rmfs_poll(5,24
+
+lib/fuseops/rmfs_fuseops_tab.c,45
+struct fuse_operations rmfs_file_ops 22,994
+
+lib/fuseops/rmfs_mayaccess.c,23
+rmfs_mayaccess(10,154
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/set_val_bool.c,19
+set_val_bool(5,25
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/set_val_charptr.c,22
+set_val_charptr(8,53
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/set_val_l.c,16
+set_val_l(5,25
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/set_val_pid.c,18
+set_val_pid(5,25
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/set_val_ptr.c,18
+set_val_ptr(8,54
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/set_val_truth.c,20
+set_val_truth(5,25
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/set_val_ui.c,17
+set_val_ui(5,25
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/set_val_uid.c,18
+set_val_uid(5,25
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/set_val_ul.c,17
+set_val_ul(5,25
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/cp_subr.c,83
+init_hash_cp 9,64
+derefable_cp(29,362
+dup_cp(41,558
+init_dependency_cp(76,1444
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/cp_Debug.c,12
+Debug(6,27
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/cp_effluviate.c,51
+effluviate_one_cp(4,24
+effluviate_config(38,1030
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/cp_get.c,82
+getconfig_fromnm(5,37
+getconfig_fromnm_nohash(29,539
+getconfig_fromhash(47,913
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/cp_tab.c,399
+config_param_t slurmfs_config[slurmfs_config52,2322
+  { .nm=nm154,12129
+ptyp2pname_tab[ptyp2pname_tab159,12327
+slurm_fuse_opt_desc_t slurm_fopts[slurm_fopts223,14081
+struct fuse_opt *p_fuseopts_tbl p_fuseopts_tbl298,16106
+int              fuseopts_len 299,16181
+int fo_max_len 301,16259
+char *psrc2srcname_tab[psrc2srcname_tab308,16429
+get_fo_max_len(323,16611
+decode_psrc(328,16661
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/djb_hash.c,46
+djb_strtohash(23,815
+djb_accumulate(44,1148
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/misc_subr.c,41
+psrc_msb(11,265
+internal_strlen(23,413
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_alpha.c,18
+typ_isalpha(5,26
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_alphanum.c,50
+typ_isalphanum(6,58
+typ_isalphanum_ornul(26,438
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_always_fails.c,23
+typ_always_fails(6,87
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_check.c,17
+typ_check(7,101
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_context.c,20
+typ_context(14,233
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_dir.c,35
+typ_dir(5,26
+typ_direxist(28,510
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_file.c,36
+typ_file(5,26
+typ_filexist(29,386
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_host.c,15
+typ_host(5,26
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_inout.c,39
+typ_copyout(9,99
+typ_copyin(153,3487
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_numeric.c,169
+typ_numeric(5,26
+typ_numsigned(25,378
+typ_unsigned_int(40,644
+typ_unsigned_int16(56,910
+typ_unsigned_int32(72,1172
+typ_numerictime(88,1434
+typ_numtimsecs(96,1664
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_numericchar.c,22
+typ_numericchar(5,26
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_opaque.c,17
+typ_opaque(6,52
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_path.c,15
+typ_path(5,26
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_slurm.c,212
+typ_slurm_cluster(22,622
+typ_slurm_controlmach(29,757
+typ_slurm_partition(36,899
+typ_slurm_node(43,1038
+typ_slurm_job(50,1165
+typ_slurm_step(57,1294
+typ_slurm_allocjob(64,1434
+typ_slurm_nodestate(71,1576
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_truth.c,266
+typ_trilene(5,26
+static struct truth_hash 20,297
+  char *str;str21,324
+  tri_t truth;22,337
+  int   h;23,352
+} truth_hash_tab[truth_hash_tab24,363
+typ_boolean(46,1083
+tri2str[tri2str87,1976
+bool2str[bool2str89,2025
+b2boolstr(92,2067
+t2tristr(108,2358
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_xattr.c,16
+typ_xattr(5,26
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_slurm_part.c,123
+config_param_t partinfodesc_tab[partinfodesc_tab13,312
+collectslurm_attr_part(32,1451
+collectslurm_partitions(101,3161
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_slurm_node.c,118
+config_param_t nodeinfodesc_tab[nodeinfodesc_tab12,311
+collectslurm_attr_node(47,2894
+collectslurm_nodes(166,6048
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_slurm_job.c,114
+config_param_t jobinfodesc_tab[jobinfodesc_tab13,312
+collectslurm_attr_job(57,3624
+collectslurm_jobs(189,7243
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_slurm_step.c,121
+config_param_t stepinfodesc_tab[stepinfodesc_tab14,313
+collectslurm_attr_step(36,1759
+collectslurm_jobsteps(114,3871
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_slurm.c,223
+collectslurm_api_version(19,616
+collectslurm_attr(50,1473
+collectslurm_confparam(181,5924
+set_val_slurm(226,7080
+time_t slurm_update_time 369,10788
+slurm_ctl_conf_t *p_slcnf p_slcnf370,10829
+collect_slurm(373,10879
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_fuse.c,380
+static int select_only_one 40,1270
+parse_an_arg(43,1307
+getfuseoptdesc_fromconfig(113,3278
+construct_fuse_mountopts(141,4116
+  enum { NOTHING 143,4199
+  enum { NOTHING = 0, TERMINATOR 143,4199
+  enum { NOTHING = 0, TERMINATOR = 1, OPT 143,4199
+  enum { NOTHING = 0, TERMINATOR = 1, OPT = 2, NONOPT 143,4199
+static int term_count 282,8544
+collect_fuse_mountopts(285,8587
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/typ_slurm.c,41
+ptyp_t slurm2basetyp[slurm2basetyp4,20
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_os.c,185
+mkdir_varrun(10,127
+varrun_opencp(43,816
+collectos_pid(140,3420
+#define _HOST_NAME_MAX 158,3846
+collectos_hostname(162,3910
+collectos_pidfile(193,4808
+record_mountpoint(243,6241
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_predecessor.c,196
+predecessor_alive(18,309
+claim_varrun(114,3123
+claim_BackingStore(122,3237
+merge_backingstore(127,3274
+backingstore_isvalid(132,3311
+pred_requestrefresh(137,3346
+collect_predstate(189,4905
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_macconf.c,52
+collect_macconf(13,293
+collectmac_context(60,1485
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_env.c,18
+collect_env(7,37
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_cp.c,17
+collect_cp(6,36
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/calcul.c,103
+calcul_derived(5,35
+calcul_isController(15,188
+calcul_rnodepool(43,960
+calcul_unmountwait(111,3122
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_default.c,22
+collect_default(7,37
+
+slu_rmfs/ingest.c,91
+char *src2str[src2str56,2228
+config_consistent_complete(75,2508
+ingest_config(139,4098
+
+slu_rmfs/mount.c,71
+already_mounted(9,114
+reclaim_files(63,1629
+request_unmount(86,2276
+
+slu_rmfs/usage.c,120
+char   *pusage_msg;pusage_msg9,80
+Usage(16,181
+static int caught_in_a_loop 27,449
+ErrExit(30,488
+CleanExit(56,916
+
+slu_rmfs/slu_rmfs.c,13
+main(16,410
+
+/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_table.c,0
+
+lib/rnode/rn_README.c,0
+
+inc/linkage/slurm.h,0

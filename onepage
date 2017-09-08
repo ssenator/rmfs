@@ -1,0 +1,35 @@
+Slu_rmfs
+
+This project implements a file system that consumes an API for a monolithic software module and presents a view of such information as a file system name space. Most information is authoritatively provided by the monolithic software; a small amount is derived for user consumption or is modifiable by file system node-specific functions.
+
+This implementation targets the TOSS-provided slurm resource manager, extending the analog of "/proc" or "/sysfs" to cluster-related data.  The file system name space represents the current state of jobs and resources provided to jobs.  Modifiable nodes are used to associate, set, get and enforce node-specific contextual information. This name space is meant to be visible across a cluster, but modifiable only on a selected, authorized, subset of cluster components. Only the modifiable instance utilizes or requires backing storage.
+
+This was developed as part of the SELinux MLS cluster research project. Therefore, SELinux security context was the first extension implemented. The slurm implementation includes separate slurm plugin-enforcement modules which set and get the SELinux security context. Two designed, but not yet implemented, extensions are:
+- associate security context with underlying software-defined network components, such as an IB partition, VLAN or netflow, and
+- associate a Linux cgroup or FreeBSD jail with a node (ex. user job) or set of nodes (ex. slurm partition.)
+
+Node-specific contextual information may be derived from any of underlying datum provided by the monolithic software or its plugins. This implementation uses a table-driven "datum dictionary" that collects from multiple sources. This table-based dictionary is meant to be an intermediate format for an eventual parsed data description implementation. This was strongly influenced by the requirements that any component, and therefore file system node, could be controlled by different administrative or policy authority. This datum dictionary is structured so that a given component, or class of components would be as simple as an additional table entry.
+
+The nodes in the file system are strongly typed. The type hierarchy is derived from the types implemented and exposed by the resource manager API. The internal representation of these nodes is independent of the mechanism which mounts these nodes. The current implementation uses a fuse mount. However, it is anticipated that an NFS or v9fs view would be necessary at scale.
+
+Strong interest has been expressed by potential consumers of this information, so that it could be used for:
+- platform-independent cluster administration tools, and
+- normative data collection and comparison across clusters.
+This interest includes extending this implementation to an alternative scheduler (MOAB, Mesos) or a different underlying resource manager, such as Torque, ALPS or a modern version of slurm.
+
+The primary requirements which this project was designed to satisfy are as follows:
+1. Extend an existing monolithic resource manager to support associated datums, initially SELinux security contexts.
+2. Enforce aspects of the job dispatching based on modules which consume the datums.
+3. Enforce the association of these datums consistent with a strong, constrained security model.
+4. These datums may be collected from a wide variety of sources, with an administratively-defined hierarchy.
+   For example, collect the security context set by the user's context at job submission. Allow the user to further specify the security
+   context, per-job, within the constraints of the SELinux MLS policy implemented on the cluster or portion of the cluster. 
+5. Do not modify the underlying resource manager.
+6. Construct the software to depend on a strongly-versioned API, as defined by RPM's or other external versioning.
+7. Present information regarding these jobs in a manner that is consumable by common tools, including those for visualization, auralization or web view adapters.
+   Arbitrary queries can be constructed using non-resource-manager-specific tools (ex. "grep", "awk" vs. "sinfo")
+   Medium-range goal: Jobs running on a cluster in two different security domains, such as "yellow" and "turquoise" are visually discernible.
+
+The use of a file system implementation was deliberate, so that (7) could be done on-demand, ideally interactively, and at scale.
+
+[sts v.2015.10.19]

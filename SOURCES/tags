@@ -1,0 +1,881 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ANY	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	118;"	d
+BASE_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/Makefile	/^BASE_D		:= $(RPM_SRC_D)$/;"	m
+BASE_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^BASE_D		:= $(RPM_SRC_D)$/;"	m
+BASE_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/Makefile	/^BASE_D		:= $(RPM_SRC_D)$/;"	m
+BASE_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/Makefile	/^BASE_D		:= $(RPM_SRC_D)$/;"	m
+BASE_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/Makefile	/^BASE_D		:= $(RPM_SRC_D)$/;"	m
+BASE_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/Makefile	/^BASE_D		:= $(RPM_SRC_D)$/;"	m
+BASE_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/Makefile	/^BASE_D		:= $(RPM_SRC_D)$/;"	m
+BASE_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/Makefile	/^BASE_D		:= $(RPM_SRC_D)$/;"	m
+BASE_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/Makefile	/^BASE_D		:= $(RPM_SRC_D)$/;"	m
+BASE_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/Makefile	/^BASE_D		:= $(RPM_SRC_D)$/;"	m
+BASE_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^BASE_D		:= $(RPM_SRC_D)$/;"	m
+BFALSE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  BFALSE = 0,$/;"	e	enum:boolean
+BIT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	105;"	d
+BTRUE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  BTRUE  = 1$/;"	e	enum:boolean
+BUILT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/Makefile	/^BUILT		:= $(shell date +%Y%m%d%H%M)$/;"	m
+BUILT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^BUILT		?= $(shell date +%Y%m%d%H%M)$/;"	m
+BUILT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/Makefile	/^BUILT		?= $(shell date +%Y%m%d%H%M)$/;"	m
+BUILT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/Makefile	/^BUILT		?= $(shell date +%Y%m%d%H%M)$/;"	m
+BUILT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/Makefile	/^BUILT		?= $(shell date +%Y%m%d%H%M)$/;"	m
+BUILT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/Makefile	/^BUILT		?= $(shell date +%Y%m%d%H%M)$/;"	m
+BUILT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/Makefile	/^BUILT		?= $(shell date +%Y%m%d%H%M)$/;"	m
+BUILT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/Makefile	/^BUILT		?=$(shell date +%Y%m%d%H%M)$/;"	m
+BUILT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/Makefile	/^BUILT		?= $(shell date +%Y%m%d%H%M)$/;"	m
+BUILT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/Makefile	/^BUILT		?= $(shell date +%Y%m%d%H%M)$/;"	m
+BUILT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^BUILT		?= $(shell date +%Y%m%d%H%M)$/;"	m
+CONFPARAM_MISSINGOK	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	139;"	d
+CONFPARAM_REQUIRED	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	138;"	d
+CP_UNK_SIZE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	45;"	d
+CTX_DEFAULT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/selinux.h	27;"	d
+CTX_DEFAULT_S0	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/selinux.h	20;"	d
+CTX_JOBID	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/selinux.h	21;"	d
+CTX_JOBID_DEFAULT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/selinux.h	26;"	d
+CTX_JOBID_EXEC	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/selinux.h	23;"	d
+CTX_JOBID_EXEC_S0	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/selinux.h	24;"	d
+CTX_JOBID_S0	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/selinux.h	22;"	d
+CTX_XATTR_NM	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/selinux.h	18;"	d
+CleanExit	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/usage.c	/^CleanExit() {$/;"	f
+DEFINES	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/Makefile	/^DEFINES		:= -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__COMPILE_DATE_TIME__=$(BUILT)$/;"	m
+DEFINES	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/Makefile	/^DEFINES		:= -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__COMPILE_DATE_TIME__=$(BUILT)$/;"	m
+DEFINES	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/Makefile	/^DEFINES		:= -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__COMPILE_DATE_TIME__=$(BUILT)$/;"	m
+DEFINES	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/Makefile	/^DEFINES		:= -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__COMPILE_DATE_TIME__=$(BUILT)$/;"	m
+DEFINES	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/Makefile	/^DEFINES		:= -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__COMPILE_DATE_TIME__=$(BUILT)$/;"	m
+DEFINES	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/Makefile	/^DEFINES		:= -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__COMPILE_DATE_TIME__=$(BUILT)$/;"	m
+DEFINES	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/Makefile	/^DEFINES		:= -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__COMPILE_DATE_TIME__=$(BUILT)$/;"	m
+DEFINES	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^DEFINES		:= -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__COMPILE_DATE_TIME__=$(BUILT)$/;"	m
+DEFMODE_DIR	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	33;"	d
+DEFMODE_FILE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	32;"	d
+Debug	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/cp_Debug.c	/^Debug(void) {$/;"	f
+EXEC_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/Makefile	/^EXEC_D		:= slu_rmfs$/;"	m
+EXEC_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^EXEC_D		:= .$/;"	m
+ErrExit	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/usage.c	/^ErrExit(int err, char *msg) {$/;"	f
+ErrExit_ARGPARSE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  ErrExit_ARGPARSE   = EX_USAGE,$/;"	e	enum:slurmfs_exitcode
+ErrExit_ASSERT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  ErrExit_ASSERT     = EX_OK+3, \/* *must be unique* internal inconsistency *\/$/;"	e	enum:slurmfs_exitcode
+ErrExit_CONFIG	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  ErrExit_CONFIG     = EX_CONFIG,$/;"	e	enum:slurmfs_exitcode
+ErrExit_ENOMEM	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  ErrExit_ENOMEM     = EX__BASE-1, \/* [EX_OK+1, EX_BASE-1] for user programs *\/$/;"	e	enum:slurmfs_exitcode
+ErrExit_INCOMPLETE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  ErrExit_INCOMPLETE = EX_DATAERR,$/;"	e	enum:slurmfs_exitcode
+ErrExit_INTERNAL	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  ErrExit_INTERNAL   = EX_SOFTWARE,$/;"	e	enum:slurmfs_exitcode
+ErrExit_NOMEM	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  ErrExit_NOMEM      = EX_OK+4, \/* out of memory *\/$/;"	e	enum:slurmfs_exitcode
+ErrExit_NOPERM	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  ErrExit_NOPERM     = EX_NOPERM,$/;"	e	enum:slurmfs_exitcode
+ErrExit_OSERR	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  ErrExit_OSERR      = EX_OSERR,$/;"	e	enum:slurmfs_exitcode
+ErrExit_SLURM	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  ErrExit_SLURM      = EX_OK+2, \/*some slurm problem*\/$/;"	e	enum:slurmfs_exitcode
+ErrExit_STUCK	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  ErrExit_STUCK      = EX_OK+1, \/*previous session won't relinquish*\/$/;"	e	enum:slurmfs_exitcode
+ErrExit_TEMPFAIL	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  ErrExit_TEMPFAIL   = EX_TEMPFAIL,$/;"	e	enum:slurmfs_exitcode
+ErrExit_UNAVAIL	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  ErrExit_UNAVAIL    = EX_UNAVAILABLE,$/;"	e	enum:slurmfs_exitcode
+ErrExit_WARN	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  ErrExit_WARN       = EX_OK+9  \/* not a cause to Exit *\/$/;"	e	enum:slurmfs_exitcode
+ExitOK	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  ExitOK             = EX_OK,$/;"	e	enum:slurmfs_exitcode
+Exit_OK	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  Exit_OK            = EX_OK,$/;"	e	enum:slurmfs_exitcode
+FALSE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  FALSE = false,$/;"	e	enum:trilene
+FILLSTAT_DEFAULT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/rmfs_readdir.c	4;"	d	file:
+FILLSTAT_DOT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/rmfs_readdir.c	5;"	d	file:
+FILLSTAT_DOTDOT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/rmfs_readdir.c	6;"	d	file:
+FUSE_USE_VERSION	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/fuse.h	13;"	d
+INC_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/Makefile	/^INC_D		:= inc$/;"	m
+INC_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^INC_D		:= ..\/inc$/;"	m
+INC_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/Makefile	/^INC_D		:= ..\/..\/inc$/;"	m
+INC_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/Makefile	/^INC_D		:= ..\/..\/inc$/;"	m
+INC_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/Makefile	/^INC_D		:= ..\/..\/..\/inc$/;"	m
+INC_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/Makefile	/^INC_D		:= ..\/..\/..\/inc$/;"	m
+INC_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/Makefile	/^INC_D		:= ..\/..\/..\/inc$/;"	m
+INC_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/Makefile	/^INC_D		:= ..\/..\/..\/inc$/;"	m
+INC_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/Makefile	/^INC_D		:= ..\/..\/inc$/;"	m
+INC_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/Makefile	/^INC_D		:= ..\/..\/inc$/;"	m
+INC_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^INC_D		:= ..\/inc$/;"	m
+INITIAL_START	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs.h	48;"	d
+ISSET	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	116;"	d
+IS_ALPHA_TYPE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	217;"	d
+IS_BOOLEAN_TYPE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	222;"	d
+IS_CONTEXT_TYPE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	218;"	d
+IS_FSVIS_TYPE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	226;"	d
+IS_HOST_TYPE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	227;"	d
+IS_INVALID_HASH	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	142;"	d
+IS_LOGICAL_TYPE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	225;"	d
+IS_NUMERIC_TYPE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	214;"	d
+IS_NUMSIGNED_TYPE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	215;"	d
+IS_OPAQUE_TYPE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	220;"	d
+IS_RTYPE_ATTRIBUTE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	153;"	d
+IS_RTYPE_ATTR_SUBTYPE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	150;"	d
+IS_RTYPE_BUILDABLE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	143;"	d
+IS_RTYPE_CONTROL	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	154;"	d
+IS_RTYPE_CTL	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	159;"	d
+IS_RTYPE_VALID	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	148;"	d
+IS_RTYPE_XATTR	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	162;"	d
+IS_RTYPE_XATTRIBUTE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	161;"	d
+IS_SIGNATURE_TYPE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	216;"	d
+IS_SLURM_TYPE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	213;"	d
+IS_TRILENE_TYPE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	223;"	d
+IS_TRUTH_TYPE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	224;"	d
+IS_VALID_HASH	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	141;"	d
+IS_VALID_TYPE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	221;"	d
+IS_XATTR_TYPE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	219;"	d
+LDFLAGS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^LDFLAGS		:= $(LDFLAGS) $(WITHSYMS) $(RELOC) $(XREF)$/;"	m
+LDLIBS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^LDLIBS		:= $(addprefix -L,$(LIB_D)) $(addprefix -l,$(libs))$/;"	m
+LIBS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/Makefile	/^LIBS		:= -lbsd$/;"	m
+LIBS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/Makefile	/^LIBS		:= $/;"	m
+LIBS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/Makefile	/^LIBS		:= -lbsd -lslurm -lslurmdb$/;"	m
+LIBS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/Makefile	/^LIBS		:= -lbsd -lslurm -lslurmdb$/;"	m
+LIBS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/Makefile	/^LIBS		:= $(PREREQ_LIBS) $(OUR_LIBS)$/;"	m
+LIBS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/Makefile	/^LIBS		:= -lbsd -lslurm -lslurmdb -lbsd -lrt -lselinux$/;"	m
+LIB_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/Makefile	/^LIB_D		:= lib$/;"	m
+LIB_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^LIB_D		:= ..\/lib$/;"	m
+LINT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/Makefile	/^LINT				:= splint$/;"	m
+LINT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/Makefile	/^LINT				:= splint$/;"	m
+LINT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/Makefile	/^LINT				:= splint$/;"	m
+LINT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/Makefile	/^LINT				:= splint$/;"	m
+LINT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/Makefile	/^LINT				:= splint$/;"	m
+LINT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/Makefile	/^LINT				:= splint$/;"	m
+LINT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/Makefile	/^LINT				:= splint$/;"	m
+LINT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^LINT				:= splint$/;"	m
+LINTFLAGS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/Makefile	/^LINTFLAGS			:= -checks -posix-strict-lib -booltype bool_t -boolfalse BFALSE -booltrue BTRUE $(INCFLAGS) $(DEFINES)$/;"	m
+LINTFLAGS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/Makefile	/^LINTFLAGS			:= -checks -posix-strict-lib -booltype bool_t -boolfalse BFALSE -booltrue BTRUE $(INCFLAGS) $(DEFINES)$/;"	m
+LINTFLAGS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/Makefile	/^LINTFLAGS			:= -checks -posix-strict-lib -booltype bool_t -boolfalse BFALSE -booltrue BTRUE $(INCFLAGS) $(DEFINES)$/;"	m
+LINTFLAGS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/Makefile	/^LINTFLAGS			:= -checks -posix-strict-lib -booltype bool_t -boolfalse BFALSE -booltrue BTRUE $(INCFLAGS) $(DEFINES)$/;"	m
+LINTFLAGS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/Makefile	/^LINTFLAGS			:= -checks -posix-strict-lib -booltype bool_t -boolfalse BFALSE -booltrue BTRUE $(INCFLAGS) $(DEFINES)$/;"	m
+LINTFLAGS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/Makefile	/^LINTFLAGS			:= -checks -posix-strict-lib -booltype bool_t -boolfalse BFALSE -booltrue BTRUE $(INCFLAGS) $(DEFINES)$/;"	m
+LINTFLAGS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/Makefile	/^LINTFLAGS			:= -checks -posix-strict-lib -booltype bool_t -boolfalse BFALSE -booltrue BTRUE $(INCFLAGS) $(DEFINES)$/;"	m
+LINTFLAGS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^LINTFLAGS			:= -checks -posix-strict-lib -booltype bool_t -boolfalse BFALSE -booltrue BTRUE $(INCFLAGS) $(DEFINES)$/;"	m
+LN	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/Makefile	/^LN		:= ln$/;"	m
+LN	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^LN		:= ln$/;"	m
+LNFLAGS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/Makefile	/^LNFLAGS		:= -f -v$/;"	m
+LNFLAGS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^LNFLAGS		:= -f -v$/;"	m
+MAX_RN_CMDS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	174;"	d
+MAX_STATE_STR_LEN	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_mknode.c	211;"	d	file:
+NAME	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/Makefile	/^NAME=slu_rmfs$/;"	m
+NAME	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^NAME=slu_rmfs\/conf$/;"	m
+NAME	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/Makefile	/^NAME=slu_rmfs\/lib\/collect$/;"	m
+NAME	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/Makefile	/^NAME=slu_rmfs\/conf$/;"	m
+NAME	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/Makefile	/^NAME=slu_rmfs\/conf\/config_param$/;"	m
+NAME	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/Makefile	/^NAME=slu_rmfs\/conf\/misc$/;"	m
+NAME	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/Makefile	/^NAME=slu_rmfs\/conf\/typ$/;"	m
+NAME	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/Makefile	/^NAME=slu_rmfs\/conf\/typ$/;"	m
+NAME	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/Makefile	/^NAME=slu_rmfs\/lib\/fuseops$/;"	m
+NAME	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/Makefile	/^NAME=slu_rmfs\/lib\/rnode$/;"	m
+NAME	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^NAME=slu_rmfs\/slu_rmfs$/;"	m
+NOBITS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	119;"	d
+N_DEFAULT_MODES	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	34;"	d
+N_SLURMFS_CONFIG	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/fuse.h	45;"	d
+N_SLURM_FOPTS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/fuse.h	44;"	d
+OPAQUE_EMIT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	233;"	d
+OPT_DEBUG	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  OPT_DEBUG          = OPT_VALID_IF_DEBUG,$/;"	e	enum:opt_flag
+OPT_EXCLUSIVE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  OPT_EXCLUSIVE      = OPT_EXCLUSIVE_ALL,$/;"	e	enum:opt_flag
+OPT_EXCLUSIVE_ALL	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  OPT_EXCLUSIVE_ALL  = 4,$/;"	e	enum:opt_flag
+OPT_EXCL_ALL	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  OPT_EXCL_ALL       = OPT_EXCLUSIVE_ALL,$/;"	e	enum:opt_flag
+OPT_INVAL	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  OPT_INVAL          = ~0,$/;"	e	enum:opt_flag
+OPT_MAND	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  OPT_MAND           = OPT_MANDATORY,$/;"	e	enum:opt_flag
+OPT_MANDATORY	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  OPT_MANDATORY      = 2,$/;"	e	enum:opt_flag
+OPT_NONE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  OPT_NONE           = 0,$/;"	e	enum:opt_flag
+OPT_NONOPT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  OPT_NONOPT         = 16 \/* => FUSE_OPT_KEY_NONOPT, indicating a non-option "no '-'" *\/$/;"	e	enum:opt_flag
+OPT_ONE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  OPT_ONE            = OPT_SELECT_ONE,$/;"	e	enum:opt_flag
+OPT_SELECT_ONE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  OPT_SELECT_ONE     = 8,$/;"	e	enum:opt_flag
+OPT_VALID_IF_DEBUG	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  OPT_VALID_IF_DEBUG = 1,$/;"	e	enum:opt_flag
+OUR_LIBS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/Makefile	/^OUR_LIBS	:= -lmisc$/;"	m
+PREREQ_LIBS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/Makefile	/^PREREQ_LIBS	:= -lbsd -lslurm -lslurmdb -lbsd -lrt -lselinux$/;"	m
+PREV_GENERATION	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs.h	47;"	d
+PSRCNAME	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	103;"	d
+PSRC_ALLBITS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	107;"	d
+PSRC_DEFAULT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PSRC_DEFAULT       = 8,$/;"	e	enum:param_source
+PSRC_DERIVED	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PSRC_DERIVED       = 9, \/*more trusted than this position implies, but should be last*\/$/;"	e	enum:param_source
+PSRC_ENV	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PSRC_ENV           = PSRC_ENVAR,$/;"	e	enum:param_source
+PSRC_ENVAR	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PSRC_ENVAR         = 3,$/;"	e	enum:param_source
+PSRC_FIRST	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PSRC_FIRST         = PSRC_NONE+1 \/*@+enumint@*\/,$/;"	e	enum:param_source
+PSRC_FUSE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PSRC_FUSE          = 6,$/;"	e	enum:param_source
+PSRC_HIPRI	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PSRC_HIPRI         = PSRC_FIRST,$/;"	e	enum:param_source
+PSRC_LAST	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PSRC_LAST          = PSRC_MAX,$/;"	e	enum:param_source
+PSRC_LEAST_TRUSTED	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PSRC_LEAST_TRUSTED = PSRC_LOPRI,$/;"	e	enum:param_source
+PSRC_LOPRI	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PSRC_LOPRI         = PSRC_LAST,$/;"	e	enum:param_source
+PSRC_LSB	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	121;"	d
+PSRC_MAC	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PSRC_MAC           = PSRC_MAC_CONF,$/;"	e	enum:param_source
+PSRC_MAC_CONF	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PSRC_MAC_CONF      = 1,$/;"	e	enum:param_source
+PSRC_MAX	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PSRC_MAX           = PSRC_DERIVED,$/;"	e	enum:param_source
+PSRC_MNT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PSRC_MNT           = PSRC_MNT_OPT,$/;"	e	enum:param_source
+PSRC_MNT_NONOPT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PSRC_MNT_NONOPT    = 5, \/*to trigger fuse option collection *\/$/;"	e	enum:param_source
+PSRC_MNT_OPT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PSRC_MNT_OPT       = 4,$/;"	e	enum:param_source
+PSRC_MOST_TRUSTED	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PSRC_MOST_TRUSTED  = PSRC_HIPRI$/;"	e	enum:param_source
+PSRC_MSB	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	124;"	d
+PSRC_N	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PSRC_N             = PSRC_MAX+1 \/*@+enumint@*\/,$/;"	e	enum:param_source
+PSRC_NOBITS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PSRC_NOBITS        = PSRC_NONE,$/;"	e	enum:param_source
+PSRC_NONE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PSRC_NONE          = 0,$/;"	e	enum:param_source
+PSRC_NXT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	126;"	d
+PSRC_SLURM	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PSRC_SLURM         = 2,$/;"	e	enum:param_source
+PSRC_TEST	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	127;"	d
+PSRC_USERINPUT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PSRC_USERINPUT     = 7, \/*if any*\/$/;"	e	enum:param_source
+PTYP_ALLOCJOB	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_ALLOCJOB     = PTYP_SLURM_FIRST + 6,  \/* XXXfuture SYMLINK, PTYP_FILE *\/$/;"	e	enum:param_type
+PTYP_ALPHA	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_ALPHA        = PTYP_ALPHA_FIRST + 1,$/;"	e	enum:param_type
+PTYP_ALPHANUM	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_ALPHANUM     = PTYP_OPAQUE + 1,$/;"	e	enum:param_type
+PTYP_ALPHA_FIRST	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_ALPHA_FIRST  = PTYP_ALPHANUM,$/;"	e	enum:param_type
+PTYP_ALPHA_LAST	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_ALPHA_LAST   = PTYP_HOST,$/;"	e	enum:param_type
+PTYP_ALPHA_P2P	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_ALPHA_P2P    = PTYP_ALPHA_FIRST + 3,  \/* ptr to ptr to alpha *\/$/;"	e	enum:param_type
+PTYP_BOOLEAN	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_BOOLEAN        = PTYP_INT_FIRST + 10,  \/* integers, E of [0,1]         *\/$/;"	e	enum:param_type
+PTYP_CLUSTER	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_CLUSTER      = PTYP_CNTXT_LAST + 1,$/;"	e	enum:param_type
+PTYP_CNTRLMACH	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_CNTRLMACH    = PTYP_SLURM_FIRST + 1,  \/* HOST   *\/$/;"	e	enum:param_type
+PTYP_CNTXT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_CNTXT        = PTYP_CONTEXT,$/;"	e	enum:param_type
+PTYP_CNTXT_FIRST	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_CNTXT_FIRST  = PTYP_CONTEXT,$/;"	e	enum:param_type
+PTYP_CNTXT_LAST	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_CNTXT_LAST   = PTYP_CONTEXT,$/;"	e	enum:param_type
+PTYP_CONTEXT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_CONTEXT      = PTYP_INT_LAST + 1,     \/* XATTR++ *\/$/;"	e	enum:param_type
+PTYP_DIR	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_DIR          = PTYP_ALPHA_FIRST + 10, \/* S_ISDIR(PATH), no-preexistence req'd            *\/$/;"	e	enum:param_type
+PTYP_DIREXIST	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_DIREXIST     = PTYP_ALPHA_FIRST + 9,  \/* S_ISDIR(PATH) && must already exist            *\/$/;"	e	enum:param_type
+PTYP_FILE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_FILE         = PTYP_ALPHA_FIRST + 6,  \/* S_ISREG(PATH) no pre-existence requirement     *\/$/;"	e	enum:param_type
+PTYP_FILEXIST	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_FILEXIST     = PTYP_ALPHA_FIRST + 7,  \/* S_ISREG(PATH) && must already exist            *\/$/;"	e	enum:param_type
+PTYP_FIRST	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_FIRST        = PTYP_OPAQUE,$/;"	e	enum:param_type
+PTYP_FSVIS_FIRST	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_FSVIS_FIRST  = PTYP_PATH,             \/* visible in file system *\/$/;"	e	enum:param_type
+PTYP_FSVIS_LAST	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_FSVIS_LAST   = PTYP_DIR,$/;"	e	enum:param_type
+PTYP_GRES_PLUGIN	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_GRES_PLUGIN  = PTYP_SLURM_FIRST + 14,$/;"	e	enum:param_type
+PTYP_GUARD	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_GUARD        = PTYP_LAST + 1,$/;"	e	enum:param_type
+PTYP_HOST	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_HOST         = PTYP_ALPHA_FIRST + 11, \/* ALPHANUM  (_POSIX_HOST_MAX, RFC1123)          *\/$/;"	e	enum:param_type
+PTYP_HOSTNAME	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_HOSTNAME     = PTYP_HOST,$/;"	e	enum:param_type
+PTYP_HOST_FIRST	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_HOST_FIRST   = PTYP_HOST,$/;"	e	enum:param_type
+PTYP_HOST_LAST	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_HOST_LAST    = PTYP_HOST,$/;"	e	enum:param_type
+PTYP_INT_FIRST	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_INT_FIRST      = PTYP_NUMERIC,        \/* unsigned long integer *\/$/;"	e	enum:param_type
+PTYP_INT_LAST	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_INT_LAST       = PTYP_SIGNATURE,$/;"	e	enum:param_type
+PTYP_JOB	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_JOB          = PTYP_SLURM_FIRST + 4,  \/* NUMERICHAR *\/$/;"	e	enum:param_type
+PTYP_JSUB_PLUGIN	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_JSUB_PLUGIN  = PTYP_SLURM_FIRST + 13,$/;"	e	enum:param_type
+PTYP_LAST	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_LAST         = PTYP_SLURM_LAST,$/;"	e	enum:param_type
+PTYP_LEN	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_LEN          = PTYP_GUARD          \/* extra for placeholder in PTYP_NONE *\/$/;"	e	enum:param_type
+PTYP_NODE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_NODE         = PTYP_SLURM_FIRST + 3,  \/* HOSTNAME   *\/$/;"	e	enum:param_type
+PTYP_NODESTATE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_NODESTATE    = PTYP_SLURM_FIRST + 7,  \/* slurm-api specific *\/$/;"	e	enum:param_type
+PTYP_NONE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_NONE         = 0,$/;"	e	enum:param_type
+PTYP_NUMERIC	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_NUMERIC        = PTYP_ALPHA_LAST + 1,   $/;"	e	enum:param_type
+PTYP_NUMERICHAR	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_NUMERICHAR   = PTYP_ALPHA_FIRST + 2,  \/* numeric characters                             *\/$/;"	e	enum:param_type
+PTYP_NUMERICTIME	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_NUMERICTIME    = PTYP_INT_FIRST + 1,  \/* unsigned long => time_t    *\/$/;"	e	enum:param_type
+PTYP_NUMSIGNED	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_NUMSIGNED      = PTYP_INT_FIRST + 3,  \/* signed long integer *\/$/;"	e	enum:param_type
+PTYP_NUMTIME	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_NUMTIME        = PTYP_NUMERICTIME,$/;"	e	enum:param_type
+PTYP_NUMTIME_SECS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_NUMTIME_SECS   = PTYP_NUMTIM_SECS,$/;"	e	enum:param_type
+PTYP_NUMTIM_SECS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_NUMTIM_SECS    = PTYP_INT_FIRST + 2,  \/* time_t, interpreted as seconds *\/$/;"	e	enum:param_type
+PTYP_OPAQUE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_OPAQUE       = PTYP_NONE+1,$/;"	e	enum:param_type
+PTYP_PARTITION	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_PARTITION    = PTYP_SLURM_FIRST + 2,  \/* ALPHANUM   *\/$/;"	e	enum:param_type
+PTYP_PATH	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_PATH         = PTYP_ALPHA_FIRST + 5,  \/* ALPHANUM max(strlen(_POSIX_PATH_MAX))          *\/$/;"	e	enum:param_type
+PTYP_PID	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_PID            = PTYP_INT_FIRST + 8,$/;"	e	enum:param_type
+PTYP_SIGNATURE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_SIGNATURE      = PTYP_INT_FIRST + 11,$/;"	e	enum:param_type
+PTYP_SLURMDUNAME	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_SLURMDUNAME  = PTYP_SLURM_FIRST + 16,$/;"	e	enum:param_type
+PTYP_SLURMTMOUT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_SLURMTMOUT   = PTYP_SLURM_FIRST + 10,$/;"	e	enum:param_type
+PTYP_SLURMUID	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_SLURMUID     = PTYP_SLURM_FIRST + 9,$/;"	e	enum:param_type
+PTYP_SLURMUNAME	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_SLURMUNAME   = PTYP_SLURM_FIRST + 15,$/;"	e	enum:param_type
+PTYP_SLURMVERSION	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_SLURMVERSION = PTYP_SLURM_FIRST + 8,$/;"	e	enum:param_type
+PTYP_SLURM_FIRST	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_SLURM_FIRST  = PTYP_CLUSTER,$/;"	e	enum:param_type
+PTYP_SLURM_LAST	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_SLURM_LAST   = PTYP_SLURM_FIRST + 16,$/;"	e	enum:param_type
+PTYP_SPANKENV	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_SPANKENV     = PTYP_SLURM_FIRST + 11,$/;"	e	enum:param_type
+PTYP_SPANKENVSIZE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_SPANKENVSIZE = PTYP_SLURM_FIRST + 12,$/;"	e	enum:param_type
+PTYP_STEP	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_STEP         = PTYP_SLURM_FIRST + 5,  \/* NUMERICHAR *\/$/;"	e	enum:param_type
+PTYP_SYM	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_SYM          = PTYP_ALPHA_FIRST + 8,  \/* S_ISLNK(PATH)                                  *\/  $/;"	e	enum:param_type
+PTYP_TRILENE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_TRILENE        = PTYP_INT_FIRST + 9,  \/* integers, E of [-1, 0, 1]    *\/$/;"	e	enum:param_type
+PTYP_UID	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_UID            = PTYP_INT_FIRST + 7,$/;"	e	enum:param_type
+PTYP_UNSIGNED_INT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_UNSIGNED_INT   = PTYP_INT_FIRST + 4,$/;"	e	enum:param_type
+PTYP_UNSIGNED_INT16	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_UNSIGNED_INT16 = PTYP_INT_FIRST + 5,$/;"	e	enum:param_type
+PTYP_UNSIGNED_INT32	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_UNSIGNED_INT32 = PTYP_INT_FIRST + 6,$/;"	e	enum:param_type
+PTYP_XATTR	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  PTYP_XATTR        = PTYP_ALPHA_FIRST + 4,  \/* alphanum, interpreted as an extended attribute *\/$/;"	e	enum:param_type
+RELOC	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^RELOC		:= --emit-relocs$/;"	m
+RMFS_CONF_H_	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	40;"	d
+RMFS_FUSE_LINKAGE_H_	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/fuse.h	10;"	d
+RMFS_H_	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs.h	4;"	d
+RMFS_MISCSUBR_H_	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/misc.h	3;"	d
+RMFS_PARAM_H_	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	3;"	d
+RMFS_TYPE_H_	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	9;"	d
+RM_UIDS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	38;"	d
+RM_UID_CTL	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	36;"	d
+RM_UID_DISPATCH	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	37;"	d
+RND_ATTRIBUTES	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RND_ATTRIBUTES  = RN_FIRST + 14 \/*@+enumint@*\/,$/;"	e	enum:rnode_type
+RND_CLUSTER	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RND_CLUSTER     = RN_FIRST + 3 \/*@+enumint@*\/,$/;"	e	enum:rnode_type
+RND_CONTROL	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RND_CONTROL     = RN_FIRST + 16 \/*@+enumint@*\/,$/;"	e	enum:rnode_type
+RND_CTRL	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RND_CTRL        = RND_CONTROL,$/;"	e	enum:rnode_type
+RND_JOBID	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RND_JOBID       = RN_FIRST + 9 \/*@+enumint@*\/,$/;"	e	enum:rnode_type
+RND_JOBNAME	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RND_JOBNAME     = RND_JOBID,$/;"	e	enum:rnode_type
+RND_JOBS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RND_JOBS        = RN_FIRST + 8 \/*@+enumint@*\/,$/;"	e	enum:rnode_type
+RND_JOBSTEP	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RND_JOBSTEP     = RND_JOBSTEPID,$/;"	e	enum:rnode_type
+RND_JOBSTEPID	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RND_JOBSTEPID   = RN_FIRST + 11 \/*@+enumint@*\/,$/;"	e	enum:rnode_type
+RND_JOBSTEPNAME	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RND_JOBSTEPNAME = RND_JOBSTEPID,$/;"	e	enum:rnode_type
+RND_JOBSTEPS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RND_JOBSTEPS    = RN_FIRST + 10 \/*@+enumint@*\/,$/;"	e	enum:rnode_type
+RND_JOBSTEP_CTX	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RND_JOBSTEP_CTX,$/;"	e	enum:rnode_type
+RND_JOBSTEP_LAUNCH	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RND_JOBSTEP_LAUNCH,$/;"	e	enum:rnode_type
+RND_NODENAME	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RND_NODENAME    = RN_FIRST + 7 \/*@+enumint@*\/,$/;"	e	enum:rnode_type
+RND_NODES	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RND_NODES       = RN_FIRST + 6 \/*@+enumint@*\/,$/;"	e	enum:rnode_type
+RND_NODESTATE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RND_NODESTATE   = RN_FIRST + 13 \/*@+enumint@*\/,$/;"	e	enum:rnode_type
+RND_PARAMS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RND_PARAMS      = RND_RNPARAMS,$/;"	e	enum:rnode_type
+RND_PARTITIONS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RND_PARTITIONS  = RND_PARTS,$/;"	e	enum:rnode_type
+RND_PARTNAME	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RND_PARTNAME    = RN_FIRST + 5 \/*@+enumint@*\/,$/;"	e	enum:rnode_type
+RND_PARTS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RND_PARTS       = RN_FIRST + 4 \/*@+enumint@*\/,$/;"	e	enum:rnode_type
+RND_RESERVATION	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RND_RESERVATION,$/;"	e	enum:rnode_type
+RND_RESV	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RND_RESV,$/;"	e	enum:rnode_type
+RND_RNPARAMS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RND_RNPARAMS    = RN_FIRST + 20 \/*@+enumint@*\/,$/;"	e	enum:rnode_type
+RND_ROOT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RND_ROOT        = RN_FIRST + 2 \/*@+enumint@*\/,$/;"	e	enum:rnode_type
+RNF_ALLOCJOB	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RNF_ALLOCJOB    = RN_FIRST + 12 \/*@+enumint@*\/,$/;"	e	enum:rnode_type
+RNF_ATTR	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RNF_ATTR        = RNF_ATTRIBUTE,$/;"	e	enum:rnode_type
+RNF_ATTRIBUTE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RNF_ATTRIBUTE   = RN_FIRST + 15 \/*@+enumint@*\/,$/;"	e	enum:rnode_type
+RNF_CNTX	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RNF_CNTX        = RNF_CONTEXT,$/;"	e	enum:rnode_type
+RNF_CNTXT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RNF_CNTXT       = RNF_CONTEXT,$/;"	e	enum:rnode_type
+RNF_CONTEXT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RNF_CONTEXT     = RN_FIRST + 17 \/*@+enumint@*\/,$/;"	e	enum:rnode_type
+RNF_EXEC	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RNF_EXEC        = RNF_KNOB,$/;"	e	enum:rnode_type
+RNF_KNOB	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RNF_KNOB        = RN_FIRST + 18 \/*@+enumint@*\/,$/;"	e	enum:rnode_type
+RNF_SIG	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RNF_SIG         = RNF_SIGNATURE,$/;"	e	enum:rnode_type
+RNF_SIGNATURE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RNF_SIGNATURE   = RN_FIRST + 19 \/*@+enumint@*\/,$/;"	e	enum:rnode_type
+RNODEPOOL_DEFAULT_MINSIZE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	45;"	d
+RNODE_H_	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	55;"	d
+RNPARAM_ALLOCMAP	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	127;"	d
+RNPARAM_ALLOCMAP_OFF	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	126;"	d
+RNPARAM_BASEALLOC	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	136;"	d
+RNPARAM_BASEALLOC_OFF	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	135;"	d
+RNPARAM_CURALLOC	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	139;"	d
+RNPARAM_CURALLOC_OFF	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	138;"	d
+RNPARAM_DEFMODE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	151;"	d
+RNPARAM_DEFMODE_OFF	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	150;"	d
+RNPARAM_DIRTY	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	157;"	d
+RNPARAM_DIRTY_OFF	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	156;"	d
+RNPARAM_FSID	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	163;"	d
+RNPARAM_FSID_OFF	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	162;"	d
+RNPARAM_JOBD	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	154;"	d
+RNPARAM_JOBD_OFF	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	153;"	d
+RNPARAM_LASTUPDATE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	160;"	d
+RNPARAM_LASTUPDATE_OFF	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	159;"	d
+RNPARAM_MAXALLOC	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	133;"	d
+RNPARAM_MAXALLOC_OFF	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	132;"	d
+RNPARAM_MINPOOLSIZE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	124;"	d
+RNPARAM_MINPOOLSIZE_OFF	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	123;"	d
+RNPARAM_NXTAVAIL	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	145;"	d
+RNPARAM_NXTAVAILRN	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	142;"	d
+RNPARAM_NXTAVAILRN_OFF	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	141;"	d
+RNPARAM_NXTAVAIL_OFF	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	144;"	d
+RNPARAM_POOL	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	130;"	d
+RNPARAM_POOL_OFF	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	129;"	d
+RNPARAM_RMUID	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	148;"	d
+RNPARAM_RMUID_OFF	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	147;"	d
+RN_BASEALLOC	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RN_BASEALLOC    = RND_ROOT,$/;"	e	enum:rnode_type
+RN_FIRST	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RN_FIRST        = RN_NONE,$/;"	e	enum:rnode_type
+RN_GUARD	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RN_GUARD        = RN_FIRST + 1 \/*@+enumint@*\/,$/;"	e	enum:rnode_type
+RN_INVALID	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RN_INVALID      = (~0)          \/*@+enumint@*\/$/;"	e	enum:rnode_type
+RN_LAST	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RN_LAST         = RN_RAZE,$/;"	e	enum:rnode_type
+RN_LEN	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RN_LEN          = RN_LAST + 1   \/*@+enumint@*\/,$/;"	e	enum:rnode_type
+RN_NONE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RN_NONE         = 0,$/;"	e	enum:rnode_type
+RN_PROVISION	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RN_PROVISION    = RN_FIRST,$/;"	e	enum:rnode_type
+RN_RAZE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  RN_RAZE         = RN_FIRST + 21 \/*@+enumint@*\/,$/;"	e	enum:rnode_type
+RPM_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/Makefile	/^RPM_D		:= \/home\/sts\/lanl\/sw\/fuse\/playpen\/slurmfs$/;"	m
+RPM_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^RPM_D		:= \/home\/sts\/lanl\/sw\/fuse\/playpen\/slurmfs$/;"	m
+RPM_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/Makefile	/^RPM_D		:= \/home\/sts\/lanl\/sw\/fuse\/playpen\/slurmfs$/;"	m
+RPM_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/Makefile	/^RPM_D		:= \/home\/sts\/lanl\/sw\/fuse\/playpen\/slurmfs$/;"	m
+RPM_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/Makefile	/^RPM_D		:= \/home\/sts\/lanl\/sw\/fuse\/playpen\/slurmfs$/;"	m
+RPM_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/Makefile	/^RPM_D		:= \/home\/sts\/lanl\/sw\/fuse\/playpen\/slurmfs$/;"	m
+RPM_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/Makefile	/^RPM_D		:= \/home\/sts\/lanl\/sw\/fuse\/playpen\/slurmfs$/;"	m
+RPM_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/Makefile	/^RPM_D		:= \/home\/sts\/lanl\/sw\/fuse\/playpen\/slurmfs$/;"	m
+RPM_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/Makefile	/^RPM_D		:= \/home\/sts\/lanl\/sw\/fuse\/playpen\/slurmfs$/;"	m
+RPM_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/Makefile	/^RPM_D		:= \/home\/sts\/lanl\/sw\/fuse\/playpen\/slurmfs$/;"	m
+RPM_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^RPM_D		:= \/home\/sts\/lanl\/sw\/fuse\/playpen\/slurmfs$/;"	m
+RPM_SRC_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/Makefile	/^RPM_SRC_D	:= $(RPM_D)\/SOURCES$/;"	m
+RPM_SRC_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^RPM_SRC_D	:= $(RPM_D)\/SOURCES$/;"	m
+RPM_SRC_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/Makefile	/^RPM_SRC_D	:= $(RPM_D)\/SOURCES$/;"	m
+RPM_SRC_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/Makefile	/^RPM_SRC_D	:= $(RPM_D)\/SOURCES$/;"	m
+RPM_SRC_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/Makefile	/^RPM_SRC_D	:= $(RPM_D)\/SOURCES$/;"	m
+RPM_SRC_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/Makefile	/^RPM_SRC_D	:= $(RPM_D)\/SOURCES$/;"	m
+RPM_SRC_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/Makefile	/^RPM_SRC_D	:= $(RPM_D)\/SOURCES$/;"	m
+RPM_SRC_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/Makefile	/^RPM_SRC_D	:= $(RPM_D)\/SOURCES$/;"	m
+RPM_SRC_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/Makefile	/^RPM_SRC_D	:= $(RPM_D)\/SOURCES$/;"	m
+RPM_SRC_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/Makefile	/^RPM_SRC_D	:= $(RPM_D)\/SOURCES$/;"	m
+RPM_SRC_D	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^RPM_SRC_D	:= $(RPM_D)\/SOURCES$/;"	m
+SELINUX_LINKAGE_H_	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/selinux.h	6;"	d
+SIGTYP_DJBHASH	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/selinux.h	31;"	d
+TRUE	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  TRUE  = true$/;"	e	enum:trilene
+UNSET	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^  UNSET = (~0),$/;"	e	enum:trilene
+Usage	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/usage.c	/^Usage(int err, char *msg) {$/;"	f
+WARN	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/Makefile	/^WARN		:= -Wall$/;"	m
+WARN	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/Makefile	/^WARN		:= -Wall$/;"	m
+WARN	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/Makefile	/^WARN		:= -Wall$/;"	m
+WARN	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/Makefile	/^WARN		:= -Wall$/;"	m
+WARN	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/Makefile	/^WARN		:= -Wall$/;"	m
+WARN	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/Makefile	/^WARN		:= -Wall$/;"	m
+WARN	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/Makefile	/^WARN		:= -Wall$/;"	m
+WARN	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^WARN		:= -Wall$/;"	m
+WITHSYMS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/Makefile	/^WITHSYMS	:= -ggdb$/;"	m
+WITHSYMS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/Makefile	/^WITHSYMS	:= -ggdb$/;"	m
+WITHSYMS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/Makefile	/^WITHSYMS	:= -ggdb$/;"	m
+WITHSYMS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/Makefile	/^WITHSYMS	:= -ggdb$/;"	m
+WITHSYMS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/Makefile	/^WITHSYMS	:= -ggdb$/;"	m
+WITHSYMS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/Makefile	/^WITHSYMS	:= -ggdb$/;"	m
+WITHSYMS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/Makefile	/^WITHSYMS	:= -ggdb$/;"	m
+WITHSYMS	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^WITHSYMS	:= -ggdb$/;"	m
+XATTR_SIG	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/selinux.h	29;"	d
+XATTR_SIGTYP	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/selinux.h	30;"	d
+XREF	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^XREF		:= --cref$/;"	m
+_HOST_NAME_MAX	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_os.c	160;"	d	file:
+_long	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/fuse.h	/^  char                *_long;     \/* _ because "long" is a keyword *\/$/;"	m	struct:slurm_fuse_opt_desc
+_s	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/fuse.h	/^  char                *_s;$/;"	m	struct:slurm_fuse_opt_desc
+actual	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    param_source_t   actual;$/;"	m	struct:config_param::src
+allowed	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    param_source_t   allowed;$/;"	m	struct:config_param::src
+already_mounted	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/mount.c	/^already_mounted(void) {$/;"	f
+array_str	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    char    **array_str;$/;"	m	union:rmfs_param::ue
+attr	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  struct rnode        *attr;      \/* children which are leaf nodes, are attributes   *\/$/;"	m	struct:rnode	typeref:struct:rnode::rnode
+attr_cnt_cp	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_subr.c	/^attr_cnt_cp(rn_type_t rtype) {$/;"	f
+attr_desc	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  struct attr_desc {$/;"	s	struct:rnode
+attr_desc	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  } attr_desc;$/;"	m	struct:rnode	typeref:struct:rnode::attr_desc
+b2boolstr	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_truth.c	/^b2boolstr(bool_t btruth) {$/;"	f
+base_addr	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^      void                         *base_addr;$/;"	m	struct:config_param::src_specific::slurm_info
+base_addr	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    void     *base_addr;$/;"	m	union:rmfs_param::ue
+bool2str	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_truth.c	/^bool2str[] = { "false", "true" };$/;"	v
+bool_t	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^typedef _Bool bool_t;$/;"	t
+bool_t	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^typedef enum boolean bool_t;$/;"	t	typeref:enum:boolean
+boolean	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^enum boolean {$/;"	g
+btruth	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    bool_t        btruth;$/;"	m	union:rmfs_param::ue
+buildfn	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  struct rnode      *(*buildfn)(struct rnode *, struct rnode *);$/;"	m	struct:rnode	typeref:struct:rnode::buildfn
+calcul_derived	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/calcul.c	/^calcul_derived(config_param_t *p_cp) {$/;"	f
+calcul_isController	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/calcul.c	/^calcul_isController(config_param_t *p_cp) {$/;"	f
+calcul_rnodepool	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/calcul.c	/^calcul_rnodepool(config_param_t *p_cp) {$/;"	f
+calcul_unmountwait	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/calcul.c	/^calcul_unmountwait(config_param_t *p_cp) {$/;"	f
+caught_in_a_loop	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/usage.c	/^static int caught_in_a_loop = 0;$/;"	v	file:
+children	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  struct rnode        *children;  \/* if any                                          *\/$/;"	m	struct:rnode	typeref:struct:rnode::rnode
+cleanup	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_ctlroot.c	/^cleanup() {$/;"	f
+cleanup_file	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_ctlroot.c	/^cleanup_file(config_param_t *p_cp) {$/;"	f
+collect_cp	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_cp.c	/^collect_cp(config_param_t *p_cp) {$/;"	f
+collect_default	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_default.c	/^collect_default(config_param_t *p_cp) {$/;"	f
+collect_env	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_env.c	/^collect_env(config_param_t *p_cp) {$/;"	f
+collect_fuse_mountopts	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_fuse.c	/^collect_fuse_mountopts(config_param_t *p_cp) {$/;"	f
+collect_macconf	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_macconf.c	/^collect_macconf(config_param_t *p_cp) {$/;"	f
+collect_slurm	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_slurm.c	/^collect_slurm(config_param_t *p_cp) {$/;"	f
+collectmac_context	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_macconf.c	/^collectmac_context(config_param_t *p_cp) {$/;"	f
+collector	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^  param_source_t (*collector)(struct config_param *);$/;"	m	struct:config_param
+collectos_hostname	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_os.c	/^collectos_hostname(config_param_t *p_cp) {$/;"	f
+collectos_pid	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_os.c	/^collectos_pid(config_param_t *p_cp) {$/;"	f
+collectos_pidfile	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_os.c	/^collectos_pidfile(config_param_t *pidfile_cp) {$/;"	f
+collectslurm_api_version	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_slurm.c	/^collectslurm_api_version(config_param_t *p_cp) {$/;"	f
+collectslurm_attr	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_slurm.c	/^collectslurm_attr(rn_type_t rtype, config_param_t *p_cp, void *p_dyntyp)  {$/;"	f
+collectslurm_attr_job	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_slurm_job.c	/^collectslurm_attr_job(config_param_t *p_cp, rmfs_param_t *p_val, job_info_t *ji) {$/;"	f
+collectslurm_attr_node	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_slurm_node.c	/^collectslurm_attr_node(config_param_t *p_cp, rmfs_param_t *p_val, node_info_t *ni) {$/;"	f
+collectslurm_attr_part	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_slurm_part.c	/^collectslurm_attr_part(config_param_t *p_cp, rmfs_param_t *p_val, partition_info_t *pi) {$/;"	f
+collectslurm_attr_step	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_slurm_step.c	/^collectslurm_attr_step(config_param_t *p_cp, rmfs_param_t *p_val, job_step_info_t *jsti) {$/;"	f
+collectslurm_confparam	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_slurm.c	/^collectslurm_confparam(config_param_t *p_cp) {$/;"	f
+collectslurm_jobs	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_slurm_job.c	/^collectslurm_jobs(config_param_t *p_cp) {$/;"	f
+collectslurm_jobsteps	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_slurm_step.c	/^collectslurm_jobsteps(config_param_t *p_cp) {$/;"	f
+collectslurm_nodes	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_slurm_node.c	/^collectslurm_nodes(config_param_t *p_cp) {$/;"	f
+collectslurm_partitions	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_slurm_part.c	/^collectslurm_partitions(config_param_t *p_cp) {$/;"	f
+config_consistent_complete	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/ingest.c	/^config_consistent_complete() {$/;"	f
+config_param	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^struct config_param {$/;"	s
+config_param_t	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^typedef struct config_param config_param_t;$/;"	t	typeref:struct:config_param
+construct_fuse_mountopts	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_fuse.c	/^construct_fuse_mountopts(config_param_t *p_cp) {$/;"	f
+controllable	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^    unsigned int      controllable:1;$/;"	m	struct:rnode::may_be
+convtyp	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^struct convtyp {$/;"	s
+ctime	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  time_t               ctime;$/;"	m	struct:rnode
+ctl	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  } ctl[MAX_RN_CMDS];$/;"	m	struct:rnode	typeref:struct:rnode::rn_ctl
+ctx_DEFAULT	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/selinux.h	19;"	d
+debug	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    param_source_t   debug;$/;"	m	struct:config_param::src
+decode_psrc	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/cp_tab.c	/^decode_psrc(param_source_t psrc) {$/;"	f
+def_mode	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	/^  mode_t              def_mode[N_DEFAULT_MODES];$/;"	m	struct:rnode_params
+default_val	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^  rmfs_param_t     default_val;$/;"	m	struct:config_param
+depends_on	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^  struct depends_on {$/;"	s	struct:config_param
+depends_on	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^  } depends_on;$/;"	m	struct:config_param	typeref:struct:config_param::depends_on
+derefable_cp	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/cp_subr.c	/^derefable_cp(const config_param_t *p_cp) {$/;"	f
+dir	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^    unsigned int   dir:1;$/;"	m	struct:rnode::is
+dirty	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^    unsigned int      dirty:1;$/;"	m	struct:rnode::may_be
+djb_accumulate	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/.djb_strtohash.c	/^djb_accumulate(int prev_hash, int key) {$/;"	f
+djb_accumulate	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/djb_hash.c	/^djb_accumulate(int prev_hash, int key) {$/;"	f
+djb_strtohash	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/.djb_strtohash.c	/^djb_strtohash(char *str)$/;"	f
+djb_strtohash	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/djb_hash.c	/^djb_strtohash(char *str)$/;"	f
+dup_cp	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/cp_subr.c	/^dup_cp(config_param_t *p_from_cp) {$/;"	f
+dynamic	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^      int                           dynamic:1;$/;"	m	struct:config_param::src_specific::slurm_info
+effluviate_config	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/cp_effluviate.c	/^effluviate_config() {$/;"	f
+effluviate_fstree	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_ctlroot.c	/^effluviate_fstree(rnode_t *p_root, int levels_down) {$/;"	f
+effluviate_one_cp	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/cp_effluviate.c	/^effluviate_one_cp(config_param_t *p_cp) {$/;"	f
+effluviate_one_rn	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_ctlroot.c	/^effluviate_one_rn(rnode_t *p_rn){$/;"	f
+effluviate_rnode	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_ctlroot.c	/^effluviate_rnode(rnode_t *p_start, int levels_down) {$/;"	f
+exec	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/Makefile	/^exec		:= $(EXEC_D)\/slu_rmfs$/;"	m
+exec	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^exec		:= $(subst .c,,$(sources_slu_rmfs_main))$/;"	m
+execable	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^    unsigned int      execable:1;$/;"	m	struct:rnode::may_be
+f_args	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/fuse.h	/^struct fuse_args f_args;$/;"	v	typeref:struct:fuse_args
+fd	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    int   fd;$/;"	m	struct:rmfs_param::path_descriptor
+file	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^    unsigned int   file:1;$/;"	m	struct:rnode::is
+fn	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^    tri_t          (*fn)(struct rnode *, struct config_param *);$/;"	m	struct:rnode::rn_ctl
+fo_max_len	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/cp_tab.c	/^int fo_max_len = 1 + N_SLURM_FOPTS + N_SLURMFS_CONFIG; \/* actual total allocated *\/$/;"	v
+fs	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^      int                           fs:1;$/;"	m	struct:config_param::src_specific::rmfs_info
+fsid	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	/^  unsigned long  fsid;$/;"	m	struct:rnode_params
+fstr	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    FILE *fstr;$/;"	m	struct:rmfs_param::path_descriptor
+fullpath	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    char *fullpath;$/;"	m	struct:rmfs_param::path_descriptor
+fuseopts_len	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/cp_tab.c	/^int              fuseopts_len   = 0;     \/* its length that has been used *\/$/;"	v
+gen	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  int                  gen;$/;"	m	struct:rnode
+get_fo_max_len	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/cp_tab.c	/^get_fo_max_len() {$/;"	f
+get_rn_buildfn	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_public.c	/^(*get_rn_buildfn(rn_type_t rtyp))(rnode_t *, rnode_t *) {$/;"	f
+get_rn_params	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rmfs_param.c	/^get_rn_params(int needlock) {$/;"	f
+get_rn_signfn	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_mkattr.c	/^(*get_rn_signfn(rnode_t *p_watched))(rnode_t *, config_param_t *) {$/;"	f
+get_rnparam_fsid	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rmfs_param.c	/^get_rnparam_fsid(void)$/;"	f
+get_rnparam_fsroot	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rmfs_param.c	/^get_rnparam_fsroot(void) {$/;"	f
+get_rnparam_modep	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rmfs_param.c	/^get_rnparam_modep(void)$/;"	f
+get_rnparam_modep_offset	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rmfs_param.c	/^get_rnparam_modep_offset(off_t offset) {$/;"	f
+get_rnparam_rn	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rmfs_param.c	/^get_rnparam_rn(off_t offset) {$/;"	f
+get_rnparam_uidp	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rmfs_param.c	/^get_rnparam_uidp(off_t offset) {$/;"	f
+get_rnparam_ul	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rmfs_param.c	/^get_rnparam_ul(off_t offset) {$/;"	f
+get_rnparam_ulp	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rmfs_param.c	/^get_rnparam_ulp(off_t offset) {$/;"	f
+get_rnparam_version	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rmfs_param.c	/^get_rnparam_version(void)$/;"	f
+getconfig_from_myattrnm	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_mkattr.c	/^getconfig_from_myattrnm(rnode_t *p_attrd, char *attr_nm) {$/;"	f
+getconfig_fromhash	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/cp_get.c	/^getconfig_fromhash(unsigned long h) {$/;"	f
+getconfig_fromnm	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/cp_get.c	/^getconfig_fromnm(char *nm) {$/;"	f
+getconfig_fromnm_nohash	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/cp_get.c	/^getconfig_fromnm_nohash(char *nm) {$/;"	f
+getfuseoptdesc_fromconfig	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_fuse.c	/^getfuseoptdesc_fromconfig(config_param_t *p_cp) {$/;"	f
+gid	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    gid_t         gid;$/;"	m	union:rmfs_param::ue
+gid	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  gid_t                gid;$/;"	m	struct:rnode
+h	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^  int              h;$/;"	m	struct:config_param
+h	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  int                  h;    \/*hash(nm)*\/$/;"	m	struct:rnode
+h	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_truth.c	/^  int   h;$/;"	m	struct:truth_hash	file:
+help	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/fuse.h	/^  char                *help;      \/* for constructing the usage msg *\/$/;"	m	struct:slurm_fuse_opt_desc
+hostname	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    char     *hostname;$/;"	m	union:rmfs_param::ue
+i	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    int           i;$/;"	m	union:rmfs_param::ue
+ingest_config	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/ingest.c	/^ingest_config(int pass_no)$/;"	f
+init_dependency_cp	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/cp_subr.c	/^init_dependency_cp(config_param_t *p_cp) {$/;"	f
+init_hash_cp	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/cp_subr.c	/^init_hash_cp (config_param_t *p_cp) {$/;"	f
+internal_strlen	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/misc_subr.c	/^internal_strlen(const char *p_str) {$/;"	f
+is	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  struct is {$/;"	s	struct:rnode
+is	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  } is;$/;"	m	struct:rnode	typeref:struct:rnode::is
+is_cname_attr	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_mkcname.c	/^is_cname_attr(config_param_t *p_cp) {$/;"	f
+is_fsroot_attr	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_mkfsroot.c	/^is_fsroot_attr(config_param_t *p_cp) {$/;"	f
+is_mine	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^    tri_t              (*is_mine)(struct config_param *);$/;"	m	struct:rnode::attr_desc
+jim	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^      job_info_msg_t               *jim;$/;"	m	struct:config_param::src_specific::slurm_info
+jobid_sigdesc_tab	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_ctljobid.c	/^jobid_sigdesc_tab[] = {$/;"	v	file:
+jobinfodesc_tab	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_slurm_job.c	/^config_param_t jobinfodesc_tab[] = {$/;"	v
+l	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    long          l;$/;"	m	union:rmfs_param::ue
+last_update	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	/^  time_t         last_update;$/;"	m	struct:rnode_params
+lib_collect	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^lib_collect	:=	libcollect.a$/;"	m
+lib_collect	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/Makefile	/^lib_collect	:= libcollect.a$/;"	m
+lib_collect_dir	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^lib_collect_dir	:=	collect$/;"	m
+lib_collect_path	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^lib_collect_path :=	$(lib_collect_dir)\/$(lib_collect)$/;"	m
+lib_conf_dir	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^lib_conf_dir	:=	conf$/;"	m
+lib_cp	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^lib_cp		:=	libcp.a$/;"	m
+lib_cp	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/Makefile	/^lib_cp		:= cp\/libcp.a$/;"	m
+lib_cp	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/Makefile	/^lib_cp	:= libcp.a$/;"	m
+lib_cp_dir	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^lib_cp_dir	:=	$(lib_conf_dir)\/cp$/;"	m
+lib_cp_path	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^lib_cp_path	:=	$(lib_cp_dir)\/$(lib_cp)$/;"	m
+lib_dirs	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^lib_dirs	:=	$(lib_cp_dir) $(lib_typ_dir) $(lib_misc_dir) $(lib_setval_dir)	\\$/;"	m
+lib_fuseops	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/Makefile	/^lib_fuseops	:= librmfs.a$/;"	m
+lib_misc	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^lib_misc	:=	libmisc.a$/;"	m
+lib_misc	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/Makefile	/^lib_misc 	:= misc\/libmisc.a$/;"	m
+lib_misc	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/Makefile	/^lib_misc	:= libmisc.a$/;"	m
+lib_misc_dir	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^lib_misc_dir	:=	$(lib_conf_dir)\/misc$/;"	m
+lib_misc_path	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^lib_misc_path	:=	$(lib_misc_dir)\/$(lib_misc)$/;"	m
+lib_rmfs	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^lib_rmfs	:=	librmfs.a$/;"	m
+lib_rmfs_dir	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^lib_rmfs_dir	:=	fuseops$/;"	m
+lib_rmfs_path	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^lib_rmfs_path	:=	$(lib_rmfs_dir)\/$(lib_rmfs)$/;"	m
+lib_rnode	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^lib_rnode	:=	librnode.a$/;"	m
+lib_rnode	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/Makefile	/^lib_rnode	:= librnode.a$/;"	m
+lib_rnode_dir	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^lib_rnode_dir	:=	rnode$/;"	m
+lib_rnode_path	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^lib_rnode_path	:=	$(lib_rnode_dir)\/$(lib_rnode)$/;"	m
+lib_setval	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^lib_setval	:=	libsetval.a$/;"	m
+lib_setval	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/Makefile	/^lib_setval 	:= setval\/libsetval.a$/;"	m
+lib_setval	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/Makefile	/^lib_setval	:= libsetval.a$/;"	m
+lib_setval_dir	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^lib_setval_dir	:=	$(lib_conf_dir)\/setval$/;"	m
+lib_setval_path	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^lib_setval_path	:=	$(lib_setval_dir)\/$(lib_setval)$/;"	m
+lib_typ	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^lib_typ		:=	libtyp.a$/;"	m
+lib_typ	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/Makefile	/^lib_typ 	:= typ\/libtyp.a$/;"	m
+lib_typ	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/Makefile	/^lib_typ	:= libtyp.a$/;"	m
+lib_typ_dir	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^lib_typ_dir	:=	$(lib_conf_dir)\/typ$/;"	m
+lib_typ_path	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^lib_typ_path	:=	$(lib_typ_dir)\/$(lib_typ)$/;"	m
+libs	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^libs		:=	$(lib_cp) $(lib_typ) $(lib_misc) $(lib_setval)	\\$/;"	m
+libs	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^libs		:= $(prereq_libs) $(our_libs)$/;"	m
+link	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^    unsigned int   link:1;$/;"	m	struct:rnode::is
+link_xattr2rn	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_subr.c	/^link_xattr2rn (rnode_t *p_rn, config_param_t *p_cp) {$/;"	f
+local	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^      int                           local:1;$/;"	m	struct:config_param::src_specific::rmfs_info
+main	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/slu_rmfs.c	/^main(int ac, char **av) {$/;"	f
+max	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	272;"	d
+may_be	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  struct may_be {$/;"	s	struct:rnode
+maybe	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  } maybe;$/;"	m	struct:rnode	typeref:struct:rnode::may_be
+min	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	279;"	d
+mk_fs	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_public.c	/^mk_fs(void) {$/;"	f
+mkattr_knob	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_mkattr.c	/^mkattr_knob(rnode_t *p_knob) {$/;"	f
+mkattr_sig	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_mkattr.c	/^mkattr_sig(rnode_t *p_sig) {$/;"	f
+mkattr_xattr_ctx	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_mkattr.c	/^mkattr_xattr_ctx(rnode_t *p_rn, char *ctx_str) {$/;"	f
+mkdir_varrun	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_os.c	/^mkdir_varrun(config_param_t *varrun_cp) {$/;"	f
+n_children	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  int                  n_children; $/;"	m	struct:rnode
+n_xattr	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  int                  n_xattr;   \/* # extended attributes                           *\/$/;"	m	struct:rnode
+namer	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/namer.c	/^namer(const char *path, rnode_t *p_lookup, int *p_errno) {$/;"	f
+nim	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^      node_info_msg_t              *nim;$/;"	m	struct:config_param::src_specific::slurm_info
+nm	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/fuse.h	/^  char                *nm;        \/* as in the slurmfs_config table *\/$/;"	m	struct:slurm_fuse_opt_desc
+nm	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    char                *nm;$/;"	m	struct:config_param::depends_on
+nm	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^  char            *nm;$/;"	m	struct:config_param
+nm	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^    char            *nm;$/;"	m	struct:rnode::rn_ctl
+nm	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  char                *nm;$/;"	m	struct:rnode
+nodeinfodesc_tab	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_slurm_node.c	/^config_param_t nodeinfodesc_tab[] = {$/;"	v
+notify	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^    struct rnode     *notify;$/;"	m	struct:rnode::may_be	typeref:struct:rnode::may_be::rnode
+nxt_avail	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	/^  unsigned long  nxt_avail;$/;"	m	struct:rnode_params
+nxt_dirty	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  struct rnode        *nxt_dirty; \/* dirty nodes not yet written to BackingStore              *\/$/;"	m	struct:rnode	typeref:struct:rnode::rnode
+object_slu_rmfs_main	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^object_slu_rmfs_main	:= $(subst .c,.o,$(sources_slu_rmfs_main))$/;"	m
+objects	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/Makefile	/^objects		:= $(subst .c,.o,$(sources))$/;"	m
+objects	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/Makefile	/^objects		:= $(subst .c,.o,$(sources))$/;"	m
+objects	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/Makefile	/^objects		:= $(subst .c,.o,$(sources))$/;"	m
+objects	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/Makefile	/^objects		:= $(subst .c,.o,$(sources))$/;"	m
+objects	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/Makefile	/^objects		:= $(subst .c,.o,$(sources))$/;"	m
+objects	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/Makefile	/^objects		:= $(subst .c,.o,$(sources))$/;"	m
+objects	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/Makefile	/^objects		:= $(subst .c,.o,$(sources))$/;"	m
+objects	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^objects			:= $(objects_slu_rmfs_supt)$/;"	m
+objects_slu_rmfs_supt	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^objects_slu_rmfs_supt	:= $(subst .c,.o,$(sources_slu_rmfs_supt))$/;"	m
+off	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^      off_t                         off;$/;"	m	struct:config_param::src_specific::slurm_info
+oflg	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/fuse.h	/^  opt_flg_t            oflg;      \/* option flags, rmfs\/types.h *\/$/;"	m	struct:slurm_fuse_opt_desc
+opt_flag	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^enum opt_flag {$/;"	g
+opt_flg_t	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^typedef enum opt_flag opt_flg_t;$/;"	t	typeref:enum:opt_flag
+our_libs	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^our_libs	:= collect rmfs rnode $(our_libs_lowlevel)$/;"	m
+our_libs_a	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^our_libs_a	:= $(addsuffix .a,$(our_libs))$/;"	m
+our_libs_l	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^our_libs_l	:= $(addprefix lib,$(our_libs))$/;"	m
+our_libs_la	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^our_libs_la	:= $(addprefix lib,$(our_libs_a))$/;"	m
+our_libs_lfa	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^our_libs_lfa	:= $(addprefix $(LIB_D)\/lib,$(our_libs_a))$/;"	m
+our_libs_lowlevel	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^our_libs_lowlevel := cp misc typ setval$/;"	m
+ours	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    int   ours:1;$/;"	m	struct:rmfs_param::path_descriptor
+owner	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    pid_t owner;$/;"	m	struct:rmfs_param::path_descriptor
+p2r_typ_convtab	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_tab.c	/^pt2rn_t p2r_typ_convtab[] = {$/;"	v
+p2r_typ_rm_convtab	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_tab.c	/^pt2rn_t p2r_typ_rm_convtab[] = {$/;"	v
+p_cname	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	/^  rnode_t       *p_cname;$/;"	m	struct:rnode_params
+p_cp	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/fuse.h	/^  struct config_param *p_cp;      \/* ptr to slurmfs_config entry *\/$/;"	m	struct:slurm_fuse_opt_desc	typeref:struct:slurm_fuse_opt_desc::config_param
+p_cp	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    struct config_param *p_cp;$/;"	m	struct:config_param::depends_on	typeref:struct:config_param::depends_on::config_param
+p_cp	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  struct config_param *p_cp;$/;"	m	struct:rnode	typeref:struct:rnode::config_param
+p_dirty	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	/^  rnode_t       *p_dirty;  \/* list head *\/$/;"	m	struct:rnode_params
+p_dyntyp	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  void                *p_dyntyp;$/;"	m	struct:rnode
+p_fo	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^  struct fuse_opt            *p_fo;     \/* see fuse_opt.h *\/$/;"	m	struct:config_param	typeref:struct:config_param::fuse_opt
+p_fopd	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^  struct slurm_fuse_opt_desc *p_fopd;   \/* slurm fuse opt param descriptor slurm_fopts[] *\/$/;"	m	struct:config_param	typeref:struct:config_param::slurm_fuse_opt_desc
+p_fsroot	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	/^  rnode_t       *p_fsroot;$/;"	m	struct:rnode_params
+p_fuseopts_tbl	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/cp_tab.c	/^struct fuse_opt *p_fuseopts_tbl = NULL;  \/* fuse_opt table (conf_tab.c) *\/$/;"	v	typeref:struct:fuse_opt
+p_jobd	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	/^  rnode_t       *p_jobd;$/;"	m	struct:rnode_params
+p_nxt	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^  struct config_param *p_nxt; \/* arbitrary nxt list, used by extended attributes in fs *\/$/;"	m	struct:config_param	typeref:struct:config_param::config_param
+p_nxt_avail_rn	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	/^  rnode_t       *p_nxt_avail_rn;$/;"	m	struct:rnode_params
+p_rnode	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^  struct rnode        *p_rnode;$/;"	m	struct:config_param	typeref:struct:config_param::rnode
+p_slcnf	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_slurm.c	/^slurm_ctl_conf_t *p_slcnf = NULL;$/;"	v
+param_collection_functab	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/ingest.c	/^param_source_t (*param_collection_functab[])(config_param_t *) = { \/*XXXswitchfunc*\/$/;"	v
+param_source	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^enum param_source {$/;"	g
+param_source_t	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^typedef enum param_source param_source_t;$/;"	t	typeref:enum:param_source
+param_type	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^enum param_type {$/;"	g
+param_typecheck_functab	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_table.c	/^tri_t (*param_typecheck_functab[])(rmfs_param_t *) = {$/;"	v
+parent	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  struct rnode        *parent;    \/* always exists, fsroot->parent->fsroot           *\/ $/;"	m	struct:rnode	typeref:struct:rnode::rnode
+parent_type	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^      ptyp_t                        parent_type;$/;"	m	struct:config_param::src_specific::rmfs_info
+parent_type	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^      ptyp_t                        parent_type;$/;"	m	struct:config_param::src_specific::slurm_info
+parse_an_arg	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_fuse.c	/^parse_an_arg(void *data, const char *arg, int fusekey, struct fuse_args *outarg) {$/;"	f
+partinfodesc_tab	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_slurm_part.c	/^config_param_t partinfodesc_tab[] = {$/;"	v
+path_descriptor	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^  struct path_descriptor {$/;"	s	struct:rmfs_param
+pathnm	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    char     *pathnm;$/;"	m	union:rmfs_param::ue
+pd	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^  } pd;$/;"	m	struct:rmfs_param	typeref:struct:rmfs_param::path_descriptor
+per_src	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^  } per_src;$/;"	m	struct:config_param	typeref:struct:config_param::src_specific
+pid	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    pid_t         pid;$/;"	m	union:rmfs_param::ue
+pim	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^      partition_info_msg_t         *pim;$/;"	m	struct:config_param::src_specific::slurm_info
+prereq	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/Makefile	/^prereq		:= $(sources_depend) $(BASE_D)\/Makefile $(BASE_D)\/Makefile.depend$/;"	m
+prereq	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^prereq		:=	Makefile $(sources_headers)$/;"	m
+prereq	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/Makefile	/^prereq		:= Makefile $(sources_headers)$/;"	m
+prereq	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/Makefile	/^prereq		:=	Makefile $(sources_headers)$/;"	m
+prereq	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/Makefile	/^prereq		:= Makefile $(sources_headers)$/;"	m
+prereq	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/Makefile	/^prereq		:= Makefile $(sources_headers)$/;"	m
+prereq	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/Makefile	/^prereq		:= Makefile $(sources_headers)$/;"	m
+prereq	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/Makefile	/^prereq		:= Makefile $(sources_headers)$/;"	m
+prereq	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/Makefile	/^prereq		:= Makefile $(sources_headers)$/;"	m
+prereq	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/Makefile	/^prereq		:= Makefile $(sources_headers)$/;"	m
+prereq	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^prereq		 := Makefile$/;"	m
+prereq_libs	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^prereq_libs	:= bsd fuse rt selinux slurm slurmdb$/;"	m
+psrc2srcname_tab	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/cp_tab.c	/^char *psrc2srcname_tab[] = {$/;"	v
+psrc_msb	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/misc_subr.c	/^psrc_msb(unsigned int tst) {$/;"	f
+pt2rn_t	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^typedef struct convtyp pt2rn_t;$/;"	t	typeref:struct:convtyp
+ptr	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    void     *ptr;$/;"	m	union:rmfs_param::ue
+ptyp	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  enum param_type ptyp;$/;"	m	struct:convtyp	typeref:enum:convtyp::param_type
+ptyp2pname_tab	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/cp_tab.c	/^ptyp2pname_tab[] = {$/;"	v
+ptyp_t	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^typedef enum param_type ptyp_t;$/;"	t	typeref:enum:param_type
+pusage_msg	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/usage.c	/^char   *pusage_msg;  \/* constructed from the fuse_opt table *\/$/;"	v
+readable	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^    unsigned int      readable:1;$/;"	m	struct:rnode::may_be
+reclaim_files	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/mount.c	/^reclaim_files() {$/;"	f
+record_mountpoint	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_os.c	/^record_mountpoint(config_param_t *mpfile_cp) {$/;"	f
+request_unmount	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/mount.c	/^request_unmount(FILE *prev_ctlfile, long waited_for) {$/;"	f
+rino	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  unsigned long        rino; \/*not enum\/rn_type_t so may be >RN_LAST, esp. RN_GUARD *\/$/;"	m	struct:rnode
+rm_uid	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	/^  uid_t               rm_uid[RM_UIDS];   \/* from resource mgr *\/$/;"	m	struct:rnode_params
+rmfs	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    } rmfs;$/;"	m	struct:config_param::src_specific	typeref:struct:config_param::src_specific::rmfs_info
+rmfs_access	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/rmfs_access.c	/^rmfs_access(const char *path, int mask){$/;"	f
+rmfs_exitcode_t	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^typedef enum slurmfs_exitcode rmfs_exitcode_t;$/;"	t	typeref:enum:slurmfs_exitcode
+rmfs_file_ops	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/rmfs_fuseops_tab.c	/^struct fuse_operations rmfs_file_ops = {$/;"	v	typeref:struct:fuse_operations
+rmfs_getattr	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/rmfs_getattr.c	/^rmfs_getattr(const char *path, struct stat *st){$/;"	f
+rmfs_getxattr	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/rmfs_xattr.c	/^rmfs_getxattr(const char *path,$/;"	f
+rmfs_info	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    struct rmfs_info {$/;"	s	struct:config_param::src_specific
+rmfs_init	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/rmfs_init.c	/^rmfs_init(struct fuse_conn_info *ignored_fuse_conn_info){$/;"	f
+rmfs_listxattr	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/rmfs_xattr.c	/^rmfs_listxattr(const char *path,$/;"	f
+rmfs_mayaccess	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/rmfs_mayaccess.c	/^rmfs_mayaccess(rnode_t *p_rn, int *p_errno, struct fuse_file_info *fi) {$/;"	f
+rmfs_open	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/rmfs_open.c	/^rmfs_open(const char *path, struct fuse_file_info *fi) {$/;"	f
+rmfs_param	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^struct rmfs_param {$/;"	s
+rmfs_param_t	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^typedef struct rmfs_param rmfs_param_t;$/;"	t	typeref:struct:rmfs_param
+rmfs_poll	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/rmfs_poll.c	/^rmfs_poll(const char             *path,$/;"	f
+rmfs_read	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/rmfs_read.c	/^rmfs_read(const char *path,$/;"	f
+rmfs_readdir	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/rmfs_readdir.c	/^rmfs_readdir(const char            *path,$/;"	f
+rmfs_readdir_statfiller	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/rmfs_readdir.c	/^rmfs_readdir_statfiller(rnode_t *p_rn, struct stat *st, int flag) {$/;"	f
+rmfs_setxattr	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/rmfs_xattr.c	/^rmfs_setxattr(const char *path,$/;"	f
+rmfs_statfs	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/rmfs_statfs.c	/^rmfs_statfs(const char *path, struct statvfs *stv) {$/;"	f
+rmfs_trunc	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/rmfs_trunc.c	/^rmfs_trunc(const char *path, off_t trunc_size) {$/;"	f
+rmfs_write	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/rmfs_write.c	/^rmfs_write(const char *path,$/;"	f
+rn_alloc	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_alloc.c	/^rn_alloc(unsigned int requested) {$/;"	f
+rn_allocmap	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	/^  unsigned long *rn_allocmap;$/;"	m	struct:rnode_params
+rn_basealloc	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	/^  unsigned long  rn_basealloc;$/;"	m	struct:rnode_params
+rn_cast	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_cast.c	/^rn_cast(rnode_t *p_new,	rn_type_t rtype,$/;"	f
+rn_cast_attr_typconv	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_cast.c	/^rn_cast_attr_typconv(rnode_t *p_new, ptyp_t ptyp,$/;"	f
+rn_ctl	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  struct rn_ctl {$/;"	s	struct:rnode
+rn_ctl_t	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^typedef struct rn_ctl rn_ctl_t;$/;"	t	typeref:struct:rn_ctl
+rn_ctljobid_sign	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_ctljobid.c	/^rn_ctljobid_sign(rnode_t *p_sig, config_param_t *p_sig_cp) {$/;"	f
+rn_ctljobid_sync_fromBackingStore	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_ctljobid.c	/^rn_ctljobid_sync_fromBackingStore(rnode_t *p_rn, config_param_t *p_cp) {$/;"	f
+rn_ctljobid_write	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_ctljobid.c	/^rn_ctljobid_write(rnode_t *p_rn, config_param_t *p_cp) {$/;"	f
+rn_ctlroot_check	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_ctlroot.c	/^rn_ctlroot_check(rnode_t *p_rn, config_param_t *p_cp) {$/;"	f
+rn_ctlroot_effluviate	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_ctlroot.c	/^rn_ctlroot_effluviate(rnode_t *p_rn, config_param_t *p_cp) {$/;"	f
+rn_ctlroot_umount	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_ctlroot.c	/^rn_ctlroot_umount(rnode_t *p_rn, config_param_t *p_cp) {$/;"	f
+rn_curalloc	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	/^  unsigned long  rn_curalloc;$/;"	m	struct:rnode_params
+rn_maxalloc	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	/^  unsigned long  rn_maxalloc;$/;"	m	struct:rnode_params
+rn_minpoolsize	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	/^  unsigned long  rn_minpoolsize;$/;"	m	struct:rnode_params
+rn_mkallocjob	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_mknode.c	/^rn_mkallocjob(rnode_t *p_nstate, rnode_t *p_allocjob) {$/;"	f
+rn_mkattr	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_mkattr.c	/^rn_mkattr(rnode_t *p_parent, rnode_t *p_attr) {$/;"	f
+rn_mkattrd	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_mkattr.c	/^rn_mkattrd(rnode_t *p_parent, rnode_t *p_attrd) {$/;"	f
+rn_mkcname	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_mkcname.c	/^rn_mkcname(rnode_t *p_fsroot, rnode_t *p_cluster) {$/;"	f
+rn_mkctld	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_mkctl.c	/^rn_mkctld(rnode_t *p_parent, rnode_t *p_ctl) {$/;"	f
+rn_mkfsroot	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_mkfsroot.c	/^rn_mkfsroot(rnode_t *p_fsroot, rnode_t *ignored) {$/;"	f
+rn_mkjobd	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_mkjob.c	/^rn_mkjobd(rnode_t *p_cluster, rnode_t *p_jobd) {$/;"	f
+rn_mkjobid	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_mkjob.c	/^rn_mkjobid(rnode_t *p_jobd, rnode_t *p_jobid) {$/;"	f
+rn_mkjobstep	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_mkstep.c	/^rn_mkjobstep(rnode_t *p_jobstepd, rnode_t *p_stepX) {$/;"	f
+rn_mkjobstepd	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_mkstep.c	/^rn_mkjobstepd(rnode_t *p_jobid, rnode_t *p_jobstepd) {$/;"	f
+rn_mknode	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_mknode.c	/^rn_mknode(rnode_t *p_noded, rnode_t *p_nodeX) {$/;"	f
+rn_mknoded	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_mknode.c	/^rn_mknoded(rnode_t *p_partition, rnode_t *p_noded) {$/;"	f
+rn_mknstate	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_mknode.c	/^rn_mknstate(rnode_t *p_parent, rnode_t *p_nodeX) {$/;"	f
+rn_mkpart	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_mkpart.c	/^rn_mkpart(rnode_t *p_partitions, rnode_t *p_partX) {$/;"	f
+rn_mkpartd	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_mkpart.c	/^rn_mkpartd(rnode_t *p_cluster, rnode_t *p_partitions) {$/;"	f
+rn_param_adddirty	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rmfs_param.c	/^rn_param_adddirty(rnode_t *p_rn) {$/;"	f
+rn_param_t	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	/^typedef struct rnode_params rn_param_t;$/;"	t	typeref:struct:rnode_params
+rn_paramtab	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rmfs_param.c	/^rn_param_t rn_paramtab = { 0 };$/;"	v
+rn_paramtab_lock	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rmfs_param.c	/^rn_paramtab_lock(void) {$/;"	f
+rn_paramtab_release	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rmfs_param.c	/^rn_paramtab_release(void) {$/;"	f
+rn_pool	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	/^  rnode_t       *rn_pool;$/;"	m	struct:rnode_params
+rn_poolinit	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_alloc.c	/^rn_poolinit(void) {$/;"	f
+rn_provision	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_provision.c	/^rn_provision(rnode_t *p_parent, rnode_t *rn_pro) {$/;"	f
+rn_raze	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_alloc.c	/^rn_raze(rnode_t *p_rn, rnode_t *ignored) {$/;"	f
+rn_resetugid	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_mkjob.c	/^rn_resetugid(rnode_t *p_dir, uid_t uid, gid_t gid) {$/;"	f
+rn_type_t	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^typedef enum rnode_type rn_type_t;$/;"	t	typeref:enum:rnode_type
+rnode	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^struct rnode {$/;"	s
+rnode_buildtab	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rn_tab.c	/^rnode_t rnode_buildtab[] = {$/;"	v
+rnode_params	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	/^struct rnode_params {$/;"	s
+rnode_t	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^typedef struct rnode  rnode_t;$/;"	t	typeref:struct:rnode
+rnode_type	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^enum rnode_type {$/;"	g
+rtyp	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  rn_type_t       rtyp;$/;"	m	struct:convtyp
+rtype	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^    enum rnode_type  rtype; \/*rnode_type to be linked to the control function*\/$/;"	m	struct:rnode::rn_ctl	typeref:enum:rnode::rn_ctl::rnode_type
+rtype	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  rn_type_t            rtype;$/;"	m	struct:rnode
+scon	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	/^  security_context_t *scon;$/;"	m	struct:rnode_params
+select_only_one	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_fuse.c	/^static int select_only_one = 0;$/;"	v	file:
+set_rnparam_cname	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rmfs_param.c	/^set_rnparam_cname(rnode_t *p_new_cname) {$/;"	f
+set_rnparam_fsroot	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rmfs_param.c	/^set_rnparam_fsroot(rnode_t *p_new_fsroot) {$/;"	f
+set_rnparam_jobd	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rmfs_param.c	/^set_rnparam_jobd(rnode_t *p_new_jobd) {$/;"	f
+set_rnparam_rn	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rmfs_param.c	/^set_rnparam_rn(off_t offset, rnode_t *p_new) {$/;"	f
+set_rnparam_time	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rmfs_param.c	/^set_rnparam_time(off_t offset, time_t t) {$/;"	f
+set_rnparam_ul	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rmfs_param.c	/^set_rnparam_ul(off_t offset, unsigned long new_val) {$/;"	f
+set_val_bool	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/set_val_bool.c	/^set_val_bool(config_param_t *p_cp, bool_t v) {$/;"	f
+set_val_charptr	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/set_val_charptr.c	/^set_val_charptr(config_param_t *p_cp, char *p_str) {$/;"	f
+set_val_l	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/set_val_l.c	/^set_val_l(config_param_t *p_cp, long v) {$/;"	f
+set_val_pid	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/set_val_pid.c	/^set_val_pid(config_param_t *p_cp, pid_t pid) {$/;"	f
+set_val_ptr	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/set_val_ptr.c	/^set_val_ptr(config_param_t *p_cp, void *p_void) {$/;"	f
+set_val_slurm	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_slurm.c	/^set_val_slurm(config_param_t *p_cp, void *p_opaque)$/;"	f
+set_val_truth	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/set_val_truth.c	/^set_val_truth(config_param_t *p_cp, tri_t v) {$/;"	f
+set_val_ui	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/set_val_ui.c	/^set_val_ui(config_param_t *p_cp, unsigned int uiv) {$/;"	f
+set_val_uid	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/set_val_uid.c	/^set_val_uid(config_param_t *p_cp, uid_t uid) {$/;"	f
+set_val_ul	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/set_val_ul.c	/^set_val_ul(config_param_t *p_cp, unsigned long v) {$/;"	f
+signature	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  struct rnode        *signature; \/* this node has a signature, visible through its attribute *\/$/;"	m	struct:rnode	typeref:struct:rnode::rnode
+size	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^  size_t size; \/* for char *, calloc()'d size, unless opaque *\/$/;"	m	struct:rmfs_param
+slurm	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    } slurm;$/;"	m	struct:config_param::src_specific	typeref:struct:config_param::src_specific::slurm_info
+slurm2basetyp	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/typ_slurm.c	/^ptyp_t slurm2basetyp[] = {$/;"	v
+slurm_fopts	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/cp_tab.c	/^slurm_fuse_opt_desc_t slurm_fopts[] =$/;"	v
+slurm_fuse_opt_desc	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/fuse.h	/^struct slurm_fuse_opt_desc {$/;"	s
+slurm_fuse_opt_desc_t	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/linkage/fuse.h	/^typedef struct slurm_fuse_opt_desc slurm_fuse_opt_desc_t;$/;"	t	typeref:struct:slurm_fuse_opt_desc
+slurm_info	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    struct slurm_info { \/* see -> slurm.h *\/$/;"	s	struct:config_param::src_specific
+slurm_update_time	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_slurm.c	/^time_t slurm_update_time  = 0; \/* XXX *\/$/;"	v
+slurmfs_config	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/cp_tab.c	/^config_param_t slurmfs_config[] =$/;"	v
+slurmfs_exitcode	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^enum slurmfs_exitcode {$/;"	g
+sources	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/Makefile	/^sources		:= $(sources_collect)$/;"	m
+sources	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/Makefile	/^sources		:= $(sources_config_param)$/;"	m
+sources	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/Makefile	/^sources		:= $(sources_misc)$/;"	m
+sources	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/Makefile	/^sources		:= $(sources_set_val)$/;"	m
+sources	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/Makefile	/^sources		:= $(sources_typ)$/;"	m
+sources	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/Makefile	/^sources		:= $(sources_fuseops)$/;"	m
+sources	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/Makefile	/^sources		:= $(sources_rnode)$/;"	m
+sources	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^sources			:= $(notdir $(sources_slu_rmfs))$/;"	m
+sources_collect	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/Makefile	/^sources_collect	:=				\\$/;"	m
+sources_config_param	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/Makefile	/^sources_config_param	:=			\\$/;"	m
+sources_dirs	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/Makefile	/^sources_dirs	:= $(LIB_D) $(EXEC_D)$/;"	m
+sources_dirs	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^sources_dirs	:=	$(lib_dirs)$/;"	m
+sources_dirs	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/Makefile	/^sources_dirs	:=	$(dir $(sources_libs))$/;"	m
+sources_dirs	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^sources_dirs	:= $(LIB_D) $(EXEC_D)$/;"	m
+sources_fuseops	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/Makefile	/^sources_fuseops	:=				\\$/;"	m
+sources_headers	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^sources_headers	:=			\\$/;"	m
+sources_headers	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/Makefile	/^sources_headers	:=				\\$/;"	m
+sources_headers	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/Makefile	/^sources_headers	:=			\\$/;"	m
+sources_headers	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/cp/Makefile	/^sources_headers	:=				\\$/;"	m
+sources_headers	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/Makefile	/^sources_headers	:=			\\$/;"	m
+sources_headers	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/Makefile	/^sources_headers	:=				\\$/;"	m
+sources_headers	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/Makefile	/^sources_headers	:=				\\$/;"	m
+sources_headers	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/fuseops/Makefile	/^sources_headers	:=				\\$/;"	m
+sources_headers	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/Makefile	/^sources_headers	:=				\\$/;"	m
+sources_libs	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/Makefile	/^sources_libs	:=	$(lib_cp_path)		\\$/;"	m
+sources_libs	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/Makefile	/^sources_libs	:=	$(lib_cp) $(lib_typ) $(lib_misc) $(lib_setval)$/;"	m
+sources_libs	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^sources_libs	:= $(our_libs)$/;"	m
+sources_misc	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/misc/Makefile	/^sources_misc	:=			\\$/;"	m
+sources_rnode	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/Makefile	/^sources_rnode	:=				\\$/;"	m
+sources_set_val	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/setval/Makefile	/^sources_set_val	:=				\\$/;"	m
+sources_slu_rmfs	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^sources_slu_rmfs	:= $(notdir $(sources_slu_rmfs))$/;"	m
+sources_slu_rmfs_main	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^sources_slu_rmfs_main	:= $(notdir $(sources_slu_rmfs_main))$/;"	m
+sources_slu_rmfs_supt	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/Makefile	/^sources_slu_rmfs_supt	:= $(notdir $(sources_slu_rmfs_supt))$/;"	m
+sources_typ	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/Makefile	/^sources_typ	:=				\\$/;"	m
+src	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^  struct src {$/;"	s	struct:config_param
+src	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^  } src;$/;"	m	struct:config_param	typeref:struct:config_param::src
+src2str	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/slu_rmfs/ingest.c	/^char *src2str[] = {$/;"	v
+src_specific	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^  struct src_specific {$/;"	s	struct:config_param
+stepinfodesc_tab	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_slurm_step.c	/^config_param_t stepinfodesc_tab[] = {$/;"	v
+stim	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^      job_step_info_response_msg_t *stim;$/;"	m	struct:config_param::src_specific::slurm_info
+str	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    char     *str;$/;"	m	union:rmfs_param::ue
+str	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_truth.c	/^  char *str;$/;"	m	struct:truth_hash	file:
+subdir	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  struct rnode        *subdir;    \/* children which are not leaf nodes, are sub-dirs *\/$/;"	m	struct:rnode	typeref:struct:rnode::rnode
+t2tristr	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_truth.c	/^t2tristr(tri_t truth) {$/;"	f
+table	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^    struct config_param *table;$/;"	m	struct:rnode::attr_desc	typeref:struct:rnode::attr_desc::config_param
+target	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/Makefile	/^target		:= slurmfs$/;"	m
+term_count	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_fuse.c	/^static int term_count = 0;$/;"	v	file:
+the_rn_paramtab_lock	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/rnode/rmfs_param.c	/^static int the_rn_paramtab_lock = 0;$/;"	v	file:
+time	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    time_t        time;$/;"	m	union:rmfs_param::ue
+tri2str	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_truth.c	/^tri2str[] = { "unset", "false", "true" };$/;"	v
+tri_t	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^typedef enum trilene tri_t;$/;"	t	typeref:enum:trilene
+trilene	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/types.h	/^enum trilene {$/;"	g
+truth	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    tri_t         truth;$/;"	m	union:rmfs_param::ue
+truth	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_truth.c	/^  tri_t truth;$/;"	m	struct:truth_hash	file:
+truth_hash	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_truth.c	/^static struct truth_hash {$/;"	s	file:
+truth_hash_tab	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_truth.c	/^} truth_hash_tab[] =$/;"	v	typeref:struct:truth_hash	file:
+typ	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^  ptyp_t           typ;$/;"	m	struct:config_param
+typ_always_fails	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_always_fails.c	/^typ_always_fails(rmfs_param_t *p_val) {$/;"	f
+typ_boolean	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_truth.c	/^typ_boolean(rmfs_param_t *p_val) {$/;"	f
+typ_check	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_check.c	/^typ_check(ptyp_t ptyp, rmfs_param_t *p_val) {$/;"	f
+typ_context	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_context.c	/^typ_context(rmfs_param_t *p_val) {$/;"	f
+typ_copyin	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_inout.c	/^typ_copyin(config_param_t *p_cp, char *in, size_t size) {$/;"	f
+typ_copyout	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_inout.c	/^typ_copyout(config_param_t *p_cp, char *out, size_t size) {$/;"	f
+typ_dir	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_dir.c	/^typ_dir(rmfs_param_t *p_val) {$/;"	f
+typ_direxist	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_dir.c	/^typ_direxist(rmfs_param_t *p_val) {$/;"	f
+typ_file	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_file.c	/^typ_file(rmfs_param_t *p_val) {$/;"	f
+typ_filexist	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_file.c	/^typ_filexist(rmfs_param_t *p_val) {$/;"	f
+typ_host	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_host.c	/^typ_host(rmfs_param_t *p_val) {$/;"	f
+typ_isalpha	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_alpha.c	/^typ_isalpha(rmfs_param_t *p_val) {$/;"	f
+typ_isalphanum	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_alphanum.c	/^typ_isalphanum(rmfs_param_t *p_val) {$/;"	f
+typ_isalphanum_ornul	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_alphanum.c	/^typ_isalphanum_ornul(rmfs_param_t *p_val) {$/;"	f
+typ_numeric	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_numeric.c	/^typ_numeric(rmfs_param_t *p_val) {$/;"	f
+typ_numericchar	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_numericchar.c	/^typ_numericchar(rmfs_param_t *p_val) {$/;"	f
+typ_numerictime	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_numeric.c	/^typ_numerictime(rmfs_param_t *p_val) {$/;"	f
+typ_numsigned	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_numeric.c	/^typ_numsigned(rmfs_param_t *p_val) {$/;"	f
+typ_numtimsecs	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_numeric.c	/^typ_numtimsecs(rmfs_param_t *p_val) {$/;"	f
+typ_opaque	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_opaque.c	/^typ_opaque(rmfs_param_t *p_val) {$/;"	f
+typ_path	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_path.c	/^typ_path(rmfs_param_t *p_val) {$/;"	f
+typ_slurm_allocjob	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_slurm.c	/^typ_slurm_allocjob(rmfs_param_t *p_val) {$/;"	f
+typ_slurm_cluster	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_slurm.c	/^typ_slurm_cluster(rmfs_param_t *p_val) {$/;"	f
+typ_slurm_controlmach	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_slurm.c	/^typ_slurm_controlmach(rmfs_param_t *p_val) {$/;"	f
+typ_slurm_job	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_slurm.c	/^typ_slurm_job(rmfs_param_t *p_val) {$/;"	f
+typ_slurm_node	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_slurm.c	/^typ_slurm_node(rmfs_param_t *p_val) {$/;"	f
+typ_slurm_nodestate	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_slurm.c	/^typ_slurm_nodestate(rmfs_param_t *p_val) {$/;"	f
+typ_slurm_partition	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_slurm.c	/^typ_slurm_partition(rmfs_param_t *p_val) {$/;"	f
+typ_slurm_step	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_slurm.c	/^typ_slurm_step(rmfs_param_t *p_val) {$/;"	f
+typ_trilene	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_truth.c	/^typ_trilene(rmfs_param_t *p_val) {$/;"	f
+typ_unsigned_int	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_numeric.c	/^typ_unsigned_int(rmfs_param_t *p_val) {$/;"	f
+typ_unsigned_int16	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_numeric.c	/^typ_unsigned_int16(rmfs_param_t *p_val) {$/;"	f
+typ_unsigned_int32	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_numeric.c	/^typ_unsigned_int32(rmfs_param_t *p_val) {$/;"	f
+typ_xattr	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/conf/typ/typ_xattr.c	/^typ_xattr(rmfs_param_t *p_val) {$/;"	f
+ue	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^  union ue {        \/* must have offsetof(0) for fuse_opt_param processing *\/$/;"	u	struct:rmfs_param
+ue	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^  } ue;$/;"	m	struct:rmfs_param	typeref:union:rmfs_param::ue
+ui	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    unsigned int  ui;$/;"	m	union:rmfs_param::ue
+ui_16	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    uint16_t      ui_16;$/;"	m	union:rmfs_param::ue
+ui_32	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    uint32_t      ui_32;$/;"	m	union:rmfs_param::ue
+uid	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    uid_t         uid;$/;"	m	union:rmfs_param::ue
+uid	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  uid_t                uid;$/;"	m	struct:rnode
+ul	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^    unsigned long ul;$/;"	m	union:rmfs_param::ue
+val	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/conf.h	/^  rmfs_param_t     val;  \/* must start at offsetof(0) for fuse_opt param linkage *\/$/;"	m	struct:config_param
+varrun_opencp	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/lib/collect/collect_os.c	/^varrun_opencp(config_param_t *file_cp) {$/;"	f
+version	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/param.h	/^  unsigned long  version;$/;"	m	struct:rnode_params
+writable	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^    unsigned int      writable:1;$/;"	m	struct:rnode::may_be
+xattr	/home/sts/lanl/sw/fuse/playpen/slurmfs/SOURCES/inc/rmfs/rnode.h	/^  struct config_param *xattr;     \/* config param holding nm, value & type, p_nxt->  *\/$/;"	m	struct:rnode	typeref:struct:rnode::config_param
