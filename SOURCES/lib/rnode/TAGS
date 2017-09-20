@@ -1,105 +1,0 @@
-
-rmfs_param.c,526
-static int the_rn_paramtab_lock 11,214
-rn_param_t rn_paramtab 12,251
-rn_paramtab_lock(15,289
-rn_paramtab_release(22,431
-get_rn_params(41,872
-set_rnparam_rn(53,1065
-set_rnparam_time(73,1419
-set_rnparam_ul(88,1712
-get_rnparam_fsroot(104,2101
-get_rnparam_rn(121,2412
-get_rnparam_ulp(136,2702
-get_rnparam_ul(151,2999
-get_rnparam_uidp(167,3304
-get_rnparam_modep(182,3588
-get_rnparam_fsid(198,3866
-get_rnparam_modep_offset(214,4128
-rn_param_adddirty(233,4510
-set_rnparam_fsroot(260,5141
-set_rnparam_jobd(284,5720
-
-rn_alloc.c,54
-rn_poolinit(5,25
-rn_alloc(75,2428
-rn_raze(143,4224
-
-rn_cast.c,46
-rn_cast(9,128
-rn_cast_attr_typconv(181,4755
-
-rn_mkattr.c,140
-rn_mkattrd(10,242
-mkattr_knob(138,4085
-mkattr_sig(151,4264
-mkattr_xattr(188,5344
-rn_mkattr(286,8026
-getconfig_from_myattrnm(381,10939
-
-rn_mkcname.c,42
-is_cname_attr(18,375
-rn_mkcname(48,1005
-
-rn_mkctl.c,311
-rn_mkctld(18,637
-cleanup_file(113,3345
-cleanup(138,3760
-rn_ctlroot_umount(145,3888
-effluviate_one_rn(166,4354
-effluviate_rnode(215,5860
-effluviate_fstree(237,6335
-rn_ctlroot_effluviate(259,6894
-rn_ctlroot_check(271,7152
-rn_ctljobid_sign(289,7449
-rn_ctljobid_sync(299,7712
-rn_ctljobid_write(309,7955
-
-rn_mkfsroot.c,43
-is_fsroot_attr(9,112
-rn_mkfsroot(60,1546
-
-rn_mkjob.c,62
-rn_mkjobd(10,201
-rn_resetugid(144,4249
-rn_mkjobid(174,4810
-
-rn_mknode.c,121
-rn_mknoded(9,207
-rn_mknode(123,3808
-#define MAX_STATE_STR_LEN 211,6430
-rn_mknstate(214,6471
-rn_mkallocjob(345,10683
-
-rn_mkpart.c,39
-rn_mkpartd(10,214
-rn_mkpart(123,3847
-
-rn_mkstep.c,44
-rn_mkjobstepd(9,204
-rn_mkjobstep(158,4689
-
-rn_provision.c,21
-rn_provision(13,301
-
-rn_public.c,55
-(*get_rn_buildfn(get_rn_buildfn20,377
-mk_fs(46,1050
-
-rn_subr.c,19
-attr_cnt_cp(9,100
-
-rn_tab.c,369
-rnode_t rnode_buildtab[rnode_buildtab48,1827
-  { .rtype=rtype100,5376
-  { .rtype=rtype102,5549
-  { .rtype=rtype105,5724
-  { .rtype=rtype107,5897
-  { .rtype=rtype109,6071
-  { .rtype=rtype111,6245
-  { .rtype=rtype114,6420
-  { .rtype=rtype117,6596
-pt2rn_t p2r_typ_convtab[p2r_typ_convtab132,7099
-pt2rn_t p2r_typ_rm_convtab[p2r_typ_rm_convtab163,8644
-
-rn_README.c,0
