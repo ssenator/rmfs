@@ -7,8 +7,8 @@ rmfs_write(const char *path,
 	   struct fuse_file_info *fi) {
   int               errno;
   bool_t          (*p_ctlfn)(rnode_t *, void *);
-  rnode_t          *p_rn; 
   tri_t             tc;
+  rnode_t          *p_rn; 
   config_param_t   *p_cp_backingstore;
   config_param_t   *p_cp_varrun;
   config_param_t    cp_write;

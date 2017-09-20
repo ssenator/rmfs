@@ -45,7 +45,11 @@ rn_mkjobd(rnode_t *p_cluster, rnode_t *p_jobd) {
      return NULL;
    }
    if (!p_job_array) {
+#if defined(PORTING_TO_SLURMv17)	   
      ErrExit(ErrExit_ASSERT, "mkjobd: empty p_cp->per_src.slurm.jim->job_array");
+#else
+     ErrExit(ErrExit_WARN, "mkjobd: empty p_cp->per_src.slurm.jim->job_array");
+#endif /*PORTING_TO_SLURMv17*/     
      return NULL;
    }
    if (p_jim->record_count == 0) {
@@ -124,8 +128,12 @@ rn_mkjobd(rnode_t *p_cluster, rnode_t *p_jobd) {
 		    p_jobd, /*children*/ NULL, 0,
 		    /*attr*/ NULL, /*subdir*/ NULL);
      if (!p_jobidX) {
+#if defined(PORTING_TO_SLURMv17)	   
        ErrExit(ErrExit_ASSERT, "rn_mkjobd: !p_jobidX");
        return NULL;
+#else       
+       ErrExit(ErrExit_WARN, "rn_mkjobd: !p_jobidX");
+#endif       
      }
      p_rn++;
    }
@@ -257,7 +265,11 @@ rn_mkjobid(rnode_t *p_jobd, rnode_t *p_jobid) {
 		       p_jobid, /*children*/ NULL, 0,
 		       /*attr*/ NULL, /*subdir*/ NULL);
   if (!p_jobsteps) {
+#if defined(PORTING_TO_SLURMv17)	  
     ErrExit(ErrExit_ASSERT, "rn_mkjobid: !p_jobsteps");
+#else    
+    ErrExit(ErrExit_WARN, "rn_mkjobid: !p_jobsteps");
+#endif /*PORTING_TO_SLURMv17*/    
     return NULL;
   }
 

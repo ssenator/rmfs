@@ -15,8 +15,10 @@ config_param_t partinfodesc_tab[] = {
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_PARTITION},
   {.nm="name",        .per_src.slurm.off=offsetof(partition_info_t, name),        .typ=PTYP_ALPHANUM,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_PARTITION},
+#if defined(PORTING_TO_SLURMv17)  
   {.nm="node_list",   .per_src.slurm.off=offsetof(partition_info_t, nodes),       .typ=PTYP_ALPHANUM,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_PARTITION},
+#endif /*PORTING_TO_SLURMv17*/
   {.nm="state_up",    .per_src.slurm.off=offsetof(partition_info_t, state_up),    .typ=PTYP_NODESTATE,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_PARTITION},
   {.nm="total_cpus",  .per_src.slurm.off=offsetof(partition_info_t, total_cpus),  .typ=PTYP_NUMERIC,

@@ -172,7 +172,11 @@ rn_mkcname(rnode_t *p_fsroot, rnode_t *p_cluster) {
 		   p_cluster, /*children*/ NULL, 0,
 		   /*attr*/ NULL, /*subdir*/ NULL);
   if (!p_jobs) {
+#if defined(PORTING_TO_SLURMv17)	  
     ErrExit(ErrExit_ASSERT, "rn_mkcname: !p_jobs");
+#else    
+    ErrExit(ErrExit_WARN, "rn_mkcname: !p_jobs");
+#endif
     return NULL;
   }
   return p_cluster;

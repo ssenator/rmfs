@@ -16,9 +16,10 @@ jobid_sigdesc_tab[] = {
   { .nm=NULL }
 };
 
+config_param_t *
 rn_getsig(rnode_t *p_rn, rnode_t *p_attrd) {
-  rnode_t       *p_attrd;
-  config_param_t sig_cp, *p_sig_cp;
+  config_param_t sig_cp, *p_sig_cp, *p_cp, *p_cp_match;
+  int new_hash;
 
   if (!p_rn) {
     ErrExit(ErrExit_ASSERT, "rn_getsig: !p_rn");
@@ -39,19 +40,20 @@ rn_getsig(rnode_t *p_rn, rnode_t *p_attrd) {
       p_cp_match = getconfig_fromnm(p_cp->nm);
       
     } else if (p_cp->per_src.rmfs.fs) {
-      if (!IS_RTYPE_VALID(p_cp->per_src.rmfs.parent_type)) {
+      if (!IS_RTYPE_VALID(p2r_typ_convtab[p_cp->per_src.rmfs.parent_type].rtyp)) {
 	ErrExit(ErrExit_ASSERT, "rn_getsig: !invalid sig field rnode type");
 	return FALSE;
       }
-      if (p_cp->per_src.rmfs.parent_type != RND_JOBID) {
+      if (p2r_typ_convtab[p_cp->per_src.rmfs.parent_type].rtyp != RND_JOBID) {
 	ErrExit(ErrExit_ASSERT, "rn_getsig: !signature rnode field source");
 	return FALSE;
       }
-      p_cp_match = getconfig_from_myattrnm(p_attrd, p_cp->nm);
+      /*XXX p_cp_match = getconfig_from_nm(p_attrd, p_cp->nm); */
+      return FALSE;
     }
     new_hash = djb_accumulate(new_hash, p_cp_match->val.ue.i);
   }
-  sig_cp->val.ue.i = new_hash;
+  sig_cp.val.ue.i = new_hash;
   init_hash_cp(&sig_cp);
 
   p_sig_cp = dup_cp(&sig_cp);
@@ -67,7 +69,7 @@ tri_t
 rn_ctljobid_sign(rnode_t *p_sig, config_param_t *p_sig_cp) {
   config_param_t *p_cp, *p_cp_match, *p_sigxattr_cp, *p_sigtyp_cp, *p_2sigxattr_cp, *p_2sigtyp_cp;
   rnode_t        *p_attrd, *p_jobid;
-  int             new_hash;
+/*  int             new_hash; XXX*/
   rn_param_t     *p_rn_paramtab;
   char            pbuf[_POSIX_PATH_MAX];
   
@@ -252,7 +254,7 @@ rn_jobid_matchloose(uint32_t job_id)  {
   for (p_rn = p_jobd->children, i = 0, p_match = NULL;
            !p_match &&
            i < p_jobd->n_children && p_rn && IS_RTYPE_VALID(p_rn->rtype) &&
-	   p_rn->p_cp && IS_VALID_TYPE(p_rn->p_cp->type);
+	   p_rn->p_cp && IS_VALID_TYPE(p_rn->p_cp->typ);
                i++, p_rn++) {
 
     if (p_rn->p_cp->val.ue.ui_32 == job_id) {
@@ -262,14 +264,24 @@ rn_jobid_matchloose(uint32_t job_id)  {
   return p_match;
 }
 
+rnode_t *
+rn_jobid_loosematch(uint32_t job_id) {
+	return FALSE;
+}
+
 tri_t
 rn_jobid_matchsig(uint32_t job_id, int signature) {
-  rnode_t *p_rn, *p_attr;
+  rnode_t *p_rn;
+#if defined(PORTING_TO_SLURMv17)
+  rnode_t *p_attr;
   int      s;
+#endif /*PORTING_TO_SLURMv17*/  
   
   if (!(p_rn = rn_jobid_loosematch(job_id))) {
     return FALSE;
   }
+
+#if defined(PORTING_TO_SLURMv17)
   s = rn_getsig(p_rn, p_rn->attr);
 
   /*ASSERT(sigtyp == DJBHASH)*/
@@ -282,6 +294,9 @@ rn_jobid_matchsig(uint32_t job_id, int signature) {
     return FALSE;
   }
   return TRUE;
+#endif /* PORTING_TO_SLURMv17 */
+
+  return FALSE;
 }
 
 /*
@@ -292,10 +307,16 @@ rn_jobid_matchsig(uint32_t job_id, int signature) {
 
 tri_t
 rn_jobid_addxattr(uint32_t job_id, char *xattr_nm, char *xattr_val) {
-  rnode_t     *p_rn, *p_jobd, *p_match, p_cp_match;
-  rmfs_param_t xattr = { NULL };
-  rn_param_t  *p_rn_paramtab;
-  int          i;
+  rnode_t        *p_rn, *p_jobd, *p_match;
+  rmfs_param_t    xattr = { { NULL } };
+  rn_param_t     *p_rn_paramtab;
+#if defined(PORTING_TO_SLURMv17)
+  rnode_t        *p_cp_match, *p_cp;
+#endif
+
+#if defined(PORTING_TO_SLURMv17)
+  int             i;
+#endif /*PORTING_TO_SLURMv17*/
 
   if (job_id == 0) {
     ErrExit(ErrExit_ASSERT, "rn_jobid_addxattr(): implausible job_id");
@@ -310,7 +331,7 @@ rn_jobid_addxattr(uint32_t job_id, char *xattr_nm, char *xattr_val) {
     return FALSE;
   }
 
-  xattr.ptr = xattr_val;
+  xattr.ue.ptr = xattr_val;
   if (!typ_check(PTYP_XATTR, &xattr)) {
     ErrExit(ErrExit_ASSERT, "rn_jobid_addxattr(): !typ_check(xattr_val)");
     return FALSE;
@@ -327,8 +348,8 @@ rn_jobid_addxattr(uint32_t job_id, char *xattr_nm, char *xattr_val) {
     ErrExit(ErrExit_ASSERT, "rn_jobid_addxattr(): !rn_jobid_matchloose()");
     return FALSE;
   }
-
-  for (p_cp = p_cp_match = NULL; !p_cp_match && p_cp; p_cp = p_cp->nxt) {
+#if defined(PORTING_TO_SLURMv17)
+  for (p_cp = p_cp_match = NULL; !p_cp_match && p_cp; p_cp = p_cp->p_nxt) {
     if (strcmp(p_cp->nm, xattr_nm) == 0) {
       p_cp_match = p_cp;
     }
@@ -363,6 +384,12 @@ rn_jobid_addxattr(uint32_t job_id, char *xattr_nm, char *xattr_val) {
     p_cp_match->size = internal_strlen(xattr_val);
   }
   return TRUE;
+#else
+  p_jobd = NULL;
+  p_rn = NULL;
+  return FALSE;
+#endif /*PORTING_TO_SLURMv17*/
+
 }
 
  

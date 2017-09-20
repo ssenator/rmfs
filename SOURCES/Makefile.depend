@@ -16,7 +16,7 @@ selinux_headers	:=			\
 linux_headers	:=			\
 	/usr/include/sys/types.h	\
 	/usr/include/assert.h		\
-	/usr/include/attr/xattr.h	\
+	/usr/include/linux/xattr.h	\
 	/usr/include/ctype.h		\
 	/usr/include/dirent.h		\
 	/usr/include/errno.h		\

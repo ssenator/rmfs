@@ -2,7 +2,7 @@ NAME=slu_rmfs
 
 BUILT		:= $(shell date +%Y%m%d%H%M)
 
-RPM_D		:= /home/sts/lanl/sw/fuse/playpen/slurmfs
+RPM_D		:= /home/sts/lanl/sw/slurm/slurmfs
 RPM_SRC_D	:= $(RPM_D)/SOURCES
 
 BASE_D		:= $(RPM_SRC_D)
@@ -42,6 +42,8 @@ hygiene: cscope.out TAGS tags
 
 
 cscope.out: $(sources_depend)
+	find . -type f -name \*\.h >> cscope.files
+	find . -type f -name \*\.c >> cscope.files
 	cscope -I$(inc) -q -R -b $(sources_depend)
 
 TAGS: $(sources_depend)

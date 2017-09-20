@@ -16,14 +16,18 @@ config_param_t nodeinfodesc_tab[] = {
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_NODE},
   {.nm="cpus",          .per_src.slurm.off=offsetof(node_info_t, cpus),          .typ=PTYP_NUMERIC,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_NODE},
+#if defined(PORTING_TO_SLURMv17)  
   {.nm="features",      .per_src.slurm.off=offsetof(node_info_t, features),      .typ=PTYP_ALPHANUM,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_NODE},
   {.nm="gres",          .per_src.slurm.off=offsetof(node_info_t, gres),          .typ=PTYP_ALPHANUM,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_NODE},
+#endif /*PORTING_TO_SLURMv17*/  
   {.nm="name",          .per_src.slurm.off=offsetof(node_info_t, name),          .typ=PTYP_ALPHANUM,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_NODE},
+#if defined(PORTING_TO_SLURMv17)  
   {.nm="node_addr",     .per_src.slurm.off=offsetof(node_info_t, node_addr),     .typ=PTYP_ALPHANUM,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_NODE},
+#endif /*PORTING_TO_SLURMv17*/
   {.nm="node_hostname", .per_src.slurm.off=offsetof(node_info_t, node_hostname), .typ=PTYP_HOSTNAME,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_NODE},
    {.nm="node_state",    .per_src.slurm.off=offsetof(node_info_t, node_state),    .typ=PTYP_NODESTATE,
@@ -32,8 +36,10 @@ config_param_t nodeinfodesc_tab[] = {
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_NODE},
   {.nm="real_memory",   .per_src.slurm.off=offsetof(node_info_t, real_memory),   .typ=PTYP_NUMERIC,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_NODE},
+#if defined(PORTING_TO_SLURMv17)  
   {.nm="reason",        .per_src.slurm.off=offsetof(node_info_t, reason),        .typ=PTYP_ALPHANUM,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_NODE},
+#endif /*PORTING_TO_SLURMv17*/  
   {.nm="sockets",       .per_src.slurm.off=offsetof(node_info_t, sockets),        .typ=PTYP_NUMERIC,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_NODE},
   {.nm="threads",       .per_src.slurm.off=offsetof(node_info_t, threads),       .typ=PTYP_NUMERIC,

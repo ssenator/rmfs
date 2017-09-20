@@ -96,5 +96,6 @@ extern tri_t open_BackingStore(config_param_t *, int);
 extern tri_t merge_BackingStore(config_param_t *, merge_bs_source_t);
 extern tri_t requestWrite_BackingStore(char *);
 extern tri_t spawn_BackingStorelistener(config_param_t *);
+extern tri_t write_modifiedrnode_toBackingStore(void);
 
 #endif

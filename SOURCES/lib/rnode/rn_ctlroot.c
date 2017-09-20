@@ -171,7 +171,7 @@ rn_ctlroot_write(rnode_t *p_rn, config_param_t *p_cp) {
     return FALSE;
   }
 
-  if (!isCntrl()) { /* only valid in controller mode */
+  if (!isCtlr()) { /* only valid in controller mode */
     return FALSE;
   }
 

@@ -2,7 +2,7 @@ NAME=slu_rmfs/lib/fuseops
 
 BUILT		?= $(shell date +%Y%m%d%H%M)
 
-RPM_D		:= /home/sts/lanl/sw/fuse/playpen/slurmfs
+RPM_D		:= /home/sts/lanl/sw/slurm/slurmfs
 RPM_SRC_D	:= $(RPM_D)/SOURCES
 
 BASE_D		:= $(RPM_SRC_D)

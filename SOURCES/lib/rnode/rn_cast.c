@@ -220,7 +220,7 @@ rn_cast_attr_typconv(rnode_t *p_new, ptyp_t ptyp,
   if (IS_SLURM_TYPE(ptyp)) {
     rtyp = p2r_typ_rm_convtab[(ptyp-PTYP_SLURM_FIRST)].rtyp;
 
-  } else if (p2r_typ_convtab[ptyp].rtyp != PTYP_NONE) {
+  } else if (p2r_typ_convtab[ptyp].rtyp != RN_NONE) {
     rtyp = p2r_typ_convtab[ptyp].rtyp;
 
   } else {

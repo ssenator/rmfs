@@ -11,7 +11,7 @@
 
 #include <sys/types.h>
 #include <assert.h>
-#include <attr/xattr.h>
+#include <linux/xattr.h>
 #include <ctype.h>
 #include <dirent.h>
 #include <errno.h>
@@ -54,6 +54,6 @@ typedef enum ingest_cycles {
   INGEST_MAX       = INGEST_3,
 } ingest_cycle_t;
 
-#define NXT_ingest_cycle(_pass_no)  ((_pass_no) >= 0? (_pass_no) + 1: ((INGEST_MAX)+1))
+#define NXT_ingest_cycle(_pass_no)  ((_pass_no) >= 0 && (_pass_no) <= (INGEST_MAX))? (_pass_no) + 1: ((INGEST_MAX)+1))
 
 #endif

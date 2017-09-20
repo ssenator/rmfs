@@ -58,6 +58,7 @@ rn_mkjobstepd(rnode_t *p_jobid, rnode_t *p_jobstepd) {
    }
    if (p_stim->job_step_count == 0) {
      ErrExit(ErrExit_WARN, "mkjobstepd: p_cp->p_stim->job_step_count == 0");
+     return NULL;
    }
 
    n_children = p_stim->job_step_count;

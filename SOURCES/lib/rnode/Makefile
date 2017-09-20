@@ -2,7 +2,7 @@ NAME=slu_rmfs/lib/rnode
 
 BUILT		?= $(shell date +%Y%m%d%H%M)
 
-RPM_D		:= /home/sts/lanl/sw/fuse/playpen/slurmfs
+RPM_D		:= /home/sts/sw/slurm/slurmfs
 RPM_SRC_D	:= $(RPM_D)/SOURCES
 
 BASE_D		:= $(RPM_SRC_D)
@@ -26,7 +26,7 @@ sources_rnode	:=				\
 			rn_public.c		\
 			rn_subr.c		\
 			rn_tab.c		\
-			rn_ctlroot.c		\
+			rn_ctlroot.c            \
 			rn_ctljobid.c
 
 sources_headers	:=				\

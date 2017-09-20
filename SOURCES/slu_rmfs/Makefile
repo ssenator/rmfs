@@ -2,7 +2,7 @@ NAME=slu_rmfs/slu_rmfs
 
 BUILT		?= $(shell date +%Y%m%d%H%M)
 
-RPM_D		:= /home/sts/lanl/sw/fuse/playpen/slurmfs
+RPM_D		:= /home/sts/sw/slurm/slurmfs
 RPM_SRC_D	:= $(RPM_D)/SOURCES
 
 BASE_D		:= $(RPM_SRC_D)
@@ -42,8 +42,10 @@ DEFINES		:= -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__COMPILE_DATE_TIME__=$(BUILT
 INCFLAGS	+= -I. $(addprefix -I,$(INC_D))
 
 WITHSYMS	:= -ggdb
-RELOC		:= --emit-relocs
-XREF		:= --cref
+#RELOC		:= --emit-relocs
+#XREF		:= --cref
+RELOC		 =
+XREF             =
 WARN		:= -Wall
 
 CPPFLAGS	+= $(DEFINES) $(INCFLAGS)

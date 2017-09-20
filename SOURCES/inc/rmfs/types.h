@@ -226,7 +226,7 @@ typedef enum param_type ptyp_t;
 #define IS_FSVIS_TYPE(ptyp)     ((ptyp) >= PTYP_FSVIS_FIRST && (ptyp) <= PTYP_FSVIS_LAST)
 #define IS_HOST_TYPE(ptyp)      ((ptyp) >= PTYP_HOST_FIRST && (ptyp) <= PTYP_HOST_LAST)
 
-extern char *ptyp2pname_tab[];  /*rmfs_rnode.c*/
+extern char *ptyp2pname_tab[];  /*rn_tab.c*/
 extern ptyp_t slurm2basetyp[];  /*slu_rmfs.c*/
 
 /* the value that gets emitted for opaque types */

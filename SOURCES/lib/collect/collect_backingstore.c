@@ -3,8 +3,38 @@
  */
 #include "rmfs.h"
 
-#include "backingstore.h"
+#if defined(PORTING_TO_SLURMv17)
+#error The backing store mechanism should be revisited given that the commercial \
+        version of slurm has a more robust slurm data base backend capability.	 \
+	Re-evaluate its utility before resurrecting this code.
+#else
 
+tri_t claim_BackingStore(config_param_t *p_backingstore_cp, config_param_t *p_pid_cp, claim_t request) {
+	return FALSE;
+}
+
+tri_t open_BackingStore(config_param_t *p_backingstore_cp, int rdwr) {
+	return FALSE;
+}
+
+tri_t merge_BackingStore(config_param_t *p_src_cp, merge_bs_source_t bs_mergefrom) {
+	return FALSE;
+}
+
+tri_t requestWrite_BackingStore(char *mountpoint) {
+	return FALSE;
+}
+
+tri_t write_modifiedrnode_toBackingStore() {
+	return FALSE;
+}
+
+tri_t spawn_BackingStorelistener(config_param_t *p_bs_cp) {
+	return FALSE;
+}
+#endif
+
+#if defined(PORTING_TO_SLURMv17)
 /*
  * prune_BackingStore()
  *  mark any jobid records (infinite expiration or with an expiration time) as empty
@@ -12,8 +42,8 @@
  */
 tri_t
 prune_Backingstore(config_param_t *p_bs_cp) {
-  int                         j, n_j;
   time_t                      t;
+  int                         j, n_j;
   bs_record_t                 p_bs;
   struct backingstore_record *p_bsr;
 
@@ -21,7 +51,7 @@ prune_Backingstore(config_param_t *p_bs_cp) {
     ErrExit(ErrExit_ASSERT, "prune_BackingStore(): !p_bs_cp");
     return FALSE;
   }
-  if (!p_bs_cp->pd.is_mmapped) {
+  if (!p_bs_cp->val.pd.is_mmapped) {
     ErrExit(ErrExit_ASSERT, "prune_BackingStore(): backing store is not mapped");
     return FALSE;
   }
@@ -84,6 +114,7 @@ prune_Backingstore(config_param_t *p_bs_cp) {
       }
     }
   }
+
   return TRUE;
 }
 
@@ -137,13 +168,14 @@ claim_BackingStore(config_param_t *p_backingstore_cp,
     ErrExit(ErrExit_ASSERT, "claim_backingstore(): bs !is_mapped");
     goto tidy;
   }
-  
+
 tidy:
   /*XXXlock release_bs_rwlock()*/
 
   if (request != CL_TEST) {
     prune_BackingStore();
   }
+
   return TRUE;
 }
 
@@ -336,7 +368,7 @@ spawn_BackingStorelistener(config_param_t *p_bs_cp){
 
 tri_t
 merge_BackingStore(config_param_t *p_src_cp,
-		   enum merge_bs_source_t bs_mergefrom) {
+		   merge_bs_source_t bs_mergefrom) {
   int                         n_rec, n_j, h_ctx, h;
   tri_t                       rc = FALSE;
   time_t                      t;
@@ -658,3 +690,4 @@ requestWrite_BackingStore(char *mountpoint) {
   fclose(fstr); /* => close(fd) */
   return TRUE;
 }
+#endif /*PORTING_TO_SLURMv17*/

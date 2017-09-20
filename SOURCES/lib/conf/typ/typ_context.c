@@ -18,7 +18,7 @@ typ_context(rmfs_param_t *p_val) {
   char                *p_c;
 
   extern int getpidcon(pid_t, security_context_t *);     /*selinux.h*/
-  extern int security_check_context(security_context_t); /*selinux.h*/
+  extern int security_check_context(const char * con); /*selinux.h*/
 
   if (!p_val) {
     ErrExit(ErrExit_ASSERT, "typ_context: !p_val");

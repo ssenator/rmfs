@@ -164,7 +164,6 @@ ingest_config(ingest_cycle_t pass_no)
      *      b. read state from our local mount
      *      c. possible remount as a consequence of job scheduling
      */
-
     /* previous state is collected from BackingStore, if it is usable */
     if (!collect_predstate()) {
       ErrExit(ErrExit_WARN, "ingest_config: PREV_STATE, !collect_predstate()");
@@ -173,14 +172,20 @@ ingest_config(ingest_cycle_t pass_no)
 
   case INGEST_COLDSTART:
   case INGEST_1:
+
+#if defined(PORTING_TO_SLURM_v17)
   case INGEST_2:
   case INGEST_3:
+#endif /*PORTING_TO_SLURMv17*/	  
+
     for (p_cp = &slurmfs_config[0]; p_cp->nm; p_cp++) {
       (void) collect_cp(p_cp);
     }
+#if defined(PORTING_TO_SLURMv17)    
     if (Debug()) {
       ingest_config(NXT_ingest_cycle(pass_no));
     }
+#endif /*PORTING_TO_SLURMv17*/    
     break;
 
   default:   

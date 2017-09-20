@@ -72,9 +72,10 @@ config_param_t slurmfs_config[] =
   { .nm="EnforceMAC",       .src.allowed=BIT(PSRC_MAC)|BIT(PSRC_DEFAULT), .src.debug=BIT(PSRC_MAC)|BIT(PSRC_DEFAULT), .typ=PTYP_TRILENE,         .default_val.ue.truth=FALSE /*XXX*/    },
 
   { .nm="fsid",             .src.allowed=BIT(PSRC_DEFAULT), .src.debug=BIT(PSRC_DEFAULT), .typ=PTYP_ALPHA,             .default_val.ue.str="slu_rmfs", .default_val.size=9              },
-
+#if defined(PORTING_TO_SLURMv17)
   { .nm="gres_plugins",     .src.allowed=BIT(PSRC_SLURM),   .src.debug=BIT(PSRC_SLURM), .typ=PTYP_GRES_PLUGIN,     .collector=collectslurm_confparam, .depends_on.nm="slurm_api_version",
     .per_src.slurm.off=(offsetof(slurm_ctl_conf_t, gres_plugins)) },
+#endif /*PORTING_TO_SLURMv17*/
 
   { .nm="Hostname",         .src.allowed=BIT(PSRC_DERIVED), .src.debug=BIT(PSRC_DERIVED), .typ=PTYP_HOSTNAME, .default_val.ue.hostname="localhost",
                                                                                                                      .collector=collectos_hostname                                      },
@@ -84,10 +85,12 @@ config_param_t slurmfs_config[] =
   
   { .nm="jobs",             .src.allowed=BIT(PSRC_SLURM),   .src.debug=BIT(PSRC_SLURM), .typ=PTYP_JOB,               .collector=collectslurm_jobs,   .depends_on.nm="slurm_api_version",
     .per_src.slurm.dynamic = TRUE },
-  
+
+#if defined(PORTING_TO_SLURMv17)
   { .nm="job_submit_plugins", .src.allowed=BIT(PSRC_SLURM),   .src.debug=BIT(PSRC_SLURM), .typ=PTYP_JSUB_PLUGIN,     .collector=collectslurm_confparam, .depends_on.nm="slurm_api_version",
     .per_src.slurm.off=(offsetof(slurm_ctl_conf_t, job_submit_plugins)) },
-
+#endif /*PORTING_TO_SLURMv17*/
+  
   { .nm="MountPoint",       .src.allowed=BIT(PSRC_MNT_NONOPT)|BIT(PSRC_DEFAULT), .src.debug=BIT(PSRC_MNT_NONOPT)|BIT(PSRC_DEFAULT), .typ=PTYP_DIREXIST,
                                                                                                .default_val.ue.str="fs",                             .depends_on.nm="SLURM_DIR"         },
   

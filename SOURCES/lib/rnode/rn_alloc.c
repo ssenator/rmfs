@@ -8,8 +8,12 @@
  */
 void *
 bsalloc(int n, size_t size) {
+#if defined(PORTING_TO_SLURMv17)	
   ErrExit(ErrExit_INTERNAL, "bsalloc()");
   return NULL;
+#else
+  return calloc(n, size);
+#endif  
 }
 
 
@@ -22,6 +26,7 @@ bsalloc_init(config_param_t *p_backingstore_cp) {
 tri_t
 backingstore_valid(config_param_t *p_backingstore_cp) {
 
+#if defined(PORTING_TO_SLURMv17)
   ErrExit(ErrExit_INTERNAL, "backingstore_valid()");
   /*
   ...does backingstore pathname containing dir exist? NO => FALSE
@@ -38,6 +43,7 @@ backingstore_valid(config_param_t *p_backingstore_cp) {
 	if known & allocated type (!RN_GUARD) - call rnode-type-specific validator()
 	  if per-rnode-type validator fails() - mark as unusable
   */
+#endif   /*PORTING_TO_SLURMv17*/
   return FALSE;
  }
 
@@ -58,10 +64,11 @@ rn_poolinit(void) {
   rn_param_t     *p_rn_paramtab;
   config_param_t *slurmuser_cp, *slurmduser_cp, *rnpool_cp;
   config_param_t *backingstore_cp;
-  void           (*allocator)(int, size_t);
+  void           *(*allocator)(int, size_t);
 
+  p_allocmap = NULL;
   p_rn_paramtab = get_rn_params(/*needlock*/ TRUE);
-  allocator = &calloc();
+  allocator = (void *) &calloc; /*XXX more precise cast required*/
 
   if (!p_rn_paramtab) {
     ErrExit(ErrExit_ENOMEM, "rn_poolinit: !rn_paramtab");    
@@ -87,12 +94,19 @@ rn_poolinit(void) {
       rnpool_cp->val.ue.l = n * sizeof(rnode_t);
     }
   }
+
+#if defined(PORTING_TO_SLURMv17)
   if (backingstore_valid(backingstore_cp)) {
-    allocator = &bsalloc();
+    allocator = &bsalloc;
   }
+#endif  
   
-  if (!(p_rn = (*allocator)(n, sizeof(rnode_t) * n))) {
-    ErrExit(ErrExit_ENOMEM, "rn_poolinit: calloc (rnode_pool) failed");
+  if (!allocator || !(p_rn = (*allocator)(n, sizeof(rnode_t) * n))) {
+    ErrExit(ErrExit_ENOMEM, "rn_poolinit: alloc (rnode_pool) failed");
+  }
+
+  if (!(p_allocmap = (*allocator)(n, sizeof(int) * n))) {
+    ErrExit(ErrExit_ENOMEM, "rn_poolinit: alloc (alloc_map) failed");
   }
 
   /*

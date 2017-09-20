@@ -65,7 +65,7 @@ rn_mkfsroot(rnode_t *p_fsroot, rnode_t *ignored) {
   int             n_children, n_attr;
   unsigned long   n_alloc;
   char           *rootdir_nm;
-  int             rootdir_hash;
+/*  int             rootdir_hash; XXX*/
   char           *cname_nm;
   
   extern slurm_ctl_conf_t *p_slcnf;                /*XXX slurm.h use a config_param */
@@ -76,7 +76,7 @@ rn_mkfsroot(rnode_t *p_fsroot, rnode_t *ignored) {
   ignored = ignored;
   
   rootdir_nm   = rnode_buildtab[RND_ROOT].nm;
-  rootdir_hash = djb_strtohash(rootdir_nm);
+/*  rootdir_hash = djb_strtohash(rootdir_nm); XXX*/
   cname_nm     = rnode_buildtab[RND_CLUSTER].nm;
   
   n_children  = n_alloc = 0;
@@ -185,7 +185,11 @@ rn_mkfsroot(rnode_t *p_fsroot, rnode_t *ignored) {
 		      /*parent */ p_fsroot, /*children*/ NULL, /*n_children*/ 0,
 		      /*attr*/ NULL, /*subdir*/ NULL);
   if (!p_cluster) {
+#if defined(PORTING_TO_SLURMv17)	  
     ErrExit(ErrExit_ASSERT, "rn_mkfsroot: rn_cast(cluster) NULL");
+#else
+    ErrExit(ErrExit_WARN, "rn_mkfsroot: rn_cast(cluster) NULL");
+#endif    
     return NULL;
   }
 

@@ -139,7 +139,7 @@ getfuseoptdesc_fromconfig(config_param_t *p_cp) {
  */
 param_source_t
 construct_fuse_mountopts(config_param_t *p_cp) {
-  int i = 0, n = 0, new_size = 0;
+  int n = 0, new_size = 0;
   enum { NOTHING = 0, TERMINATOR = 1, OPT = 2, NONOPT = 4 } to_do;
   param_source_t rc = PSRC_NONE;
 
@@ -186,7 +186,6 @@ construct_fuse_mountopts(config_param_t *p_cp) {
    *
    * *complete is keyed off of the OPT_NONOPT flag, which is processed after all other options
    */
-  i = fuseopts_len;
   to_do = NOTHING;
   
   /* no parameter name */
