@@ -51,8 +51,9 @@ WARN		:= -Wall
 CPPFLAGS	+= $(DEFINES) $(INCFLAGS)
 CFLAGS		+= $(WARN) $(WITHSYMS)
 
+SLURM_LIB64	:= /opt/slurm/lib64
 LDFLAGS		:= $(LDFLAGS) $(WITHSYMS) $(RELOC) $(XREF)
-LDLIBS		:= $(addprefix -L,$(LIB_D)) $(addprefix -l,$(libs))
+LDLIBS		:= -L$(SLURM_LIB64) $(addprefix -L,$(LIB_D)) $(addprefix -l,$(libs))
 
 LINT				:= splint
 LINTFLAGS			:= -checks -posix-strict-lib -booltype bool_t -boolfalse BFALSE -booltrue BTRUE $(INCFLAGS) $(DEFINES)
