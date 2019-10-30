@@ -2,7 +2,7 @@ NAME=slu_rmfs/lib/fuseops
 
 BUILT		?= $(shell date +%Y%m%d%H%M)
 
-RPM_D		:= /home/sts/lanl/sw/slurm/slurmfs
+RPM_D		:= /home/sts/rmfs
 RPM_SRC_D	:= $(RPM_D)/SOURCES
 
 BASE_D		:= $(RPM_SRC_D)
@@ -39,15 +39,19 @@ prereq		:= Makefile $(sources_headers)
 
 DEFINES		:= -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__COMPILE_DATE_TIME__=$(BUILT)
 OUR_LIBS	:= -lmisc
-PREREQ_LIBS	:= -lbsd -lslurm -lslurmdb -lbsd -lrt -lselinux
+#PREREQ_LIBS	:= -lbsd -lslurm -lslurmdb -lbsd -lrt -lselinux
+PREREQ_LIBS	:= -lbsd -lslurm -lbsd -lrt -lselinux
 LIBS		:= $(PREREQ_LIBS) $(OUR_LIBS)
 INCFLAGS	+= -I. $(addprefix -I,$(INC_D))
 CPPFLAGS	+= $(DEFINES) $(INCFLAGS)
-WITHSYMS	:= -ggdb
-WARN		:= -Wall
 
-CFLAGS		+= $(WARN) $(WITHSYMS)
-LDFLAGS		+= $(WITHSYMS)
+WITHSYMS	:= -ggdb3
+NOPIE		:= -fno-pie
+PEDANTIC	:= -pedantic-errors
+WARN		:= -Wall -Wextra
+DYNAMIC	 	 = -rdynamic
+LDFLAGS		:= $(LDFLAGS) $(WITHSYMS) $(RELOC) $(XREF) $(DYNAMIC)
+CFLAGS		:= $(CFLAGS) $(WITHSYMS) $(WARN)
 
 LINT				:= splint
 LINTFLAGS			:= -checks -posix-strict-lib -booltype bool_t -boolfalse BFALSE -booltrue BTRUE $(INCFLAGS) $(DEFINES)

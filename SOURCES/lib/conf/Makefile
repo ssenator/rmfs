@@ -2,7 +2,7 @@ NAME=slu_rmfs/conf
 
 BUILT		?= $(shell date +%Y%m%d%H%M)
 
-RPM_D		:= /home/sts/sw/slurm/slurmfs
+RPM_D		:= /home/sts/rmfs
 RPM_SRC_D	:= $(RPM_D)/SOURCES
 
 BASE_D		:= $(RPM_SRC_D)

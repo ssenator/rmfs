@@ -53,7 +53,7 @@ rn_mkjobstepd(rnode_t *p_jobid, rnode_t *p_jobstepd) {
      return NULL;
    }
    if (!p_job_steps) {
-     ErrExit(ErrExit_ASSERT, "mkjobstepd: empty p_cp->per_src.slurm.p_stim.stim->job_steps");
+     ErrExit(ErrExit_WARN, "mkjobstepd: empty p_cp->per_src.slurm.p_stim.stim->job_steps");
      return NULL;
    }
    if (p_stim->job_step_count == 0) {

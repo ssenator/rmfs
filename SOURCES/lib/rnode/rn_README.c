@@ -111,7 +111,7 @@
 
 /*
  * attributes are obtained from the resource manager state structures
- * for slurm: partition_info_t, job_info_t, node_info_t, jobstep_info_t,
+ * for slurm: partition_info_t, slurm_job_info_t, node_info_t, jobstep_info_t,
  * in most cases the attributes are derivative of resource manager-specific state
  * for example, the RNL_ALLOCJOB is a constructed attribute based upon
  * the node and job state. In this case, the relevant rn_buildfn() is used

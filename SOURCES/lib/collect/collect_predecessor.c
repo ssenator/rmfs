@@ -205,11 +205,13 @@ collect_predstate(void) {
   ctlr = isCtlr();
   if (ctlr) {
     if (open_BackingStore(p_bs_cp, /*rdwr*/ ctlr) == FALSE) {
+      ErrExit(
 #if defined(PORTING_TO_SLURMv17)	    
-      ErrExit(ErrExit_ASSERT, "collect_predstate: !open_BackingStore(isCtlr)");
+      		ErrExit_ASSERT
 #else      
-      ErrExit(ErrExit_WARN, "collect_predstate: !open_BackingStore(isCtlr)");
+      		ErrExit_WARN
 #endif      
+      		, "collect_predstate: !open_BackingStore(isCtlr)");
       return FALSE;
     }
     if (predecessor_alive(p_pred_pid_cp, p_pred_mp_cp)) { /*sets pred_mp_cp, pred_pid_cp*/

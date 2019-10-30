@@ -2,7 +2,7 @@ NAME=slu_rmfs
 
 BUILT		:= $(shell date +%Y%m%d%H%M)
 
-RPM_D		:= /home/sts/lanl/sw/slurm/slurmfs
+RPM_D		:= /home/sts/rmfs
 RPM_SRC_D	:= $(RPM_D)/SOURCES
 
 BASE_D		:= $(RPM_SRC_D)
@@ -28,6 +28,8 @@ vpath %.h $(INC_D)
 
 all:	$(target) hygiene
 
+prereq_sources := fuse-devel libbsd-devel
+
 
 $(target):	$(exec) $(prereq)
 	$(LN) $(LNFLAGS) $(exec) $(target)
@@ -40,6 +42,7 @@ $(sources_dirs): $(prereq)
 
 hygiene: cscope.out TAGS tags
 
+cscope: cscope.out
 
 cscope.out: $(sources_depend)
 	find . -type f -name \*\.h >> cscope.files

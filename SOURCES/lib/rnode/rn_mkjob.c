@@ -16,8 +16,8 @@ rn_mkjobd(rnode_t *p_cluster, rnode_t *p_jobd) {
   int             i;
 
   job_info_msg_t *p_jim;                   /* slurm.h */ 
-  job_info_t     *p_job_array;             /* slurm.h */
-  job_info_t     *p_jai;                   /* job array indexer */
+  slurm_job_info_t     *p_job_array;             /* slurm.h */
+  slurm_job_info_t     *p_jai;                   /* job array indexer */
 
   extern rnode_t          *rn_cast(rnode_t *, rn_type_t, config_param_t *, void *, char *, rnode_t *, rnode_t *, int, rnode_t *, rnode_t *);
    
@@ -47,10 +47,10 @@ rn_mkjobd(rnode_t *p_cluster, rnode_t *p_jobd) {
    if (!p_job_array) {
 #if defined(PORTING_TO_SLURMv17)	   
      ErrExit(ErrExit_ASSERT, "mkjobd: empty p_cp->per_src.slurm.jim->job_array");
+     return NULL;
 #else
      ErrExit(ErrExit_WARN, "mkjobd: empty p_cp->per_src.slurm.jim->job_array");
 #endif /*PORTING_TO_SLURMv17*/     
-     return NULL;
    }
    if (p_jim->record_count == 0) {
      ErrExit(ErrExit_WARN, "mkjobd: p_cp->per_src.slurm.jim->record_count == 0");
@@ -191,7 +191,7 @@ rn_mkjobid(rnode_t *p_jobd, rnode_t *p_jobid) {
   extern int             attr_cnt_cp(rn_type_t); /*rn_subr.c*/
   extern rnode_t        *rn_cast(rnode_t *, rn_type_t, config_param_t *, void *, char *, rnode_t *, rnode_t *, int, rnode_t *, rnode_t *);
   
-  job_info_t    *p_ji;   /* slurm.h */
+  slurm_job_info_t    *p_ji;   /* slurm.h */
 
    if (!p_jobd) {
     ErrExit(ErrExit_ASSERT, "rn_mkjobid(NULL parent) p_jobd");
@@ -206,7 +206,7 @@ rn_mkjobid(rnode_t *p_jobd, rnode_t *p_jobid) {
   /*
    * slurm info job array entry was squirreled away by the RND_JOBS setup
    */
-  p_ji = (job_info_t *) p_jobd->p_dyntyp;
+  p_ji = (slurm_job_info_t *) p_jobd->p_dyntyp;
   if (!p_ji) {
     ErrExit(ErrExit_ASSERT, "mkjobid: !job info ptr");
     return NULL;

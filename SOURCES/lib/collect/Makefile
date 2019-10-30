@@ -2,7 +2,7 @@ NAME=slu_rmfs/lib/collect
 
 BUILT		?= $(shell date +%Y%m%d%H%M)
 
-RPM_D		:= /home/sts/sw/slurm/slurmfs
+RPM_D		:= /home/sts/rmfs
 RPM_SRC_D	:= $(RPM_D)/SOURCES
 
 BASE_D		:= $(RPM_SRC_D)
@@ -42,8 +42,12 @@ DEFINES		:= -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__COMPILE_DATE_TIME__=$(BUILT
 
 INCFLAGS	+= -I. $(addprefix -I,$(INC_D))
 CPPFLAGS	+= $(DEFINES) $(INCFLAGS)
-WITHSYMS	:= -ggdb
-WARN		:= -Wall
+WITHSYMS	:= -ggdb3
+NOPIE		:= -fno-pie
+PEDANTIC	:= -pedantic-errors
+WARN		:= -Wall -Wextra
+DYNAMIC	 	 = -rdynamic
+LDFLAGS		:= $(LDFLAGS) $(WITHSYMS) $(RELOC) $(XREF) $(DYNAMIC)
 
 CFLAGS		+= $(WARN) $(WITHSYMS)
 

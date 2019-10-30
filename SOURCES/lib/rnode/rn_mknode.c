@@ -350,7 +350,7 @@ rn_mkallocjob(rnode_t *p_nstate, rnode_t *p_allocjob) {
   rn_param_t     *p_rn_paramtab;
 
   /*slurm.h*/
-  job_info_t      *p_ji;
+  slurm_job_info_t      *p_ji;
   hostlist_t       hl;
 
   extern rnode_t *rn_cast_attr_typconv(rnode_t *, ptyp_t, config_param_t *, void *, char *, rnode_t *, rnode_t *, int, rnode_t *, rnode_t *);
@@ -404,7 +404,7 @@ rn_mkallocjob(rnode_t *p_nstate, rnode_t *p_allocjob) {
 	         n_jobs++, p_jobidX++) {
     int i;
 
-    p_ji = (job_info_t *) p_jobidX->p_dyntyp;
+    p_ji = (slurm_job_info_t *) p_jobidX->p_dyntyp;
     if (!p_ji) {
       ErrExit(ErrExit_ASSERT, "rn_mkallocjob NULL p_ji ptr");
       continue;

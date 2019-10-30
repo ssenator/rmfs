@@ -110,8 +110,10 @@ rnode_t rnode_buildtab[] = {
       .maybe.writable=1, .maybe.readable=1                                           },
   { .rtype=RNF_KNOB,       .nm="<knob>",          .buildfn=rn_mkattr,     .is.file=1,
       .maybe.execable=1, .maybe.controllable=1, .maybe.readable=1                    },
+#ifdef SLURM_1905
   { .rtype=RNF_SIGNATURE,  .nm="signature",       .buildfn=rn_mkattr,   .is.file=1,
       .maybe.readable=1                                                              },
+#endif
   
   { .rtype=RND_PARAMS,     .nm="rn_parameters", .buildfn=NULL/*XXXFUTURE*/, .is.dir=1,
       .maybe.readable=1                                                              },

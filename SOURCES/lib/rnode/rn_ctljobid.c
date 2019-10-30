@@ -45,7 +45,11 @@ rn_getsig(rnode_t *p_rn, rnode_t *p_attrd) {
 	return FALSE;
       }
       if (p2r_typ_convtab[p_cp->per_src.rmfs.parent_type].rtyp != RND_JOBID) {
+#ifdef SLURM1905
 	ErrExit(ErrExit_ASSERT, "rn_getsig: !signature rnode field source");
+#else
+	ErrExit(ErrExit_WARN, "rn_getsig: !signature rnode field source");
+#endif
 	return FALSE;
       }
       /*XXX p_cp_match = getconfig_from_nm(p_attrd, p_cp->nm); */
@@ -119,8 +123,12 @@ rn_ctljobid_sign(rnode_t *p_sig, config_param_t *p_sig_cp) {
   }
 
   p_cp = rn_getsig(p_jobid, p_attrd);
+  if (!p_cp) {
+    ErrExit(ErrExit_ASSERT, "ctljobid_sign: !rn_getsig(p_jobid, p_attrd)");
+    return FALSE;
+  }
   if (!p_sig_cp) {
-    ErrExit(ErrExit_ASSERT, "ctljobid_sign: !rn_getsig");
+    ErrExit(ErrExit_ASSERT, "ctljobid_sign: !rn_getsig(p_sig_cp)");
     return FALSE;
   }
   *p_sig_cp = *p_cp;

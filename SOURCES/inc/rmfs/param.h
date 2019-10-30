@@ -44,8 +44,7 @@
  * or related node, such as a jobid's attributes
  */
 
-
-#define RNODEPOOL_DEFAULT_MINSIZE   256 /*XXX needs heuristic, esp. large clusters*/
+#define RNODEPOOL_DEFAULT_MINSIZE   2048 /*XXX needs heuristic, esp. large clusters*/
 
 /*
  * rn_paramtab may be viewed as an in-memory superblock

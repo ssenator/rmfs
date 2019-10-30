@@ -51,7 +51,7 @@ typedef enum ingest_cycles {
   INGEST_1         = INGEST_COLDSTART + 1,
   INGEST_2         = INGEST_1 + 1,
   INGEST_3         = INGEST_1 + 2,
-  INGEST_MAX       = INGEST_3,
+  INGEST_MAX       = INGEST_3
 } ingest_cycle_t;
 
 #define NXT_ingest_cycle(_pass_no)  ((_pass_no) >= 0 && (_pass_no) <= (INGEST_MAX))? (_pass_no) + 1: ((INGEST_MAX)+1))

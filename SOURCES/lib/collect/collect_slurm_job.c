@@ -11,50 +11,54 @@
  */
 
 config_param_t jobinfodesc_tab[] = {
-  {.nm="account",      .per_src.slurm.off=offsetof(job_info_t, account),      .typ=PTYP_ALPHANUM,
+  {.nm="account",      .per_src.slurm.off=offsetof(slurm_job_info_t, account),      .typ=PTYP_ALPHANUM,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_JOB},
-  {.nm="comment",      .per_src.slurm.off=offsetof(job_info_t, comment),      .typ=PTYP_ALPHANUM,
+  {.nm="comment",      .per_src.slurm.off=offsetof(slurm_job_info_t, comment),      .typ=PTYP_ALPHANUM,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_JOB},
-  {.nm="end_time",     .per_src.slurm.off=offsetof(job_info_t, end_time),     .typ=PTYP_NUMERICTIME,
+  {.nm="end_time",     .per_src.slurm.off=offsetof(slurm_job_info_t, end_time),     .typ=PTYP_NUMERICTIME,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_JOB},
   {.nm="features",      .per_src.slurm.off=offsetof(node_info_t, features),   .typ=PTYP_ALPHANUM,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_JOB},
-  {.nm="group_id",     .per_src.slurm.off=offsetof(job_info_t, group_id),     .typ=PTYP_UID,
+  {.nm="group_id",     .per_src.slurm.off=offsetof(slurm_job_info_t, group_id),     .typ=PTYP_UID,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_JOB},
-  {.nm="gres",         .per_src.slurm.off=offsetof(job_info_t, gres),         .typ=PTYP_ALPHANUM,
+#ifdef SLURM1905
+  {.nm="gres",         .per_src.slurm.off=offsetof(slurm_job_info_t, gres),         .typ=PTYP_ALPHANUM,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_JOB},
-  {.nm="job_id",       .per_src.slurm.off=offsetof(job_info_t, job_id),       .typ=PTYP_NUMERIC,
+#endif
+  {.nm="job_id",       .per_src.slurm.off=offsetof(slurm_job_info_t, job_id),       .typ=PTYP_NUMERIC,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_JOB},
-  {.nm="job_state",    .per_src.slurm.off=offsetof(job_info_t, job_state),    .typ=PTYP_OPAQUE,
+  {.nm="job_state",    .per_src.slurm.off=offsetof(slurm_job_info_t, job_state),    .typ=PTYP_OPAQUE,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_JOB},
-  {.nm="name",         .per_src.slurm.off=offsetof(job_info_t, name),         .typ=PTYP_ALPHANUM,
+  {.nm="name",         .per_src.slurm.off=offsetof(slurm_job_info_t, name),         .typ=PTYP_ALPHANUM,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_JOB},
-  {.nm="nodes",        .per_src.slurm.off=offsetof(job_info_t, nodes),        .typ=PTYP_ALPHANUM,
+  {.nm="nodes",        .per_src.slurm.off=offsetof(slurm_job_info_t, nodes),        .typ=PTYP_ALPHANUM,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_JOB},
-  {.nm="num_cpus",    .per_src.slurm.off=offsetof(job_info_t, num_cpus),      .typ=PTYP_UNSIGNED_INT32,
+  {.nm="num_cpus",    .per_src.slurm.off=offsetof(slurm_job_info_t, num_cpus),      .typ=PTYP_UNSIGNED_INT32,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_JOB},
-  {.nm="num_nodes",    .per_src.slurm.off=offsetof(job_info_t, num_nodes),    .typ=PTYP_UNSIGNED_INT32,
+  {.nm="num_nodes",    .per_src.slurm.off=offsetof(slurm_job_info_t, num_nodes),    .typ=PTYP_UNSIGNED_INT32,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_JOB},
-  {.nm="partition",    .per_src.slurm.off=offsetof(job_info_t, partition),    .typ=PTYP_ALPHANUM,
+  {.nm="partition",    .per_src.slurm.off=offsetof(slurm_job_info_t, partition),    .typ=PTYP_ALPHANUM,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_JOB},
-  {.nm="state_desc",   .per_src.slurm.off=offsetof(job_info_t, state_desc),   .typ=PTYP_ALPHANUM,
+  {.nm="state_desc",   .per_src.slurm.off=offsetof(slurm_job_info_t, state_desc),   .typ=PTYP_ALPHANUM,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_JOB},
-  {.nm="state_reason", .per_src.slurm.off=offsetof(job_info_t, state_reason), .typ=PTYP_ALPHANUM,
+  {.nm="state_reason", .per_src.slurm.off=offsetof(slurm_job_info_t, state_reason), .typ=PTYP_ALPHANUM,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_JOB},
-  {.nm="submit_time",  .per_src.slurm.off=offsetof(job_info_t, submit_time),  .typ=PTYP_NUMERICTIME,
+  {.nm="submit_time",  .per_src.slurm.off=offsetof(slurm_job_info_t, submit_time),  .typ=PTYP_NUMERICTIME,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_JOB},
-  {.nm="user_id",      .per_src.slurm.off=offsetof(job_info_t, user_id),      .typ=PTYP_UID,
+  {.nm="user_id",      .per_src.slurm.off=offsetof(slurm_job_info_t, user_id),      .typ=PTYP_UID,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_JOB},
   {.nm="context",       .src.allowed=(BIT(PSRC_MAC)|BIT(PSRC_MNT)|BIT(PSRC_DEFAULT)),
                                                                               .typ=PTYP_CONTEXT,
    .per_src.rmfs.local=TRUE, .per_src.slurm.parent_type=PTYP_JOB},
+#ifdef SLURM_1905
   {.nm="signature",     .src.allowed=BIT(PSRC_DERIVED),                       .typ=PTYP_SIGNATURE,
    .per_src.rmfs.local=TRUE},
+#endif
   {.nm=NULL }
 };
 
 config_param_t *
-collectslurm_attr_job(config_param_t *p_cp, rmfs_param_t *p_val, job_info_t *ji) {
+collectslurm_attr_job(config_param_t *p_cp, rmfs_param_t *p_val, slurm_job_info_t *ji) {
   config_param_t *p_2cp;
   
   if (!p_cp) {
@@ -118,12 +122,15 @@ collectslurm_attr_job(config_param_t *p_cp, rmfs_param_t *p_val, job_info_t *ji)
   } else if (djb_strtohash("group_id") == p_cp->h) {
     p_val->ue.gid = ji->group_id;
 
+#ifdef SLURM1905
   } else if (djb_strtohash("gres") == p_cp->h) {
     p_val->ue.str = ji->gres;
     p_val->size  = internal_strlen(ji->gres);
     if (p_val->size > 0) {
       p_val->size += 1;
     }
+#endif
+
   } else if (djb_strtohash("job_id") == p_cp->h) {
     p_val->ue.ui_32 = ji->job_id;
 

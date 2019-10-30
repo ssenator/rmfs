@@ -86,7 +86,7 @@ reclaim_files() {
 
 tri_t
 request_unmount(FILE *prev_ctlfile, long waited_for) {
-  config_param_t *unmountwait_cp, *pid_cp;
+  config_param_t *unmountwait_cp;
   int             w, rc;
   extern int      errno;
 
@@ -94,7 +94,6 @@ request_unmount(FILE *prev_ctlfile, long waited_for) {
     return FALSE;
   }
 
-  pid_cp         = getconfig_fromnm("pid");
   unmountwait_cp = getconfig_fromnm("unmountwait");
 
   if ((rc = fprintf(prev_ctlfile, "umount")) < 0) {

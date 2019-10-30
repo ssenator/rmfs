@@ -2,7 +2,7 @@ NAME=slu_rmfs/slu_rmfs
 
 BUILT		?= $(shell date +%Y%m%d%H%M)
 
-RPM_D		:= /home/sts/sw/slurm/slurmfs
+RPM_D		:= /home/sts/rmfs
 RPM_SRC_D	:= $(RPM_D)/SOURCES
 
 BASE_D		:= $(RPM_SRC_D)
@@ -27,7 +27,8 @@ our_libs_lfa	:= $(addprefix $(LIB_D)/lib,$(our_libs_a))
 our_libs_l	:= $(addprefix lib,$(our_libs))
 our_libs_la	:= $(addprefix lib,$(our_libs_a))
 
-prereq_libs	:= bsd fuse rt selinux slurm slurmdb
+#prereq_libs	:= bsd fuse rt selinux slurm slurmdb
+prereq_libs	:= bsd fuse rt selinux slurm
 sources_libs	:= $(our_libs)
 libs		:= $(prereq_libs) $(our_libs)
 sources_dirs	:= $(LIB_D) $(EXEC_D)
@@ -41,18 +42,21 @@ objects			:= $(objects_slu_rmfs_supt)
 DEFINES		:= -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D__COMPILE_DATE_TIME__=$(BUILT)
 INCFLAGS	+= -I. $(addprefix -I,$(INC_D))
 
-WITHSYMS	:= -ggdb
+WITHSYMS	:= -ggdb3
+NOPIE		:= -fno-pie
 #RELOC		:= --emit-relocs
 #XREF		:= --cref
 RELOC		 =
 XREF             =
-WARN		:= -Wall
+DYNAMIC	 	 = -rdynamic
+PEDANTIC	:= -pedantic-errors
+WARN		:= -Wall -Wextra
 
 CPPFLAGS	+= $(DEFINES) $(INCFLAGS)
 CFLAGS		+= $(WARN) $(WITHSYMS)
 
 SLURM_LIB64	:= /opt/slurm/lib64
-LDFLAGS		:= $(LDFLAGS) $(WITHSYMS) $(RELOC) $(XREF)
+LDFLAGS		:= $(LDFLAGS) $(WITHSYMS) $(RELOC) $(XREF) $(DYNAMIC)
 LDLIBS		:= -L$(SLURM_LIB64) $(addprefix -L,$(LIB_D)) $(addprefix -l,$(libs))
 
 LINT				:= splint

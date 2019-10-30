@@ -32,8 +32,10 @@ config_param_t nodeinfodesc_tab[] = {
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_NODE},
    {.nm="node_state",    .per_src.slurm.off=offsetof(node_info_t, node_state),    .typ=PTYP_NODESTATE,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_NODE},
+#ifdef SLURM1905
   {.nm="os",            .per_src.slurm.off=offsetof(node_info_t, os),            .typ=PTYP_ALPHANUM,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_NODE},
+#endif
   {.nm="real_memory",   .per_src.slurm.off=offsetof(node_info_t, real_memory),   .typ=PTYP_NUMERIC,
    .per_src.slurm.dynamic=TRUE, .per_src.slurm.parent_type=PTYP_NODE},
 #if defined(PORTING_TO_SLURMv17)  

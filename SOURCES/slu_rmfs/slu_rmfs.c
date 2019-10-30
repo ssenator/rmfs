@@ -31,7 +31,7 @@ main(int ac, char **av) {
   fuse_main(ac, av, &rmfs_file_ops, /*userdata*/ NULL);
   /* FALLTHROUGH */
 
-  /*XXX fuse_request_unmount();*/
+  /*XXX fuse_session_unmount(); ***fuse_lowlevel.h*** XXX*/
   CleanExit();
   return ExitOK;
 }

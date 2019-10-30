@@ -57,7 +57,7 @@ collectslurm_attr(rn_type_t rtype, config_param_t *p_cp, void *p_dyntyp)  {
 
   extern config_param_t *collectslurm_attr_part(config_param_t *, rmfs_param_t *, partition_info_t *); /*collect_slurm_part.c*/
   extern config_param_t *collectslurm_attr_node(config_param_t *, rmfs_param_t *, node_info_t *);      /*collect_slurm_node.c*/
-  extern config_param_t *collectslurm_attr_job(config_param_t *, rmfs_param_t *, job_info_t *);        /*collect_slurm_job.c*/
+  extern config_param_t *collectslurm_attr_job(config_param_t *, rmfs_param_t *, slurm_job_info_t *);        /*collect_slurm_job.c*/
   extern config_param_t *collectslurm_attr_step(config_param_t *, rmfs_param_t *, job_step_info_t *);  /*collect_slurm_step.c*/
 
   if (!p_cp) {
@@ -118,7 +118,7 @@ collectslurm_attr(rn_type_t rtype, config_param_t *p_cp, void *p_dyntyp)  {
   }
 
   if (typ_check(p_2cp->typ, &p_2cp->val) == FALSE) {
-    ErrExit(ErrExit_ASSERT, "collectslurm_attr: per-type check failed");
+    ErrExit(ErrExit_ASSERT, "collectslurm_attr: per-typ check failed");
     return NULL;
   }
   /* provide some sugar for people who want to read in ascii not binary */

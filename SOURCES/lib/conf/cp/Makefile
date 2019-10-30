@@ -2,7 +2,7 @@ NAME=slu_rmfs/conf/config_param
 
 BUILT		?= $(shell date +%Y%m%d%H%M)
 
-RPM_D		:= /home/sts/sw/slurm/slurmfs
+RPM_D		:= /home/sts/rmfs
 RPM_SRC_D	:= $(RPM_D)/SOURCES
 
 BASE_D		:= $(RPM_SRC_D)
@@ -33,11 +33,14 @@ LIBS		:= -lbsd
 #LIBS		:= -lslurm -lslurmdb -lbsd -lrt -lselinux
 INCFLAGS	+= -I. $(addprefix -I,$(INC_D))
 CPPFLAGS	+= $(DEFINES) $(INCFLAGS)
-WITHSYMS	:= -ggdb
-WARN		:= -Wall
 
-CFLAGS		+= $(WARN) $(WITHSYMS)
-LDFLAGS		+= $(WITHSYMS)
+WITHSYMS	:= -ggdb3
+NOPIE		:= -fno-pie
+PEDANTIC	:= -pedantic-errors
+WARN		:= -Wall -Wextra
+DYNAMIC	 	 = -rdynamic
+LDFLAGS		:= $(LDFLAGS) $(WITHSYMS) $(RELOC) $(XREF) $(DYNAMIC)
+CFLAGS		:= $(CFLAGS) $(WITHSYMS) $(WARN)
 
 LINT				:= splint
 LINTFLAGS			:= -checks -posix-strict-lib -booltype bool_t -boolfalse BFALSE -booltrue BTRUE $(INCFLAGS) $(DEFINES)
